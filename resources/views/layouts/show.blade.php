@@ -44,8 +44,8 @@
           <li><a href="{{url('/index/course/courselist')}}" class="link1 current">课程</a></li>
             <li><a href="{{url('/index/article/articlelist')}}" class="link1">资讯</a></li>
             <li><a href="{{url('/index/teacher/teacherlist')}}" class="link1">讲师</a></li>
-            <li><a href="exam_index.html" class="link1" target="_blank">题库</a></li>
-            <li><a href="askarea.html" class="link1" target="_blank">问答</a></li>
+            <li><a href="" class="link1">题库</a></li>
+            <li><a href="" class="link1" >问答</a></li>
             
         </ul>
         <span class="massage">
@@ -178,5 +178,9 @@ function logclose(){
             scrollTop: 0
         },
         600);
+    });
+    $(".nag").click(function(){
+      alert("dfj");
+        $(".nag").find("li").find("a").css("link1 current");
     });
 </script>
