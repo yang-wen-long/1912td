@@ -101,18 +101,20 @@
 <div class="fcontainer">
       <div class="fwxwb"> 
          <div class="fwxwb_1">
-           <span>关注微信</span><img width="95" alt="" src="../../../../../static/index/images/num.png">
+           <span>关注微信</span><img width="95" alt="" src="../../../../static/index/images/IMG_20201109_164403.jpg">
        </div>
            <div>
-               <span>关注微博</span><img width="95" alt="" src="../../../../../static/index/images/wb.png">
+               <span>关注微博</span><img width="95" alt="" src="../../../../static/index/images/weibo.gif">
        </div>               
       </div>
       <div class="fmenu">
-       <p><a href="#">关于我们</a> | <a href="#">联系我们</a> | <a href="#">优秀讲师</a> | <a href="#">帮助中心</a> | <a href="#">意见反馈</a> | <a href="#">加入我们</a></p>
+       <p><a href="{{url('/index/page/page')}}">关于我们</a> | <a href="{{url('/index/page/page_contact')}}">联系我们</a> | 
+          <a href="{{url('/index/teacher/teacherlist')}}">优秀讲师</a> | <a href="http://www.plaso.cn/?page_id=2484">帮助中心</a> | <a href="http://www.plaso.cn/">意见反馈</a> | 
+          <a href="http://www.plaso.cn/?page_id=2488&kid=118">加入我们</a></p>
       </div>
-      <div class="copyright">      
-        <div><a href="/">谋刻网</a>所有&nbsp;晋ICP备12006957号-9</div>
-      </div>
+      <div class="copyright">
+        <div>伯索云学堂-老师版:&nbsp;晋ICP备12006957号</div>
+      </div>                                    
     </div>
 </div>
 
