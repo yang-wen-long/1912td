@@ -45,7 +45,7 @@
             <li><a href="{{url('/index/article/articlelist')}}" class="link1">资讯</a></li>
             <li><a href="{{url('/index/teacher/teacherlist')}}" class="link1">讲师</a></li>
             <li><a href="" class="link1">题库</a></li>
-            <li><a href="" class="link1" >问答</a></li>
+            <li><a href="{{url('/index/page/page')}}" class="link1" >关于</a></li>
             
         </ul>
         <span class="massage">
@@ -63,7 +63,7 @@
             @if($name == "courselist")
             <a href="{{url('/index/user/login')}}" class="link2 he">登录</a>
             <a href="{{url('/index/user/reg')}}" class="link2 he">注册</a>
-            <a href="{{url('/index/mycourse/mycourse')}}" style="width:70px" class="link2 he ico" target="_blank">个人中心</a>
+            <a href="{{url('/index/mycourse/mycourse')}}" style="width:70px" class="link2 he ico">个人中心</a>
           @elseif($name == "index")
             <a href="{{url('/index/mycourse/mycourse')}}"  onMouseOver="logmine()" style="width:70px" class="link2 he ico">sherley</a>
             <span id="lne" style="display:none" onMouseOut="logclose()" onMouseOver="logmine()">
@@ -115,35 +115,19 @@
       </div>
     </div>
 </div>
-<!--右侧浮动-->
-<div class="rmbar">
-  <span class="barico qq" style="position:relative">
-  <div  class="showqq">
-     <p>官方客服QQ:<br>335049335</p>
-  </div>
-  </span>
-  <span class="barico em" style="position:relative">
-    <img src="../../../../../static/index/images/num.png" width="75" class="showem">
-  </span>
-  <span class="barico wb" style="position:relative">
-    <img src="../../../../../static/index/images/wb.png" width="75" class="showwb">
-  </span> 
-  <span class="barico top" id="top">置顶</span> 
-</div>
-
 
 <!--右侧浮动-->
 <div class="rmbar">
     <span class="barico qq" style="position:relative">
     <div  class="showqq">
-       <p>官方客服QQ:<br>335049335</p>
+       <p>官方客服QQ:<br>2382662404</p>
     </div>
-    </span>
+    </span><!--/../../../../../static/index/images/mmqrcode1585737410500.png -->
     <span class="barico em" style="position:relative">
-      <img src="../../../../static/index/images/num.png" width="75" class="showem">
+      <img src="../../../../static/index/images/IMG_20201109_164403.jpg" width="75" class="showem">
     </span>
     <span class="barico wb" style="position:relative">
-      <img src="../../../../static/index/images/wb.png" width="75" class="showwb">
+      <img src="../../../../static/index/images/weibo.gif" width="75" class="showwb">
     </span> 
     <span class="barico top" id="top">置顶</span> 
 </div>
@@ -180,7 +164,6 @@ function logclose(){
         600);
     });
     $(".nag").click(function(){
-      alert("dfj");
         $(".nag").find("li").find("a").css("link1 current");
     });
 </script>
