@@ -10,6 +10,7 @@
         <li><a href="{{url('/index/page/help_center')}}" >帮助中心<b></b></a></li>
         <li><a href="{{url('/index/page/feedback')}}" >意见反馈<b></b></a></li>
         <li class="curr" style="border-radius:0 0 3px 3px "><a href="{{url('/index/page/joinus')}}" >加入我们<b></b></a></li>
+        
     </ul>
     </div>
     <div class="courseright pageright" style="min-height:500px;">

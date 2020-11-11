@@ -35,13 +35,8 @@ $(function(){
 		<li><a class="mb12" href="{{url('/index/mycourse/mycourse')}}">我的作业</a></li>
         <li><a class="mb2" href="{{url('/index/mycourse/mycourse')}}" target="_blank">我的题库</a></li>
    </ul>
-   
     </div>
-
-    
   </div>
-
-
 	<div class="membcont">
 <h3 class="mem-h3">我的课程</h3>
 <div class="box demo2" style="width:820px;">
