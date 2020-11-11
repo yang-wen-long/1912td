@@ -10,7 +10,7 @@ class RegController extends Controller
     //注册
     public function reg(){
         $nav = $this->nav();
-    	return view("user.reg");
+    	return view("user.reg",["nav"=>$nav]);
     }
     public function reg_do(){
         $data=request()->all();
