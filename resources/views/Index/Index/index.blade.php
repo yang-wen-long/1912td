@@ -19,8 +19,6 @@ function nTabs(thisObj,Num){
         }
         } 
 }
-
-
 </script>
 <div class="content">
 <div class="fullwidthbanner-container">

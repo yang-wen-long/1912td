@@ -25,8 +25,6 @@
 <!-- InstanceEndEditable -->
 
 <!-- <script src="../../../../../jquery.js"></script> -->
-
-
 <script type="text/javascript" src="../../../../../static/index/js/rev-setting-1.js"></script>
 <script type="text/javascript" src="../../../static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../../../../../static/index/css/main.css" id="main-css">

@@ -15,6 +15,7 @@ class IndexController extends Controller
         $a=$silde[0];
         $b=$silde[1];
         $c=$silde[2];
+
     	return view("Index.index.index",['a'=>$a,'b'=>$b,'c'=>$c]);
     }
 }
