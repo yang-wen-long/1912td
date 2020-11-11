@@ -11,17 +11,17 @@
 	<h3 class="righttit">全部资讯</h3>
     <div class="clearh"></div>
     <span class="bread nob">
-        <a class="fombtn cur" href="articlelist.html">全部资讯</a>
-        <a class="fombtn" href="articlelist.html">热门资讯</a>
-        <a class="fombtn" href="articlelist.html">考试指导</a>
-        <a class="fombtn" href="articlelist.html">精彩活动</a>
+        <a class="fombtn cur" href="{{url('/index/article/articlelist')}}">全部资讯</a>
+        <a class="fombtn" href="{{url('/index/article/articlelist')}}">热门资讯</a>
+        <a class="fombtn" href="{{url('/index/article/articlelist')}}">考试指导</a>
+        <a class="fombtn" href="{{url('/index/article/articlelist')}}">精彩活动</a>
     </span>
     
 </div>
 <div class="clearh"></div>
 <div class="coursetext">
 	<div class="articlelist">
-    	<h3><a class="artlink" href="article.html">2015年第一季度山西省会计从业资格考务日程安排</a></h3>
+    	<h3><a class="artlink" href="{{url('/index/article/article')}}">2015年第一季度山西省会计从业资格考务日程安排</a></h3>
         <p>2015年第一季度山西省会计从业资格考务日程安排已公布，望各位同学周知。 按照《山西省财政厅关于印发会计从业资格无纸化考试管理规定的通知》(晋财会【2014】5号)，现将我省2015年一季度会计从业资格考试考务安排如下。 一、考试时间： 1、网上报名时间：3月2...</p>
         <p class="artilabel">
         <span class="ask_label">热门资讯</span>

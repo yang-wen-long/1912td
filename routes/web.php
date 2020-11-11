@@ -16,11 +16,18 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	//登录LoginController
 	Route::any('/user/login',"Index\LoginController@login");
 
+	//忘记密码
+	Route::any('/user/myrepassword',"Index\LoginController@myrepassword");
+
 	//注册
 	Route::any('/user/reg',"Index\RegController@reg");
 
-	//我的详情
+	//我的首页
 	Route::any('/mycourse/mycourse',"Index\MycouController@mycourse"); 
+
+	//我的详情
+	Route::any('/mycourse/details',"Index\MycouController@details"); 
+	
 
 	//课程首页
 	Route::any('/course/courselist',"Index\CourselistController@courselist")->name("courselist");
@@ -37,7 +44,7 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	//资讯
 	Route::any('/article/articlelist',"Index\ArtiController@articlelist")->name("articlelist");
 
-	//资讯性情
+	//资讯详情
 	Route::any('/article/article',"Index\ArtiController@article")->name("article");
 	
 	//讲师
@@ -46,9 +53,21 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	//讲师详情
 	Route::any('/teacher/teacher',"Index\TeacherController@teacher");
 
+	//题库
+	Route::any('/question/bank',"Index\BankController@bank")->name("articlelist");
+
 	//关于我们
 	Route::any('/page/page',"Index\PageController@Page");
-	
+
 	//联系我们
 	Route::any('/page/page_contact',"Index\PageController@page_contact");
+
+	//帮助中心
+	Route::any('/page/help_center',"Index\PageController@help_center");
+
+	//反馈意见
+	Route::any('/page/feedback',"Index\PageController@feedback");
+
+	//加入我们
+	Route::any('/page/joinus',"Index\PageController@joinus");
 });

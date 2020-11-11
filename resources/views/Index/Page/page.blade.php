@@ -7,9 +7,9 @@
     <ul class="courseul pageul">
         <li class="curr" style="border-radius:3px 3px 0 0"><a href="{{url('/index/page/page')}}">关于我们<b></b></a></li>
         <li><a href="{{url('/index/page/page_contact')}}" >联系我们<b></b></a></li>
-        <li><a href="#" >帮助中心<b></b></a></li>
-        <li><a href="#" >意见反馈<b></b></a></li>
-        <li style="border-radius:0 0 3px 3px "><a href="#" >加入我们<b></b></a></li>
+        <li><a href="{{url('/index/page/help_center')}}" >帮助中心<b></b></a></li>
+        <li><a href="{{url('/index/page/feedback')}}" >意见反馈<b></b></a></li>
+        <li style="border-radius:0 0 3px 3px "><a href="{{url('/index/page/joinus')}}" >加入我们<b></b></a></li>
     </ul>
     </div>
     <div class="courseright pageright" style="min-height:500px;">

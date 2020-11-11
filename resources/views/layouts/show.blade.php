@@ -24,15 +24,12 @@
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 
+<!-- <script src="../../../../../jquery.js"></script> -->
 
 
-
-
-<script src="../../../../../jquery.js"></script>
 <script type="text/javascript" src="../../../../../static/index/js/rev-setting-1.js"></script>
 <script type="text/javascript" src="../../../static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../../../../../static/index/css/main.css" id="main-css">
-
 </head>
 
 <body>
@@ -44,7 +41,7 @@
           <li><a href="{{url('/index/course/courselist')}}" class="link1 current">课程</a></li>
             <li><a href="{{url('/index/article/articlelist')}}" class="link1">资讯</a></li>
             <li><a href="{{url('/index/teacher/teacherlist')}}" class="link1">讲师</a></li>
-            <li><a href="" class="link1">题库</a></li>
+            <li><a href="{{url('/index/question/bank')}}" class="link1">题库</a></li>
             <li><a href="{{url('/index/page/page')}}" class="link1" >关于</a></li>
             
         </ul>
@@ -109,7 +106,7 @@
       </div>
       <div class="fmenu">
        <p><a href="{{url('/index/page/page')}}">关于我们</a> | <a href="{{url('/index/page/page_contact')}}">联系我们</a> | 
-          <a href="{{url('/index/teacher/teacherlist')}}">优秀讲师</a> | <a href="http://www.plaso.cn/?page_id=2484">帮助中心</a> | <a href="http://www.plaso.cn/">意见反馈</a> | 
+          <a href="{{url('/index/teacher/teacherlist')}}">优秀讲师</a> | <a href="{{url('/index/page/help_center')}}">帮助中心</a> | <a href="http://www.plaso.cn/">意见反馈</a> | 
           <a href="http://www.plaso.cn/?page_id=2488&kid=118">加入我们</a></p>
       </div>
       <div class="copyright">
@@ -136,6 +133,52 @@
 
 </body>
 </html>
+  <style>
+    #heage_desc{
+        width:820px;
+        height:1px;
+        background:#6d6d6d;
+        margin-top: 51px;
+    }
+    #heage_asc{
+        background:#ffdd62;
+        font-size:25px;
+        color:#fff;
+        margin-top: 15px;
+        margin-left: 150px;
+        border:1px #cc9e9e solid;
+    }
+    #tables_name{
+        width:710px;
+        height:600px;
+        margin-left:48px;
+         /*border:1px red solid;*/
+    }
+    .user_name{
+        width:290px;
+        height:40px;
+    }
+    .user_desc{
+        width:290px;
+        height:40px;
+        /*onmouseover:red;*/
+    }
+    #p{
+        color:red;
+    }
+    #u_text{
+        width:290px;
+        height:100px; 
+    }
+    #hideuimg{
+      display:none;
+    }
+    #tablesdesc{
+        width:710px;
+        height:400px;
+        margin-left:48px;
+    }
+</style>
 <script>
 function logmine(){
     document.getElementById("lne").style.display="block";

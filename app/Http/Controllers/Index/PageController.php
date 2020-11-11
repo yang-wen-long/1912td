@@ -15,5 +15,16 @@ class PageController extends Controller
     public function page_contact(){
 		return view("Index.Page.page_contact");
     }
-
+    //帮助中心
+    public function help_center(){
+    	return view("Index.Page.help_center");
+    }
+    //反馈意见
+    public function feedback(){
+    	return view("Index.Page.feedback");
+    }
+    //加入我们
+    public function joinus(){
+        return view("Index.Page.joinus");
+    }
 }

@@ -1,6 +1,19 @@
 @extends('layouts.show')
 @section('app.name', '课程')
 @section('content')
+<link rel="stylesheet" href="../../../../../static/index/css/register-login.css"/>
+
+<script type="text/javascript">
+$(function(){
+
+  $('.demo2').Tabs({
+    event:'click'
+  });
+  $('.demo3').Tabs({
+    event:'click'
+  });
+});
+</script>
 <div class="coursecont">
 <div class="coursepic1">
    <div class="coursetitle1">
@@ -29,7 +42,7 @@
 	   <span class="courstime1"><p style="border:none;">课程时长<br/><span class="coursxq_num">3小时20分</span></p></span>
    </div>
    <div class="course_xq2">
-      <a class="course_learn" href="video.html">开始学习</a>
+      <a class="course_learn" href="{{url('/index/video/video')}}">开始学习</a>
    </div> 
     <div class="clearh"></div>
 </div>
