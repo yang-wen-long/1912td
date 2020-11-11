@@ -9,10 +9,10 @@ class LoginController extends Controller
 {
     //
     public function login(){
-    	return view("Index.Login.login");
+    	return view("user.login");
     } 
     //修改密码
     public function myrepassword(){
-    	return view("Index.Login.myrepassword");
+    	return view("user.myrepassword");
     }
 }
