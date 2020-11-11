@@ -11,8 +11,8 @@
 |前台首页
 */
 Route::get('/',"Index\IndexController@index")->name("index");
-/*->middleware("auth")*/
-Route::prefix("/index")->group(function(){
+
+Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 
 	//登录LoginController
 	Route::any('/user/login',"Index\LoginController@login");
