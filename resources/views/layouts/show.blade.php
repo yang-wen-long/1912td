@@ -119,7 +119,7 @@
 <div class="rmbar">
     <span class="barico qq" style="position:relative">
     <div  class="showqq">
-       <p>官方客服QQ:<br>2382662404</p>
+       <p>官方客服QQ:<br>448567421</p>
     </div>
     </span><!--/../../../../../static/index/images/mmqrcode1585737410500.png -->
     <span class="barico em" style="position:relative">
