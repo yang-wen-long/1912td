@@ -134,7 +134,7 @@
                         data-start="800"
                         data-easing="easeOutExpo">
                         <h2>
-                            <span  style="font-size:70px;">教育机构专属的&nbsp;&nbsp;&nbsp;在线教学系统</span>
+                            <span  style="font-size:70px;">乐拧教育机构专属的&nbsp;&nbsp;&nbsp;在线教学系统</span>
                             
                         </h2>
                     </div>
@@ -154,7 +154,7 @@
                         data-speed="300"
                         data-start="1200"
                         data-easing="easeOutExpo">
-                        <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">了解情况</a>
+                        <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">快来充钱 </a>
                     </div>
 
                     <div class="tp-caption small-white lfb"
@@ -163,7 +163,7 @@
                         data-speed="1000"
                         data-start="1400"
                         data-easing="easeOutExpo">
-                        <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">立即咨询</a>
+                        <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed"> 充八万 </a>
                     </div>
                 </li>
 
