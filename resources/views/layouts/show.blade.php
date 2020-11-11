@@ -35,13 +35,11 @@
 <div class="head" id="fixed">
   <div class="nav">
       <span class="navimg"><a href="{{url('/')}}"><img border="0" src="../../../../../static/index/images/logo.png"></a></span>
-        <ul class="nag">
-          <li><a href="{{url('/index/course/courselist')}}" class="link1 current">课程</a></li>
-            <li><a href="{{url('/index/information/informationlist')}}" class="link1">资讯</a></li>
-            <li><a href="{{url('/index/teacher/teacherlist')}}" class="link1">讲师</a></li>
-            <li><a href="{{url('/index/question/bank')}}" class="link1">题库</a></li>
-            <li><a href="{{url('/index/page/page')}}" class="link1" >关于</a></li>
-            
+        <ul class="nag" id="hidedesc">
+          <!-- current -->
+            @foreach($nav as $k=>$a)
+            <li><a href="{{$a->nav_url}}" class="link1 ">{{$a->nav_name}}</a></li>
+            @endforeach
         </ul>
         <span class="massage">
             <!--<span class="select">

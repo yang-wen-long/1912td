@@ -9,10 +9,12 @@ class TeacherController extends Controller
 {
     //教师
     public function teacherlist(){
-    	return view("Index.Teacher.teacherlist");
+    	 $nav = $this->nav();
+    	return view("Index.Teacher.teacherlist",["nav"=>$nav]);
     }
     //讲师详情
     public function teacher(){
-    	return view("Index.Teacher.teacher");
+    	 $nav = $this->nav();
+    	return view("Index.Teacher.teacher",["nav"=>$nav]);
     }
 }
