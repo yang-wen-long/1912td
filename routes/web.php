@@ -11,7 +11,6 @@
 |前台首页
 */
 Route::get('/',"Index\IndexController@index")->name("index");
-
 Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 
 	//登录LoginController
