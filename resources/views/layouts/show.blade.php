@@ -5,7 +5,7 @@
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>{{config('app.name', 'Laravel') }}</title>
 @php $name = Route::currentRouteName();@endphp
-@if(!$name == "articlelist" || $name=="courselist")
+@if(!$name == "informationlist" || $name=="courselist")
 <link rel="stylesheet" href="../../../../../static/index/css/course.css"/>
 <link rel="stylesheet" href="../../../../../static/index/css/tab.css" media="screen">
 <script src="../../../../../static/index/js/jquery-1.8.0.min.js"></script>
@@ -39,7 +39,7 @@
       <span class="navimg"><a href="{{url('/')}}"><img border="0" src="../../../../../static/index/images/logo.png"></a></span>
         <ul class="nag">
           <li><a href="{{url('/index/course/courselist')}}" class="link1 current">课程</a></li>
-            <li><a href="{{url('/index/article/articlelist')}}" class="link1">资讯</a></li>
+            <li><a href="{{url('/index/information/informationlist')}}" class="link1">资讯</a></li>
             <li><a href="{{url('/index/teacher/teacherlist')}}" class="link1">讲师</a></li>
             <li><a href="{{url('/index/question/bank')}}" class="link1">题库</a></li>
             <li><a href="{{url('/index/page/page')}}" class="link1" >关于</a></li>
