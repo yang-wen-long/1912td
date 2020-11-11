@@ -9,10 +9,12 @@ class LoginController extends Controller
 {
     //
     public function login(){
-    	return view("user.login");
+    	$nav = $this->nav();
+    	return view("user.login",["nav"=>$nav]);
     } 
     //修改密码
     public function myrepassword(){
-    	return view("user.myrepassword");
+    	$nav = $this->nav();
+    	return view("user.myrepassword",["nav"=>$nav]);
     }
 }

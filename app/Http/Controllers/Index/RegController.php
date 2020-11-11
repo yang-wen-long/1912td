@@ -9,8 +9,7 @@ class RegController extends Controller
 {
     //注册
     public function reg(){
-    	
-
+        $nav = $this->nav();
     	return view("user.reg");
     }
     public function reg_do(){

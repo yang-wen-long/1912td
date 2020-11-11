@@ -74,4 +74,7 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 
 	//加入我们
 	Route::any('/page/joinus',"Index\PageController@joinus");
+
+	//调用导航栏数据
+	Route::any('/navigation',"Index\IndexController@navigation");
 });
