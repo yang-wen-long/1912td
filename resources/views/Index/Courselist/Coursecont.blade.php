@@ -94,14 +94,12 @@
     <div class="cr1">
     <h3 class="righttit">课程公告</h3>
     <div class="gonggao">
+    @foreach($name as $k=>$a)
 	<div class="clearh"></div>
-    <p>人所缺乏的不是才干而是志向，不是成功的能力而是勤劳的意志。<br/>
-	<span class="gonggao_time">2014-12-12 15:01</span>
+    <p>{{$a->notice}}<br/>
+	<span class="gonggao_time">{{date("Y-m-d H:i:s",$a->create_time)}}</span>
 	</p>
-	<div class="clearh"></div>
-	<p>请学习的同学在每节课学习后务必做完当节课的测试！<br/>
-	<span class="gonggao_time">2014-12-12 15:01</span>
-	</p>
+    @endforeach
 	<div class="clearh"></div>
     </div>
     </div>

@@ -25,8 +25,6 @@
 <!-- InstanceEndEditable -->
 
 <!-- <script src="../../../../../jquery.js"></script> -->
-
-
 <script type="text/javascript" src="../../../../../static/index/js/rev-setting-1.js"></script>
 <script type="text/javascript" src="../../../static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../../../../../static/index/css/main.css" id="main-css">
@@ -119,7 +117,7 @@
 <div class="rmbar">
     <span class="barico qq" style="position:relative">
     <div  class="showqq">
-       <p>官方客服QQ:<br>2382662404</p>
+       <p>官方客服QQ:<br>448567421</p>
     </div>
     </span><!--/../../../../../static/index/images/mmqrcode1585737410500.png -->
     <span class="barico em" style="position:relative">
