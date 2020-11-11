@@ -43,10 +43,13 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	Route::any('/video/video',"Index\VideoController@video");
 
 	//资讯
-	Route::any('/article/articlelist',"Index\ArtiController@articlelist")->name("articlelist");
+	Route::any('/information/informationlist',"Index\InformationController@informationlist")->name("informationlist");
 
 	//资讯详情
-	Route::any('/article/article',"Index\ArtiController@article")->name("article");
+	Route::any('/information/information',"Index\InformationController@information")->name("information");
+
+	//热门资讯
+	Route::any('/information/informationhot',"Index\InformationController@informationhot")->name("informationhot");;
 	
 	//讲师
 	Route::any('/teacher/teacherlist',"Index\TeacherController@teacherlist");
@@ -55,7 +58,7 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	Route::any('/teacher/teacher',"Index\TeacherController@teacher");
 
 	//题库
-	Route::any('/question/bank',"Index\BankController@bank")->name("articlelist");
+	Route::any('/question/bank',"Index\BankController@bank")->name("informationlist");
 
 	//关于我们
 	Route::any('/page/page',"Index\PageController@Page");

@@ -24,11 +24,11 @@ function nTabs(thisObj,Num){
 </script>
 <div class="content">
 <div class="fullwidthbanner-container">
-        <div id="revolution-slider" style="max-height:850px !important; background:#46B0AC">
+        <div id="revolution-slider" style="max-height:850px !important; ">
             <ul>
                  <li data-transition="fade" data-slotamount="10" data-masterspeed="400" data-thumb="../../../../../../uploads/banner2.jpg">
                     <!--  BACKGROUND IMAGE -->
-                    <img src="../../../../../../uploads/banner2.jpg" alt="" rotateMatrix.setRotate(-10, rotate); />
+                    <img src="{{$a->silde_log}}" alt="" rotateMatrix.setRotate(-10, rotate); />
                     <!-- ../../../../static/index/images-slider/wide2.jpg -->
                     <!-- ../../../../static/index/images-slider/thumbs/thumb1.jpg -->
                     <!-- THE CAPTIONS IN THIS SLIDE -->
@@ -79,9 +79,10 @@ function nTabs(thisObj,Num){
                         <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">立即咨询</a>
                     </div>
                 </li>
+
                  <li data-transition="fade" data-slotamount="10" data-masterspeed="300" data-thumb="../../../../static/index/images-slider/thumbs/thumb1.jpg">
                     <!--  BACKGROUND IMAGE -->
-                    <img src="../../../../../../uploads/banner1.jpg" alt="" />
+                    <img src="{{$b->silde_log}}" alt="" />
 
                     <!-- THE CAPTIONS IN THIS SLIDE -->
                     <div class="tp-caption sfl"
@@ -132,6 +133,61 @@ function nTabs(thisObj,Num){
                         <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">立即咨询</a>
                     </div>
                 </li>
+
+                <li data-transition="fade" data-slotamount="10" data-masterspeed="300" data-thumb="../../../../static/index/images-slider/thumbs/thumb1.jpg">
+                    <!--  BACKGROUND IMAGE -->
+                    <img src="{{$c->silde_log}}" alt="" />
+
+                    <!-- THE CAPTIONS IN THIS SLIDE -->
+                    <div class="tp-caption sfl"
+                        data-x="-130"
+                        data-y="190"
+                        data-speed="300"
+                        data-start="300"
+                        data-easing="easeOutBack">
+                        <!-- <img src="../../../../static/index/images-slider/rb.png" alt=""> -->
+                    </div>
+
+                    <div class="caption sfb"
+                        data-x="10"
+                        data-y="300"
+                        data-speed="300"
+                        data-start="800"
+                        data-easing="easeOutExpo">
+                        <h2>
+                            <span  style="font-size:70px;">乐拧教育机构专属的&nbsp;&nbsp;&nbsp;在线教学系统</span>
+                            
+                        </h2>
+                    </div>
+
+                    <div class="tp-caption med-white sfl"
+                        data-x="120"
+                        data-y="400"
+                        data-speed="300"
+                        data-start="1000"
+                        data-easing="easeOutExpo" style="font-size:40px;">
+                        <span>开通账号即可使用&nbsp;&nbsp;&nbsp;满足多种线上教学场景</span>
+                    </div>
+
+                    <div class="tp-caption small-white sfr"
+                        data-x="300"
+                        data-y="500"
+                        data-speed="300"
+                        data-start="1200"
+                        data-easing="easeOutExpo">
+                        <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">快来充钱 </a>
+                    </div>
+
+                    <div class="tp-caption small-white lfb"
+                        data-x="600"
+                        data-y="500"
+                        data-speed="1000"
+                        data-start="1400"
+                        data-easing="easeOutExpo">
+                        <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed"> 充八万 </a>
+                    </div>
+                </li>
+
             </ul>
         </div>
 </div>
@@ -152,8 +208,7 @@ function nTabs(thisObj,Num){
         <span class="tdimg1"><img src="../../../../static/index/images/ico5.jpg" width="500"></span>
         <span class="tdtext1">
             <h3 class="co1">智能评估题库</h3>
-            <p>智能能力评估，学员可以通过具体题目，匹配相
-关知识点,文字解析与视频解析相结合。</p><br/>
+            <p>智能能力评估，学员可以通过具体题目，匹配相关知识点,文字解析与视频解析相结合。</p><br/>
             <p><a href="training.html" class="btninto">点击测评</a></p>
         </span>
         <div style="clear:both"></div>
@@ -164,8 +219,7 @@ function nTabs(thisObj,Num){
         <span class="tdimg" style="margin-top:80px"><img src="../../../../static/index/images/ico6.jpg" width="550"></span>
         <span class="tdtext" style="margin-top:120px">
             <h3 class="co2">智能匹配练习</h3>
-            <p class="tex1">跟随视频课程同步练习，紧扣重点难
-点，点点精通。</p><br/>
+            <p class="tex1">跟随视频课程同步练习，紧扣重点难点，点点精通。</p><br/>
             <p><a href="training.html" class="btninto">开始练习</a></p>
         </span>
         <div style="clear:both"></div>
