@@ -245,7 +245,7 @@ function nTabs(thisObj,Num){
         <ul id="myTab3">
             @foreach($course_category as $k=>$a)
             <!-- class="current"  -->
-            <li onClick="nTabs(this,3);">{{$a->cate_name}}</li>
+            <li  class="points">{{$a->cate_name}}</li>
             @endforeach
         </ul>
         <div class="clearh"></div>
@@ -254,11 +254,13 @@ function nTabs(thisObj,Num){
             @foreach($data as $k=>$a)
             <li>
                 <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
+                <a href="{{url('/index/course/coursecont/'.$a->cou_id)}}">
+                    <img width="263" style="border-radius:3px 3px 0 0;" src="{{$a->cou_img}}" >
+                </a>
                 <p class="courTit">{{$a->cou_name}}</p>
                 <div class="gray">
                 <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
+                <span class="sp1">{{$a->lll}}人学习</span>
                 <div style="clear:both"></div>
                 </div>
                 </div>
@@ -354,7 +356,9 @@ function nTabs(thisObj,Num){
 <span class="morecourse"><a href="{{url('/index/course/courselist')}}" class="btnlink">更多课程</a></span>
 <script>
     $(document).ready(function(){
-        alert("dfkjh");
+        $(".points").click(function(){
+            alert("dfjh");
+        });
     });
 </script>
 
