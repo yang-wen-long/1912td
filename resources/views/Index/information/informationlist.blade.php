@@ -34,9 +34,9 @@
 	<span class="pagejump">
     	<p class="userpager-list">
        	   <a href="#" class="page-number">首页</a>
-           <a href="#" class="page-number">上一页</a>
-           <a href="#" class="page-number">1</a>
-           <a href="#" class="page-number pageractive">2</a>
+           <a href="#" class="page-number ">上一页</a>
+           <a href="#" class="page-number pageractive">1</a>
+           <a href="#" class="page-number ">2</a>
            <a href="#" class="page-number">3</a>
             <a href="#" class="page-number">...</a>
             <a href="#" class="page-number">10</a>
@@ -53,7 +53,7 @@
     <div class="gonggao">
 	<ul class="informationhot">
             @foreach($hot as $v)
-            <li><a class="ask_link" href="#"><strong>●</strong>{{$v['infor_title']}} </a></li>
+            <li><a class="ask_link" href="informationhot"><strong>●</strong>{{$v['infor_title']}} </a></li>
             @endforeach  
             
         </ul>
