@@ -16,7 +16,7 @@ class CourselistController extends Controller
     //课程目录
     public function coursecont(){
         $nav = $this->nav();
-        $name = DB::table("course_notice")->where("notice_del","1")->limit("2")->get();
+        $name = DB::table("course_notice")->where("notice_del","1")->limit("3")->get();
     	return view("Index.Courselist.Coursecont",["name"=>$name,"nav"=>$nav]);
     }
     //课程详情页
