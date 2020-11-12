@@ -25,7 +25,7 @@
         <p>{{$v['infor_content']}}</p>
         <p class="artilabel">
         <span class="ask_label">热门资讯</span>
-        <b class="labtime">{{$v['infor_time']}}</b>
+        <b class="labtime">{{date('Y-m-d H:i:s',$v['infor_time'])}}</b>
         </p>
         <div class="clearh"></div>
         @endforeach
@@ -33,15 +33,8 @@
 	<div class="clearh" style="height:20px;"></div>
 	<span class="pagejump">
     	<p class="userpager-list">
-       	   <a href="#" class="page-number">首页</a>
-           <a href="#" class="page-number ">上一页</a>
+       	  
            <a href="#" class="page-number pageractive">1</a>
-           <a href="#" class="page-number ">2</a>
-           <a href="#" class="page-number">3</a>
-            <a href="#" class="page-number">...</a>
-            <a href="#" class="page-number">10</a>
-           <a href="#" class="page-number">下一页</a>
-           <a href="#" class="page-number">末页</a>
         </p>
     </span>
     <div class="clearh" style="height:10px;"></div>
