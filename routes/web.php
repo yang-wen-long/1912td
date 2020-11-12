@@ -32,13 +32,13 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	
 
 	//课程首页
-	Route::any('/course/courselist',"Index\CourselistController@courselist")->name("courselist");
+	Route::any('/course/course',"Index\CourseController@course")->name("course");
 
 	//课程目录
-	Route::any('/course/coursecont',"Index\CourselistController@coursecont");
+	Route::any('/course/coursecont',"Index\CourseController@coursecont");
 
 	//课程详情
-	Route::any('/course/coursecont1',"Index\CourselistController@coursecont1");
+	Route::any('/course/detail/{cou_id}',"Index\CourseController@detail");
 
 	//课程视频
 	Route::any('/video/video',"Index\VideoController@video");
