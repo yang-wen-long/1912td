@@ -38,7 +38,7 @@
         <ul class="nag" id="hidedesc">
           <!-- current -->
             @foreach($nav as $k=>$a)
-            <li><a href="{{$a->nav_url}}" class="link1 ">{{$a->nav_name}}</a></li>
+            <li><a href="{{$a->nav_url}}" class="link1">{{$a->nav_name}}</a></li>
             @endforeach
         </ul>
         <span class="massage">
