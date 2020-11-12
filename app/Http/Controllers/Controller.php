@@ -16,14 +16,19 @@ class Controller extends BaseController
     	return $name;
     }
     //无限极分类
-    public function  createTree($data,$pid=0){
-	    static $new_arr=[];
-	    foreach ($data as $k => $v) {
-	        if ($v['pid']==$pid) {
-	            $new_arr[]=$v;
-	            createTree($data,$v['p_id']);
-	        }
-	    }
-	    return $new_arr;
-	}
+    public function CreateTree($data,$parents_id=0,$level=1){
+        if(!$data){
+            return ;
+        }
+        static $newarray = [];
+        foreach($data as $k=>$v){
+            if($v->parents_id == $parents_id){
+                $v->level = $level;
+                $newarray[] = $v;
+                //调用自身
+                $this->CreateTree($data,$v->cate_id,$level+1);
+            }
+        }
+        return $newarray;
+    }
 }

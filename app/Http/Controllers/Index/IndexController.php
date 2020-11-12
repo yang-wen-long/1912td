@@ -16,6 +16,13 @@ class IndexController extends Controller
         $a=$silde[0];
         $b=$silde[1];
         $c=$silde[2];
-    	return view("Index.index.index",['a'=>$a,'b'=>$b,'c'=>$c,"nav"=>$nav]);
+        $course_category = DB::table("course_category")->limit('4')->get();
+        $data = DB::table("course")->where("cate_id",$course_category[0]->cate_id)->get();
+        // dd($course_category);
+    	return view("Index.index.index",['a'=>$a,'b'=>$b,'c'=>$c,"nav"=>$nav,"course_category"=>$course_category,"data"=>$data]);
     }
+    //处理业务
+
+
+
 }
