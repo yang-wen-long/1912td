@@ -10,15 +10,10 @@ use \DB;
 class IndexController extends Controller
 {
     //前台首页
-<<<<<<< HEAD
-    public function index(){
+    public function index(){ 
         // 导航栏
         $nav = $this->nav();
-        // 轮播图
-=======
-    public function index(){ 
-    	$nav = $this->nav();
->>>>>>> 015238c756acd50f02e2751caa9ce4bc51f2185e
+        //轮播图
         $silde = SlideModel::get();
         // dd($silde);
         $a=$silde[0];
