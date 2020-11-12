@@ -5,7 +5,7 @@
 <!-- InstanceBeginEditable name="doctitle" -->
 <title>{{config('app.name', 'Laravel') }}</title>
 @php $name = Route::currentRouteName();@endphp
-@if(!$name == "articlelist" || $name=="courselist")
+@if(!$name == "informationlist" || $name=="courselist")
 <link rel="stylesheet" href="../../../../../static/index/css/course.css"/>
 <link rel="stylesheet" href="../../../../../static/index/css/tab.css" media="screen">
 <script src="../../../../../static/index/js/jquery-1.8.0.min.js"></script>
@@ -25,8 +25,6 @@
 <!-- InstanceEndEditable -->
 
 <!-- <script src="../../../../../jquery.js"></script> -->
-
-
 <script type="text/javascript" src="../../../../../static/index/js/rev-setting-1.js"></script>
 <script type="text/javascript" src="../../../static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <link rel="stylesheet" type="text/css" href="../../../../../static/index/css/main.css" id="main-css">
@@ -37,13 +35,11 @@
 <div class="head" id="fixed">
   <div class="nav">
       <span class="navimg"><a href="{{url('/')}}"><img border="0" src="../../../../../static/index/images/logo.png"></a></span>
-        <ul class="nag">
-          <li><a href="{{url('/index/course/courselist')}}" class="link1 current">课程</a></li>
-            <li><a href="{{url('/index/article/articlelist')}}" class="link1">资讯</a></li>
-            <li><a href="{{url('/index/teacher/teacherlist')}}" class="link1">讲师</a></li>
-            <li><a href="{{url('/index/question/bank')}}" class="link1">题库</a></li>
-            <li><a href="{{url('/index/page/page')}}" class="link1" >关于</a></li>
-            
+        <ul class="nag" id="hidedesc">
+          <!-- current -->
+            @foreach($nav as $k=>$a)
+            <li><a href="{{$a->nav_url}}" class="link1 ">{{$a->nav_name}}</a></li>
+            @endforeach
         </ul>
         <span class="massage">
             <!--<span class="select">
@@ -119,7 +115,7 @@
 <div class="rmbar">
     <span class="barico qq" style="position:relative">
     <div  class="showqq">
-       <p>官方客服QQ:<br>2382662404</p>
+       <p>官方客服QQ:<br>448567421</p>
     </div>
     </span><!--/../../../../../static/index/images/mmqrcode1585737410500.png -->
     <span class="barico em" style="position:relative">

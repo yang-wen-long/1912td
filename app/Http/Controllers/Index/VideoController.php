@@ -9,6 +9,7 @@ class VideoController extends Controller
 {
     //视频
     public function video(){
-    	return view("Index.Video.video");
+    	$nav = $this->nav();
+    	return view("Index.Video.video",["nav"=>$nav]);
     }
 }

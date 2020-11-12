@@ -9,6 +9,7 @@ class BankController extends Controller
 {
     //
     public function bank(){
-    	return view("Index.Bank.bank");
+    	$nav = $this->nav();
+    	return view("Index.Bank.bank",["nav"=>$nav]);
     }
 }
