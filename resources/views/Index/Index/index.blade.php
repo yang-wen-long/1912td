@@ -239,22 +239,23 @@ function nTabs(thisObj,Num){
 
 <div class="course">
     <h2 style="text-align:center; font-weight:normal; font-size:34px">精品课程</h2>
-    <div class="clearh" style="height:20px;"></div>
+    <div class="clIT技能earh" style="height:20px;"></div>
     
     <div>
         <ul id="myTab3">
-            <li class="current" onClick="nTabs(this,0);">IT技能</li>
-            <li class="norma3" onClick="nTabs(this,1);">IT技能</li>
-            <li class="norma3" onClick="nTabs(this,2);">IT技能</li>
-            <li class="norma3" onClick="nTabs(this,3);">IT技能</li>
+            @foreach($course_category as $k=>$a)
+            <!-- class="current"  -->
+            <li onClick="nTabs(this,3);">{{$a->cate_name}}</li>
+            @endforeach
         </ul>
         <div class="clearh"></div>
         <div>
            <ul class="courseul" id="myTab3_Content0" style="display: block;">
+            @foreach($data as $k=>$a)
             <li>
                 <div class="courselist">
                 <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
+                <p class="courTit">{{$a->cou_name}}</p>
                 <div class="gray">
                 <span>1小时前更新</span>
                 <span class="sp1">1255555人学习</span>
@@ -262,110 +263,12 @@ function nTabs(thisObj,Num){
                 </div>
                 </div>
            </li>
-           <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>.
+           @endforeach
            <div class="clearh"></div>
           </ul>               
         </div>
         <div>
            <ul class="courseul" id="myTab3_Content1" style="display: none;">
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>   
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
             <li>
                 <div class="courselist">
                 <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
@@ -446,12 +349,18 @@ function nTabs(thisObj,Num){
            </ul>               
         </div>
     </div>
-    
-    
     <div class="line no"></div>
-    
-    
 </div>
 <span class="morecourse"><a href="{{url('/index/course/courselist')}}" class="btnlink">更多课程</a></span>
+<script>
+    $(document).ready(function(){
+        alert("dfkjh");
+    });
+</script>
+
+
+
+
+
 
 @endsection
