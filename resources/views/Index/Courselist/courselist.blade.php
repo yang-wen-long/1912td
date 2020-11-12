@@ -21,6 +21,7 @@
         </ul>
     <div class="clearh"></div>
     </li>
+    
     <li>
     <h4>计算机</h4>
         <ul class="sortul">
@@ -35,9 +36,11 @@
     </ul>
     <div style="height:20px;border-radius:0 0 5px 5px; background:#fff;box-shadow:0 2px 4px rgba(0, 0, 0, 0.1)"></div>
     </div>
+    
     <div class="courseright">
         <div class="clearh"></div>
       <ul class="courseulr">
+
         <li>
         	<div class="courselist">
             <a href="{{url('/index/course/coursecont')}}" target="_blank"><img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c1.jpg" title="会计基础"></a>
@@ -49,6 +52,7 @@
             </div>
             </div>
        </li>
+       
         <li>
         	<div class="courselist">
             <a href="{{url('/index/course/coursecont')}}" target="_blank"><img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c2.jpg" title="会计基础"></a>
@@ -60,6 +64,7 @@
             </div>
             </div>
         </li>
+
         <li>
         	<div class="courselist">
             <a href="{{url('/index/course/coursecont')}}" target="_blank"><img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c3.jpg" title="会计基础"></a>
@@ -71,6 +76,7 @@
             </div>
             </div>
        </li>
+
        <li>
         	<div class="courselist">
             <img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c4.jpg" >
@@ -82,6 +88,7 @@
             </div>
             </div>
        </li>
+
        <li>
         	<div class="courselist">
             <img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c5.jpg" >
@@ -93,6 +100,7 @@
             </div>
             </div>
        </li>
+
        <li>
         	<div class="courselist">
             <img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c6.jpg" >
@@ -104,6 +112,7 @@
             </div>
             </div>
        </li>
+
        <li>
         	<div class="courselist">
             <img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c7.jpg" >
@@ -115,6 +124,7 @@
             </div>
             </div>
        </li>
+
        <li>
         	<div class="courselist">
             <img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c8.jpg" >
@@ -126,6 +136,7 @@
             </div>
             </div>
        </li>
+
        <li>
         	<div class="courselist">
             <img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c9.jpg" >
@@ -137,6 +148,7 @@
             </div>
             </div>
        </li>
+       
     </ul>
     </div>
     <div class="clearh"></div>

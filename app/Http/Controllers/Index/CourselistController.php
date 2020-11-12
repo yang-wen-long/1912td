@@ -4,11 +4,12 @@ namespace App\Http\Controllers\Index;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+
 //课程
-class CourselistController extends Controller
-{
+class CourselistController extends Controller{
     //详情
     public function courselist(){
+        
     	return view("Index.Courselist.Courselist");
     }
     //课程目录
