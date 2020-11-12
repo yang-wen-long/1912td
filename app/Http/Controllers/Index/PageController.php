@@ -14,12 +14,8 @@ class PageController extends Controller{
     }
     //联系我们
     public function page_contact(){
-<<<<<<< HEAD
-		  return view("Index.Page.page_contact");
-=======
         $nav = $this->nav();
 		return view("Index.Page.page_contact",["nav"=>$nav]);
->>>>>>> 986333ce1b91661f05d28aa41d5962f17946de2b
     }
     //帮助中心
     public function help_center(){
