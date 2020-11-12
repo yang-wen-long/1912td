@@ -6,7 +6,7 @@
     <h3 class="righttit" style="padding-left:50px;">优秀讲师</h3>
 	<div class="coursepic tecti">
 		<div class="teaimg">
-		<a href="{{url('/index/teacher/teacher')}}" target="_blank"><img src="../../../../../static/index/images//teacher.jpg" width="150"></a>
+		<a href="{{url('/index/teacher/teacher')}}" target="_blank"><img src="/static/index/images/teacher.jpg" width="150"></a>
 		</div>
 		<div class="teachtext">
 			<h3><a href="{{url('/index/teacher/teacher')}}" target="_blank" class="teatt">马嫱</a>&nbsp;&nbsp;<strong>会计基础、会计电算化讲师</strong></h3>
@@ -19,7 +19,7 @@
 	</div>
 	<div class="coursepic tecti">
 		<div class="teaimg">
-		<a href="{{url('/index/teacher/teacher')}}" target="_blank"><img src="../../../../../static/index/images//teacher.jpg" width="150"></a>
+		<a href="{{url('/index/teacher/teacher')}}" target="_blank"><img src="/static/index/images/teacher.jpg" width="150"></a>
 		</div>
 		<div class="teachtext">
 			<h3><a href="{{url('/index/teacher/teacher')}}" target="_blank" class="teatt">马嫱</a>&nbsp;&nbsp;<strong>会计基础、会计电算化讲师</strong></h3>
@@ -32,7 +32,7 @@
 	</div>
 	<div class="coursepic tecti">
 		<div class="teaimg">
-		<a href="{{url('/index/teacher/teacher')}}" target="_blank"><img src="../../../../../static/index/images//teacher.jpg" width="150"></a>
+		<a href="{{url('/index/teacher/teacher')}}" target="_blank"><img src="/static/index/images/teacher.jpg" width="150"></a>
 		</div>
 		<div class="teachtext">
 			<h3><a href="{{url('/index/teacher/teacher')}}" target="_blank" class="teatt">马嫱</a>&nbsp;&nbsp;<strong>会计基础、会计电算化讲师</strong></h3>

@@ -10,7 +10,7 @@ use \DB;
 class IndexController extends Controller
 {
     //前台首页
-    public function index(){
+    public function index(){ 
     	$nav = $this->nav();
         $silde = SlideModel::get();
         $a=$silde[0];

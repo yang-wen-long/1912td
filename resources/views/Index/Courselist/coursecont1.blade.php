@@ -1,7 +1,7 @@
 @extends('layouts.show')
 @section('app.name', '课程')
 @section('content')
-<link rel="stylesheet" href="../../../../../static/index/css/register-login.css"/>
+<link rel="stylesheet" href="/static/index/css/register-login.css"/>
 
 <script type="text/javascript">
 $(function(){
@@ -34,7 +34,7 @@ $(function(){
 		</div>
    </div>
    <div class="course_img1">
-	   <img src="../../../../../static/index/images/c1.jpg" height="140">	   
+	   <img src="/static/index/images/c1.jpg" height="140">	   
    </div>
    <div class="course_xq">
        <span class="courstime1"><p>课时<br/><span class="coursxq_num">100课时</span></p></span>
@@ -105,14 +105,14 @@ $(function(){
                     </div>
 					<ul class="evalucourse">
                     	<li>
-                        	<span class="pephead"><img src="../../../../../static/index/images/0-0.JPG" width="50" title="候候">
+                        	<span class="pephead"><img src="/static/index/images/0-0.JPG" width="50" title="候候">
                             <p class="pepname">候候候候</p>                           
                             </span>
                             <span class="pepcont"><p>2013年国家公务员考试真题2013年国家公务员考试真题2013年国家公务员考试真题2013试真3年国家公。</p>
                             <p class="peptime pswer">2015-01-02</p></span>
                         </li>
                         <li>
-                        	<span class="pephead"><img src="../../../../../static/index/images/0-0.JPG" width="50" title="候候">
+                        	<span class="pephead"><img src="/static/index/images/0-0.JPG" width="50" title="候候">
                             <p class="pepname">候候15kpiii</p>                           
                             </span>
                             <span class="pepcont"><p>2013年国家公务员考试真题2013年国家公务员考试真题2013年国家公务员考试真题2013年国家公务员考试真题2013年国家公务员考试真题2013年国家公务员考试真题2013年国家公务员考试真题2013年国家公。</p>
@@ -132,7 +132,7 @@ $(function(){
                     </div>
 					<ul class="evalucourse">
                     	<li>
-                        	<span class="pephead"><img src="../../../../../static/index/images/0-0.JPG" width="50" title="候候">
+                        	<span class="pephead"><img src="/static/index/images/0-0.JPG" width="50" title="候候">
 							<p class="pepname">候候</p>                             
                             </span>
                             <span class="pepcont">
@@ -141,7 +141,7 @@ $(function(){
                             </span>
                         </li>
                         <li>
-                        	<span class="pephead"><img src="../../../../../static/index/images/0-0.JPG" width="50" title="候候">
+                        	<span class="pephead"><img src="/static/index/images/0-0.JPG" width="50" title="候候">
 							<p class="pepname">候候</p>                             
                             </span>
                             <span class="pepcont">
@@ -184,7 +184,7 @@ $(function(){
     <h3 class="righttit">授课讲师</h3>
     <div class="teacher">
     <div class="teapic ppi">
-    <a href="teacher.html" target="_blank"><img src="../../../../../static/index/images/teacher.png" width="80" class="teapicy" title="张民智"></a>
+    <a href="teacher.html" target="_blank"><img src="/static/index/images/teacher.png" width="80" class="teapicy" title="张民智"></a>
      <h3 class="tname"><a href="teacher.html" class="peptitle" target="_blank">张民智</a><p style="font-size:14px;color:#666">会计讲师</p></h3>
     </div>
     <div class="clearh"></div>
@@ -198,10 +198,10 @@ $(function(){
     <h3 class="righttit" onclick="reglog_open();">最新学员</h3>
         <div class="teacher zxxy">
         <ul class="stuul">
-            <li><img src="../../../../../static/index/images/0-0.JPG" width="60" title="张三李四"><p class="stuname">张三李四</p></li>
-            <li><img src="../../../../../static/index/images/0-0.JPG" width="60" title="张三李四"><p class="stuname">张三李四</p></li>
-            <li><img src="../../../../../static/index/images/0-0.JPG" width="60" title="张三李四"><p class="stuname">张三李四</p></li>
-            <li><img src="../../../../../static/index/images/0-0.JPG" width="60" title="张三李四"><p class="stuname">张三李四</p></li>
+            <li><img src="/static/index/images/0-0.JPG" width="60" title="张三李四"><p class="stuname">张三李四</p></li>
+            <li><img src="/static/index/images/0-0.JPG" width="60" title="张三李四"><p class="stuname">张三李四</p></li>
+            <li><img src="/static/index/images/0-0.JPG" width="60" title="张三李四"><p class="stuname">张三李四</p></li>
+            <li><img src="/static/index/images/0-0.JPG" width="60" title="张三李四"><p class="stuname">张三李四</p></li>
         </ul>
         <div class="clearh"></div>
         </div>
@@ -213,17 +213,17 @@ $(function(){
     <h3 class="righttit">相关课程</h3>
     <div class="teacher">
     <div class="teapic">
-        <a href="#"  target="_blank"><img src="../../../../../static/index/images/c1.jpg" height="60" title="财经法规与财经职业道德"></a>
+        <a href="#"  target="_blank"><img src="/static/index/images/c1.jpg" height="60" title="财经法规与财经职业道德"></a>
         <h3 class="courh3"><a href="#" class="peptitle" target="_blank">财经法规与财经职业道德</a></h3>
     </div>
     <div class="clearh"></div>
     <div class="teapic">
-        <a href="#"  target="_blank"><img src="../../../../../static/index/images/c2.jpg" height="60" title="财经法规与财经职业道德"></a>
+        <a href="#"  target="_blank"><img src="/static/index/images/c2.jpg" height="60" title="财经法规与财经职业道德"></a>
         <h3 class="courh3"><a href="#" class="peptitle" target="_blank">财经法规与财经职业道德</a></h3>
     </div>
     <div class="clearh"></div>
     <div class="teapic">
-        <a href="#"  target="_blank"><img src="../../../../../static/index/images/c3.jpg" height="60" title="财经法规与财经职业道德"></a>
+        <a href="#"  target="_blank"><img src="/static/index/images/c3.jpg" height="60" title="财经法规与财经职业道德"></a>
         <h3 class="courh3"><a href="#" class="peptitle" target="_blank">财经法规与财经职业道德</a></h3>
     </div>
     <div class="clearh"></div>

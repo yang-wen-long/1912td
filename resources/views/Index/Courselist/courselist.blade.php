@@ -40,7 +40,7 @@
       <ul class="courseulr">
         <li>
         	<div class="courselist">
-            <a href="{{url('/index/course/coursecont')}}" target="_blank"><img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c1.jpg" title="会计基础"></a>
+            <a href="{{url('/index/course/coursecont')}}" target="_blank"><img style="border-radius:3px 3px 0 0;" width="240" src="/static/index/images/c1.jpg" title="会计基础"></a>
             <p class="courTit"><a href="{{url('/index/course/coursecont')}}" target="_blank">会计基础</a></p>
             <div class="gray">
             <span>30课时 600分钟</span>
@@ -51,7 +51,7 @@
        </li>
         <li>
         	<div class="courselist">
-            <a href="{{url('/index/course/coursecont')}}" target="_blank"><img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c2.jpg" title="会计基础"></a>
+            <a href="{{url('/index/course/coursecont')}}" target="_blank"><img style="border-radius:3px 3px 0 0;" width="240" src="/static/index/images/c2.jpg" title="会计基础"></a>
             <p class="courTit"><a href="{{url('/index/course/coursecont')}}" target="_blank">HTTP下载课程</a></p>
             <div class="gray">
             <span>5课时 60分钟</span>
@@ -62,7 +62,7 @@
         </li>
         <li>
         	<div class="courselist">
-            <a href="{{url('/index/course/coursecont')}}" target="_blank"><img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c3.jpg" title="会计基础"></a>
+            <a href="{{url('/index/course/coursecont')}}" target="_blank"><img style="border-radius:3px 3px 0 0;" width="240" src="/static/index/images/c3.jpg" title="会计基础"></a>
             <p class="courTit"><a href="{{url('/index/course/coursecont')}}" target="_blank">HTTP下载课程</a></p>
             <div class="gray">
             <span>5课时 60分钟</span>
@@ -73,7 +73,7 @@
        </li>
        <li>
         	<div class="courselist">
-            <img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c4.jpg" >
+            <img style="border-radius:3px 3px 0 0;" width="240" src="/static/index/images/c4.jpg" >
             <p class="courTit">HTTP下载课程</p>
             <div class="gray">
             <span>5课时 60分钟</span>
@@ -84,7 +84,7 @@
        </li>
        <li>
         	<div class="courselist">
-            <img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c5.jpg" >
+            <img style="border-radius:3px 3px 0 0;" width="240" src="/static/index/images/c5.jpg" >
             <p class="courTit">HTTP下载课程</p>
             <div class="gray">
             <span>5课时 60分钟</span>
@@ -95,7 +95,7 @@
        </li>
        <li>
         	<div class="courselist">
-            <img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c6.jpg" >
+            <img style="border-radius:3px 3px 0 0;" width="240" src="/static/index/images/c6.jpg" >
             <p class="courTit">HTTP下载课程</p>
             <div class="gray">
             <span>5课时 60分钟</span>
@@ -106,7 +106,7 @@
        </li>
        <li>
         	<div class="courselist">
-            <img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c7.jpg" >
+            <img style="border-radius:3px 3px 0 0;" width="240" src="/static/index/images/c7.jpg" >
             <p class="courTit">HTTP下载课程</p>
             <div class="gray">
             <span>5课时 60分钟</span>
@@ -117,7 +117,7 @@
        </li>
        <li>
         	<div class="courselist">
-            <img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c8.jpg" >
+            <img style="border-radius:3px 3px 0 0;" width="240" src="/static/index/images/c8.jpg" >
             <p class="courTit">HTTP下载课程</p>
             <div class="gray">
             <span>5课时 60分钟</span>
@@ -128,7 +128,7 @@
        </li>
        <li>
         	<div class="courselist">
-            <img style="border-radius:3px 3px 0 0;" width="240" src="../../../../../static/index/images/c9.jpg" >
+            <img style="border-radius:3px 3px 0 0;" width="240" src="/static/index/images/c9.jpg" >
             <p class="courTit">HTTP下载课程</p>
             <div class="gray">
             <span>5课时 60分钟</span>

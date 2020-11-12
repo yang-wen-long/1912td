@@ -6,35 +6,35 @@
 <title>{{config('app.name', 'Laravel') }}</title>
 @php $name = Route::currentRouteName();@endphp
 @if(!$name == "informationlist" || $name=="courselist")
-<link rel="stylesheet" href="../../../../../static/index/css/course.css"/>
-<link rel="stylesheet" href="../../../../../static/index/css/tab.css" media="screen">
-<script src="../../../../../static/index/js/jquery-1.8.0.min.js"></script>
-<script src="../../../../../static/index/js/jquery.tabs.js"></script>
-<script src="../../../../../static/index/js/mine.js"></script>
+<link rel="stylesheet" href="/static/index/css/course.css"/>
+<link rel="stylesheet" href="/static/index/css/tab.css" media="screen">
+<script src="/static/index/js/jquery-1.8.0.min.js"></script>
+<script src="/static/index/js/jquery.tabs.js"></script>
+<script src="/static/index/js/mine.js"></script>
 @endif
 @if($name == "index")
-<script src="../../../../static/index/js/jquery-1.8.0.min.js"></script>
-<script type="text/javascript" src="../../../../static/index/js/rev-setting-1.js"></script>
+<script src="/static/index/js/jquery-1.8.0.min.js"></script>
+<script type="text/javascript" src="/static/index/js/rev-setting-1.js"></script>
 <script type="text/javascript" src="../../../static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-<link rel="stylesheet" href="../../../../static/index/css/style.css"/>
-<link rel="stylesheet" href="../../../../static/index/css/tab.css" media="screen">
-<link rel="stylesheet" type="text/css" href="../../../../static/index/css/main.css" id="main-css">
+<link rel="stylesheet" href="/static/index/css/style.css"/>
+<link rel="stylesheet" href="/static/index/css/tab.css" media="screen">
+<link rel="stylesheet" type="text/css" href="/static/index/css/main.css" id="main-css">
 @endif
 <!-- InstanceEndEditable -->
 <!-- InstanceBeginEditable name="head" -->
 <!-- InstanceEndEditable -->
 
 <!-- <script src="../../../../../jquery.js"></script> -->
-<script type="text/javascript" src="../../../../../static/index/js/rev-setting-1.js"></script>
+<script type="text/javascript" src="/static/index/js/rev-setting-1.js"></script>
 <script type="text/javascript" src="../../../static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-<link rel="stylesheet" type="text/css" href="../../../../../static/index/css/main.css" id="main-css">
+<link rel="stylesheet" type="text/css" href="/static/index/css/main.css" id="main-css">
 </head>
 
 <body>
 
 <div class="head" id="fixed">
   <div class="nav">
-      <span class="navimg"><a href="{{url('/')}}"><img border="0" src="../../../../../static/index/images/logo.png"></a></span>
+      <span class="navimg"><a href="{{url('/')}}"><img border="0" src="/static/index/images/logo.png"></a></span>
         <ul class="nag" id="hidedesc">
           <!-- current -->
             @foreach($nav as $k=>$a)
@@ -94,10 +94,10 @@
 <div class="fcontainer">
       <div class="fwxwb"> 
          <div class="fwxwb_1">
-           <span>关注微信</span><img width="95" alt="" src="../../../../static/index/images/IMG_20201109_164403.jpg">
+           <span>关注微信</span><img width="95" alt="" src="/static/index/images/IMG_20201109_164403.jpg">
        </div>
            <div>
-               <span>关注微博</span><img width="95" alt="" src="../../../../static/index/images/weibo.gif">
+               <span>关注微博</span><img width="95" alt="" src="/static/index/images/weibo.gif">
        </div>               
       </div>
       <div class="fmenu">
@@ -117,12 +117,12 @@
     <div  class="showqq">
        <p>官方客服QQ:<br>448567421</p>
     </div>
-    </span><!--/../../../../../static/index/images/mmqrcode1585737410500.png -->
+    </span><!--//static/index/images/mmqrcode1585737410500.png -->
     <span class="barico em" style="position:relative">
-      <img src="../../../../static/index/images/IMG_20201109_164403.jpg" width="75" class="showem">
+      <img src="/static/index/images/IMG_20201109_164403.jpg" width="75" class="showem">
     </span>
     <span class="barico wb" style="position:relative">
-      <img src="../../../../static/index/images/weibo.gif" width="75" class="showwb">
+      <img src="/static/index/images/weibo.gif" width="75" class="showwb">
     </span> 
     <span class="barico top" id="top">置顶</span> 
 </div>
