@@ -245,7 +245,7 @@ function nTabs(thisObj,Num){
         <ul id="myTab3">
             @foreach($course_category as $k=>$a)
             <!-- class="current"  -->
-            <li id="calsssdesc" code_id="{{$a->cate_id}}" class="points">{{$a->cate_name}}</li>
+            <li code_id="{{$a->cate_id}}" class="points edscddd">{{$a->cate_name}}</li>
             @endforeach
         </ul>
         <div class="clearh"></div>
@@ -277,7 +277,7 @@ function nTabs(thisObj,Num){
     $(document).ready(function(){
         $(".points").click(function(){
             var _this=$(this);
-            // $("#calsssdesc").css("points","points current");
+            $(".edscddd").css("points","points current");
             var cate_id = _this.attr("code_id");
             $.ajax({
                 url:"/index/points",
