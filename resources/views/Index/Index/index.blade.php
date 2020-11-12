@@ -1,6 +1,25 @@
 @extends('layouts.show')
 @section('app.name', '课程')
 @section('content')
+<!--课程选项卡-->
+<script type="text/javascript">
+function nTabs(thisObj,Num){
+    if(thisObj.className == "current")return;
+    var tabObj = thisObj.parentNode.id;
+    var tabList = document.getElementById(tabObj).getElementsByTagName("li");
+    for(i=0; i <tabList.length; i++)
+        {
+        if (i == Num)
+        {
+           thisObj.className = "current"; 
+           document.getElementById(tabObj+"_Content"+i).style.display = "block";
+        }else{
+           tabList[i].className = "normal"; 
+           document.getElementById(tabObj+"_Content"+i).style.display = "none";
+        }
+        } 
+}
+</script>
 <div class="content">
 <div class="fullwidthbanner-container">
         <div id="revolution-slider" style="max-height:850px !important; ">

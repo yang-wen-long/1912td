@@ -16,12 +16,13 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 
 	//登录LoginController
 	Route::any('/user/login',"Index\LoginController@login");
-
+    Route::any('/user/login_do/{zh}',"Index\LoginController@login_do");
 	//忘记密码
 	Route::any('/user/myrepassword',"Index\LoginController@myrepassword");
 
 	//注册
 	Route::any('/user/reg',"Index\RegController@reg");
+    Route::any('/user/reg_do',"Index\RegController@reg_do");
 
 	//我的首页
 	Route::any('/mycourse/mycourse',"Index\MycouController@mycourse"); 
@@ -74,4 +75,7 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 
 	//加入我们
 	Route::any('/page/joinus',"Index\PageController@joinus");
+
+	//调用导航栏数据
+	Route::any('/navigation',"Index\IndexController@navigation");
 });
