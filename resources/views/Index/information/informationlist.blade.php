@@ -13,8 +13,8 @@
     <span class="bread nob">
         <a class="fombtn cur" href="{{url('/index/information/informationlist')}}">全部资讯</a>
         <a class="fombtn" href="{{url('/index/information/informationhot')}}">热门资讯</a>
-        <a class="fombtn" href="{{url('/index/information/informationlist')}}">考试指导</a>
-        <a class="fombtn" href="{{url('/index/information/informationlist')}}">精彩活动</a>
+        <a class="fombtn" href="{{url('/index/teacher/teacherlist')}}">考试指导</a>
+        <a class="fombtn" href="{{url('/index/information/huodonglist')}}">精彩活动</a>
     </span>
 </div>
 <div class="clearh"></div>
@@ -32,9 +32,10 @@
     </div>
 	<div class="clearh" style="height:20px;"></div>
 	<span class="pagejump">
-    	<p class="userpager-list">
-       	  
-           <a href="#" class="page-number pageractive">1</a>
+    	<p class="userpager-list" >
+            <div id="a">      	  
+                <a href="#" class="page-number pageractive">{{$list->links()}}</a>         
+           </div>
         </p>
     </span>
     <div class="clearh" style="height:10px;"></div>
@@ -47,8 +48,7 @@
 	<ul class="informationhot">
             @foreach($hot as $v)
             <li><a class="ask_link" href="informationhot"><strong>●</strong>{{$v['infor_title']}} </a></li>
-            @endforeach  
-            
+            @endforeach            
         </ul>
     </div>
     </div>

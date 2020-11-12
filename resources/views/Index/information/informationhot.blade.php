@@ -12,9 +12,9 @@
     <div class="clearh"></div>
     <span class="bread nob">
         <a class="fombtn" href="{{url('/index/information/informationlist')}}">全部资讯</a>
-        <a class="fombtn  cur" href="{{url('/index/information/informationhot')}}">热门资讯</a>
-        <a class="fombtn" href="{{url('/index/information/informationlist')}}">考试指导</a>
-        <a class="fombtn" href="{{url('/index/information/informationlist')}}">精彩活动</a>
+        <a class="fombtn cur" href="{{url('/index/information/informationhot')}}">热门资讯</a>
+        <a class="fombtn" href="{{url('/index/teacher/teacherlist')}}">考试指导</a>
+        <a class="fombtn" href="{{url('/index/information/huodonglist')}}">精彩活动</a>
     </span>
 </div>
 @foreach($hot as $v)
