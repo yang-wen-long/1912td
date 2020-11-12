@@ -27,8 +27,8 @@ function nTabs(thisObj,Num){
                  <li data-transition="fade" data-slotamount="10" data-masterspeed="400" data-thumb="../../../../../../uploads/banner2.jpg">
                     <!--  BACKGROUND IMAGE -->
                     <img src="{{$a->silde_log}}" alt="" rotateMatrix.setRotate(-10, rotate); />
-                    <!-- ../../../../static/index/images-slider/wide2.jpg -->
-                    <!-- ../../../../static/index/images-slider/thumbs/thumb1.jpg -->
+                    <!-- /static/index/images-slider/wide2.jpg -->
+                    <!-- /static/index/images-slider/thumbs/thumb1.jpg -->
                     <!-- THE CAPTIONS IN THIS SLIDE -->
                     <div class="tp-caption sfl"
                         data-x="-130"
@@ -36,7 +36,7 @@ function nTabs(thisObj,Num){
                         data-speed="300"
                         data-start="300"
                         data-easing="easeOutBack">
-                        <!-- <img src="../../../../static/index/images-slider/rb.png" alt=""> -->
+                        <!-- <img src="/static/index/images-slider/rb.png" alt=""> -->
                     </div>
 
                     <div class="caption sfb"
@@ -78,7 +78,7 @@ function nTabs(thisObj,Num){
                     </div>
                 </li>
 
-                 <li data-transition="fade" data-slotamount="10" data-masterspeed="300" data-thumb="../../../../static/index/images-slider/thumbs/thumb1.jpg">
+                 <li data-transition="fade" data-slotamount="10" data-masterspeed="300" data-thumb="/static/index/images-slider/thumbs/thumb1.jpg">
                     <!--  BACKGROUND IMAGE -->
                     <img src="{{$b->silde_log}}" alt="" />
 
@@ -89,7 +89,7 @@ function nTabs(thisObj,Num){
                         data-speed="300"
                         data-start="300"
                         data-easing="easeOutBack">
-                        <!-- <img src="../../../../static/index/images-slider/rb.png" alt=""> -->
+                        <!-- <img src="/static/index/images-slider/rb.png" alt=""> -->
                     </div>
 
                     <div class="caption sfb"
@@ -132,7 +132,7 @@ function nTabs(thisObj,Num){
                     </div>
                 </li>
 
-                <li data-transition="fade" data-slotamount="10" data-masterspeed="300" data-thumb="../../../../static/index/images-slider/thumbs/thumb1.jpg">
+                <li data-transition="fade" data-slotamount="10" data-masterspeed="300" data-thumb="/static/index/images-slider/thumbs/thumb1.jpg">
                     <!--  BACKGROUND IMAGE -->
                     <img src="{{$c->silde_log}}" alt="" />
 
@@ -143,7 +143,7 @@ function nTabs(thisObj,Num){
                         data-speed="300"
                         data-start="300"
                         data-easing="easeOutBack">
-                        <!-- <img src="../../../../static/index/images-slider/rb.png" alt=""> -->
+                        <!-- <img src="/static/index/images-slider/rb.png" alt=""> -->
                     </div>
 
                     <div class="caption sfb"
@@ -198,7 +198,7 @@ function nTabs(thisObj,Num){
 
 <div class="td1">
     <div class="tdcont">
-        <span class="tdimg"><img src="../../../../static/index/images/ico4.jpg" width="450"></span>
+        <span class="tdimg"><img src="/static/index/images/ico4.jpg" width="450"></span>
         <span class="tdtext">
             <h3>完全免费课程</h3>
             <p>精心录制视频课程与讲解，全部课程完全免费。</p><br/>
@@ -209,7 +209,7 @@ function nTabs(thisObj,Num){
 </div>
 <div class="td2">
     <div class="tdcont">
-        <span class="tdimg1"><img src="../../../../static/index/images/ico5.jpg" width="500"></span>
+        <span class="tdimg1"><img src="/static/index/images/ico5.jpg" width="500"></span>
         <span class="tdtext1">
             <h3 class="co1">智能评估题库</h3>
             <p>智能能力评估，学员可以通过具体题目，匹配相关知识点,文字解析与视频解析相结合。</p><br/>
@@ -220,7 +220,7 @@ function nTabs(thisObj,Num){
 </div>
 <div class="td1">
     <div class="tdcont np">
-        <span class="tdimg" style="margin-top:80px"><img src="../../../../static/index/images/ico6.jpg" width="550"></span>
+        <span class="tdimg" style="margin-top:80px"><img src="/static/index/images/ico6.jpg" width="550"></span>
         <span class="tdtext" style="margin-top:120px">
             <h3 class="co2">智能匹配练习</h3>
             <p class="tex1">跟随视频课程同步练习，紧扣重点难点，点点精通。</p><br/>
@@ -231,7 +231,7 @@ function nTabs(thisObj,Num){
 </div>
 <div class="td2 np">
     <div class="tdcont np">
-        <span class="tdimg1 ni"><img src="../../../../static/index/images/ico7.png" width="300"></span>
+        <span class="tdimg1 ni"><img src="/static/index/images/ico7.png" width="300"></span>
         <span class="tdtext1" style="margin-top:100px;">
             <h3 class="co3">全天答疑解惑</h3>
             <p class="tex1">谋刻答疑社区，老师学员共同交流，我们的讲师更是倾囊相授，有问必答。</p><br/>
@@ -245,106 +245,33 @@ function nTabs(thisObj,Num){
 
 <div class="course">
     <h2 style="text-align:center; font-weight:normal; font-size:34px">精品课程</h2>
-    <div class="clearh" style="height:20px;"></div>
+    <div class="clIT技能earh" style="height:20px;"></div>
     
     <div>
         <ul id="myTab3">
-            <li class="current" onClick="nTabs(this,0);">IT技能</li>
-            <li class="norma3" onClick="nTabs(this,1);">IT技能</li>
-            <li class="norma3" onClick="nTabs(this,2);">IT技能</li>
-            <li class="norma3" onClick="nTabs(this,3);">IT技能</li>
+            @foreach($course_category as $k=>$a)
+            <!-- class="current"  -->
+            <li  class="points">{{$a->cate_name}}</li>
+            @endforeach
         </ul>
         <div class="clearh"></div>
         <div>
            <ul class="courseul" id="myTab3_Content0" style="display: block;">
+            @foreach($data as $k=>$a)
             <li>
                 <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
+                <a href="{{url('/index/course/coursecont/'.$a->cou_id)}}">
+                    <img width="263" style="border-radius:3px 3px 0 0;" src="{{$a->cou_img}}" >
+                </a>
+                <p class="courTit">{{$a->cou_name}}</p>
                 <div class="gray">
                 <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
+                <span class="sp1">{{$a->lll}}人学习</span>
                 <div style="clear:both"></div>
                 </div>
                 </div>
            </li>
-           <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>.
+           @endforeach
            <div class="clearh"></div>
           </ul>               
         </div>
@@ -352,29 +279,7 @@ function nTabs(thisObj,Num){
            <ul class="courseul" id="myTab3_Content1" style="display: none;">
             <li>
                 <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>   
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
+                <img width="263" style="border-radius:3px 3px 0 0;" src="/static/index/images/c1.jpg" >
                 <p class="courTit">HTTP下载课程</p>
                 <div class="gray">
                 <span>1小时前更新</span>
@@ -390,7 +295,7 @@ function nTabs(thisObj,Num){
            <ul class="courseul" id="myTab3_Content2" style="display: none;">
             <li>
                 <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
+                <img width="263" style="border-radius:3px 3px 0 0;" src="/static/index/images/c1.jpg" >
                 <p class="courTit">HTTP下载课程</p>
                 <div class="gray">
                 <span>1小时前更新</span>
@@ -401,7 +306,7 @@ function nTabs(thisObj,Num){
             </li>   
             <li>
                 <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
+                <img width="263" style="border-radius:3px 3px 0 0;" src="/static/index/images/c1.jpg" >
                 <p class="courTit">HTTP下载课程</p>
                 <div class="gray">
                 <span>1小时前更新</span>
@@ -412,7 +317,7 @@ function nTabs(thisObj,Num){
             </li>
             <li>
                 <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
+                <img width="263" style="border-radius:3px 3px 0 0;" src="/static/index/images/c1.jpg" >
                 <p class="courTit">HTTP下载课程</p>
                 <div class="gray">
                 <span>1小时前更新</span>
@@ -428,7 +333,7 @@ function nTabs(thisObj,Num){
            <ul class="courseul" id="myTab3_Content3" style="display: none;">
             <li>
                 <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
+                <img width="263" style="border-radius:3px 3px 0 0;" src="/static/index/images/c1.jpg" >
                 <p class="courTit">HTTP下载课程</p>
                 <div class="gray">
                 <span>1小时前更新</span>
@@ -439,7 +344,7 @@ function nTabs(thisObj,Num){
             </li>   
             <li>
                 <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="../../../../static/index/images/c1.jpg" >
+                <img width="263" style="border-radius:3px 3px 0 0;" src="/static/index/images/c1.jpg" >
                 <p class="courTit">HTTP下载课程</p>
                 <div class="gray">
                 <span>1小时前更新</span>
@@ -452,12 +357,20 @@ function nTabs(thisObj,Num){
            </ul>               
         </div>
     </div>
-    
-    
     <div class="line no"></div>
-    
-    
 </div>
 <span class="morecourse"><a href="{{url('/index/course/courselist')}}" class="btnlink">更多课程</a></span>
+<script>
+    $(document).ready(function(){
+        $(".points").click(function(){
+            alert("dfjh");
+        });
+    });
+</script>
+
+
+
+
+
 
 @endsection

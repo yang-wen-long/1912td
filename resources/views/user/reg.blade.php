@@ -2,9 +2,9 @@
 @section('app.name', '课程')
 @section('content')
 
-<link rel="stylesheet" href="../../../../../static/index/css/register-login.css"/>
+<link rel="stylesheet" href="/static/index/css/register-login.css"/>
 <!-- InstanceBeginEditable name="EditRegion1" -->
-<div class="register" style="background:url(../../../../../static/index/images//13.jpg) right center no-repeat #fff">
+<div class="register" style="background:url(/static/index/images/13.jpg) right center no-repeat #fff">
 <h2>注册</h2>
 <div>
     <div>
