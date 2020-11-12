@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8">
 <title>laravel</title>
-<script src="../../../../../static/index/js/jquery-1.8.0.min.js"></script>
-<script src="../../../../../static/index/js/mine.js"></script>
-<script src="../../../../../static/index/js/jquery.tabs.js"></script>
+<script src="/static/index/js/jquery-1.8.0.min.js"></script>
+<script src="/static/index/js/mine.js"></script>
+<script src="/static/index/js/jquery.tabs.js"></script>
   		<!-- video.js must be in the <head> for older IEs to work. -->
-<link rel="stylesheet" href="../../../../../static/index/video-js.css" >
-<link rel="stylesheet" href="../../../../../static/index/css/course.css"/>
-<link rel="stylesheet" href="../../../../../static/index/css/tab.css" media="screen">
-<script src="../../../../../static/index/video.js"></script>
+<link rel="stylesheet" href="/static/index/video-js.css" >
+<link rel="stylesheet" href="/static/index/css/course.css"/>
+<link rel="stylesheet" href="/static/index/css/tab.css" media="screen">
+<script src="/static/index/video.js"></script>
     
       <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
       <script>
@@ -63,7 +63,7 @@ $(function(){
     	<span class="returnindex"><a class="gray" href="{{url('/index/course/coursecont1')}}" style="font-size:14px;">返回课程</a></span>   
         <span class="taskspan"><span class="ts">课时100</span>&nbsp;&nbsp;<b class="tasktit">会计的概念与目标1</b></span> 
         <div style="width:100%;margin-top:20px;">
-			<video width="auto" id="example_video_1" class="video-js vjs-default-skin  vjs-big-play-centered vvi " controls preload="none"  poster="../../../../../static/index/images/c8.jpg" data-setup="{}"><!--poster是视频未播放前的展示图片-->
+			<video width="auto" id="example_video_1" class="video-js vjs-default-skin  vjs-big-play-centered vvi " controls preload="none"  poster="/static/index/images/c8.jpg" data-setup="{}"><!--poster是视频未播放前的展示图片-->
 			<source src="http://video-js.zencoder.com/oceans-clip.mp4" type='video/mp4' />
 			<source src="http://video-js.zencoder.com/oceans-clip.webm" type='video/webm' />
 			<source src="http://video-js.zencoder.com/oceans-clip.ogv" type='video/ogg' />    
@@ -76,10 +76,10 @@ $(function(){
         <div class="clearh"></div>
         <!--<div class="coursmall">
         
-        <img class="csimg" src="../../../../../static/index/images/121.png" width="153" height="75">
+        <img class="csimg" src="/static/index/images/121.png" width="153" height="75">
         <span class="lineevalue">
         <p>计算机等级考试二级C语言</p>
-            <!--<p class="graytext"><img src="../../../../../static/index/images/evaluate.png" width="71" height="14">(181份评价)</p>
+            <!--<p class="graytext"><img src="/static/index/images/evaluate.png" width="71" height="14">(181份评价)</p>
             <p class="graytext">讲师：王老师</p>
             <p><a class="dowork" target="_blank" href="#">去做作业→</a></p>
          </span>

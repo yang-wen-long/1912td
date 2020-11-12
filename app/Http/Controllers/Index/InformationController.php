@@ -17,16 +17,23 @@ class InformationController extends Controller
     }
     //资讯详情
     public function information(){
+        $nav = $this->nav();
+    	$a=Information::where('infor_hot',988777)->limit(1)->get();
     	$a=Information::where('infor_hot',3445)->limit(1)->get();
         $nav = $this->nav();
     	$hot=Information::where('infor_hot','>',500000)->limit(5)->get();
+
+    	$hot=Information::where('infor_hot',1000)->limit(5)->get();
     	return view("/Index/information/information",["a"=>$a,"hot"=>$hot,"nav"=>$nav]);
     }
     //资讯
     public function informationlist(){
+         $nav = $this->nav();
+    	$list=Information::where('infor_id',22)->limit(5)->get();
         $nav = $this->nav();
     	$list=Information::limit(5)->paginate(5);
     	$hot=Information::where('infor_hot','>',5000)->limit(5)->get();   	
+    	$hot=Information::where('infor_hot',1000)->limit(5)->get();   	
     	return view("/Index/information/informationlist",["list"=>$list,"hot"=>$hot,"nav"=>$nav]);
     }
      //精彩活动

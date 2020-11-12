@@ -18,7 +18,7 @@
         <div class="clearh"></div>
         <div class="pagetext">
             <span class="pagemap">
-                <embed src="../../../../../../uploads/mp3/8a583derj4jh344c9a184fd011.mp4" type='' width="740px" height="400px" preload="none">
+                <embed src="/uploads/mp3/8a583derj4jh344c9a184fd011.mp4" type='' width="740px" height="400px" preload="none">
             </span>
         </div>
     </div>

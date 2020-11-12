@@ -1,10 +1,10 @@
 @extends('layouts.show')
 @section('app.name', '课程')
 @section('content')
-<link rel="stylesheet" href="../../../../../static/index/css/information.css">
-<script src="../../../../../static/index/js/jquery-1.8.0.min.js"></script>
-<script src="../../../../../static/index/js/mine.js"></script>
-<script type="text/javascript" src="../../../static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<link rel="stylesheet" href="/static/index/css/information.css">
+<script src="/static/index/js/jquery-1.8.0.min.js"></script>
+<script src="/static/index/js/mine.js"></script>
+<script type="text/javascript" src="/static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <!-- InstanceBeginEditable name="EditRegion1" -->
 <div class="coursecont">
 <div class="coursepic">

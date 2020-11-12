@@ -17,7 +17,7 @@
         <div class="clearh"></div>
         <div class="pagetext">
             <span class="pagemap">
-                <img src="../../../../../static/index/images/map.jpg" width="400"> 
+                <img src="/static/index/images/map.jpg" width="400"> 
             </span>
             <span class="contact">
                 <p><strong>咨询热线</strong>：400-803-5080</p>
