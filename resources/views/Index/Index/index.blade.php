@@ -245,14 +245,14 @@ function nTabs(thisObj,Num){
         <ul id="myTab3">
             @foreach($course_category as $k=>$a)
             <!-- class="current"  -->
-            <li  class="points">{{$a->cate_name}}</li>
+            <li id="calsssdesc" code_id="{{$a->cate_id}}" class="points">{{$a->cate_name}}</li>
             @endforeach
         </ul>
         <div class="clearh"></div>
-        <div>
-           <ul class="courseul" id="myTab3_Content0" style="display: block;">
+        <div id="showdesc">
+           <ul class='courseul' id='myTab3_Content0' style='display: block;'>
             @foreach($data as $k=>$a)
-            <li>
+            <li id="desc_li" class="descname">
                 <div class="courselist">
                 <a href="{{url('/index/course/coursecont/'.$a->cou_id)}}">
                     <img width="263" style="border-radius:3px 3px 0 0;" src="{{$a->cou_img}}" >
@@ -269,87 +269,6 @@ function nTabs(thisObj,Num){
            <div class="clearh"></div>
           </ul>               
         </div>
-        <div>
-           <ul class="courseul" id="myTab3_Content1" style="display: none;">
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="/static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <div class="clearh"></div>      
-           </ul>               
-        </div>
-        <div>
-           <ul class="courseul" id="myTab3_Content2" style="display: none;">
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="/static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>   
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="/static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="/static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <div class="clearh"></div>          
-           </ul>               
-        </div>
-        <div>
-           <ul class="courseul" id="myTab3_Content3" style="display: none;">
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="/static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>   
-            <li>
-                <div class="courselist">
-                <img width="263" style="border-radius:3px 3px 0 0;" src="/static/index/images/c1.jpg" >
-                <p class="courTit">HTTP下载课程</p>
-                <div class="gray">
-                <span>1小时前更新</span>
-                <span class="sp1">1255555人学习</span>
-                <div style="clear:both"></div>
-                </div>
-                </div>
-            </li>
-            <div class="clearh"></div>      
-           </ul>               
-        </div>
     </div>
     <div class="line no"></div>
 </div>
@@ -357,13 +276,29 @@ function nTabs(thisObj,Num){
 <script>
     $(document).ready(function(){
         $(".points").click(function(){
-            alert("dfjh");
+            var _this=$(this);
+            // $("#calsssdesc").css("points","points current");
+            var cate_id = _this.attr("code_id");
+            $.ajax({
+                url:"/index/points",
+                type:'post',
+                dataType:'json',
+                data:{cate_id:cate_id},
+                async:true,
+                success:function(index){
+                    var data = index.data;
+                    var html = "";
+                    $.each(data,function(k,v){
+                        html+="<li id='desc_li' class='descname'><div class='courselist'><a href='/index/course/coursecont/"+data[k].cou_id+"'><img width='263' style='border-radius:3px 3px 0 0;' src='"+data[k].cou_img+"' ></a><p class='courTit'>"+data[k].cou_name+"</p><div class='gray'><span>1小时前更新</span><span class='sp1'>"+data[k].lll+"人学习</span><div style='clear:both'></div></div></div></li>";
+                    });
+                    html+="<div class='clearh'></div>";
+                    $(".descname").hide();
+                    $(".courseul").append(html);
+                }
+            });
         });
     });
 </script>
-
-
-
 
 
 

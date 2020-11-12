@@ -17,11 +17,30 @@ class IndexController extends Controller
         $b=$silde[1];
         $c=$silde[2];
         $course_category = DB::table("course_category")->limit('4')->get();
-        $data = DB::table("course")->where("cate_id",$course_category[0]->cate_id)->get();
+        $data = DB::table("course")->where("cate_id",$course_category[0]->cate_id)->limit("8")->get();
         // dd($course_category);
     	return view("Index.index.index",['a'=>$a,'b'=>$b,'c'=>$c,"nav"=>$nav,"course_category"=>$course_category,"data"=>$data]);
     }
-    //处理业务
+    //处理分类
+    public function points(){
+    	$cate_id = request()->post("cate_id");
+    	$fgid="/^[0-9]*$/";
+        if(!preg_match($fgid,$cate_id)){
+
+            return json_encode(["error"=>1,"msg"=>"请不要糊弄我！"]);
+        }
+    	$data = DB::table("course")->where("cate_id",$cate_id)->limit("8")->get();
+    	if($data){
+	    	$name = [
+	    		"error"=>0,
+	    		"msg"=>"成功",
+	    		"data"=>$data,
+	    	];
+	    	return json_encode($name);
+	    }else{
+	    	return json_encode(["error"=>1,"msg"=>"业务繁忙中，请稍后再试！"]);
+	    }
+    }
 
 
 
