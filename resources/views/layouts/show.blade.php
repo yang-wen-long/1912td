@@ -15,7 +15,7 @@
 @if($name == "index")
 <script src="/static/index/js/jquery-1.8.0.min.js"></script>
 <script type="text/javascript" src="/static/index/js/rev-setting-1.js"></script>
-<script type="text/javascript" src="../../../static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="/static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <link rel="stylesheet" href="/static/index/css/style.css"/>
 <link rel="stylesheet" href="/static/index/css/tab.css" media="screen">
 <link rel="stylesheet" type="text/css" href="/static/index/css/main.css" id="main-css">
@@ -26,7 +26,7 @@
 
 <!-- <script src="../../../../../jquery.js"></script> -->
 <script type="text/javascript" src="/static/index/js/rev-setting-1.js"></script>
-<script type="text/javascript" src="../../../static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script type="text/javascript" src="/static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <link rel="stylesheet" type="text/css" href="/static/index/css/main.css" id="main-css">
 </head>
 
