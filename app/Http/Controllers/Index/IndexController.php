@@ -11,9 +11,13 @@ class IndexController extends Controller
 {
     //前台首页
     public function index(){ 
-    	$nav = $this->nav();
+        // 导航栏
+        $nav = $this->nav();
+        //轮播图
         $silde = SlideModel::get();
+        // dd($silde);
         $a=$silde[0];
+        // print_r($a);exit;
         $b=$silde[1];
         $c=$silde[2];
         $course_category = DB::table("course_category")->limit('4')->get();

@@ -153,18 +153,24 @@ function nTabs(thisObj,Num){
                         data-start="800"
                         data-easing="easeOutExpo">
                         <h2>
-                            <span  style="font-size:70px;">乐拧教育机构专属的&nbsp;&nbsp;&nbsp;在线教学系统</span>
-                            
+                            <span  style="font-size:20px;">
+                                我总是习惯黑夜里想你
+                                夜深了还没有睡意
+                                虽然我爱你是我的决定
+                                还要试着把你忘记
+                                我总想能够再次抱紧你
+                                告诉你我真没关系
+                            </span>
                         </h2>
                     </div>
-
+                    
                     <div class="tp-caption med-white sfl"
                         data-x="120"
                         data-y="400"
                         data-speed="300"
                         data-start="1000"
-                        data-easing="easeOutExpo" style="font-size:40px;">
-                        <span>开通账号即可使用&nbsp;&nbsp;&nbsp;满足多种线上教学场景</span>
+                        data-easing="easeOutExpo" style="font-size:80px;">
+                        <h3><span>以梦为马&nbsp;&nbsp;&nbsp;不负韶华</span></h3>
                     </div>
 
                     <div class="tp-caption small-white sfr"

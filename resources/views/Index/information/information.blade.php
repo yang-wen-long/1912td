@@ -17,7 +17,6 @@
 </div>
 <div class="clearh"></div>
 <div class="coursetext">
-    
 	<span class="informationtitle">
         <h2>{{$v['infor_title']}}</h2>
         <p class="gray">2015-02-02</p>
@@ -70,3 +69,5 @@
 </div>
 <!-- InstanceEndEditable -->
 @endsection
+
+
