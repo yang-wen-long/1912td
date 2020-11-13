@@ -8,10 +8,10 @@
 	@foreach($teacher as $v)
 	<div class="coursepic tecti">
 		<div class="teaimg">
-		<a href="{{url('/index/teacher/teacher')}}" target="_blank"><img src="../../{{$v->tea_img}}" width="150"></a>
+		<a href="{{url('/index/teacher/teacher/'.$v->tea_id)}}" target="_blank"><img src="../../{{$v->tea_img}}" width="150"></a>
 		</div>
 		<div class="teachtext">
-			<h3><a href="{{url('/index/teacher/teacher')}}" target="_blank" class="teatt">{{$v->tea_name}}</a>&nbsp;&nbsp;<strong>{{$v->cate_name}}</strong></h3>
+			<h3><a href="{{url('/index/teacher/teacher/'.$v->tea_id)}}" target="_blank" class="teatt">{{$v->tea_name}}</a>&nbsp;&nbsp;<strong>{{$v->cate_name}}讲师</strong></h3>
 			<h4>个人简介</h4>
 			<p>{{$v->tea_resume}}。</p>
 			<h4>授课风格</h4>

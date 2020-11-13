@@ -1,4 +1,4 @@
-@extends('layouts.show')
+ @extends('layouts.show')
 @section('app.name', '课程')
 @section('content')
 <div class="coursecont">

@@ -7,18 +7,17 @@
 <script type="text/javascript" src="/static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <!-- InstanceBeginEditable name="EditRegion1" -->
 <div class="coursecont">
-<div class="coursepic">
+<div class="coursepic" style="height:800px">
 	<h3 class="righttit">全部资讯</h3>
     <div class="clearh"></div>
     <span class="bread nob">
         <a class="fombtn" href="{{url('/index/information/informationlist')}}">全部资讯</a>
-        <a class="fombtn  cur" href="{{url('/index/information/informationhot')}}">热门资讯</a>
-        <a class="fombtn" href="{{url('/index/information/informationlist')}}">考试指导</a>
-        <a class="fombtn" href="{{url('/index/information/informationlist')}}">精彩活动</a>
+        <a class="fombtn cur" href="{{url('/index/information/informationhot')}}">热门资讯</a>
+        <a class="fombtn" href="{{url('/index/teacher/teacherlist')}}">考试指导</a>
+        <a class="fombtn" href="{{url('/index/information/huodonglist')}}">精彩活动</a>
     </span>
-</div>
-@foreach($hot as $v)
-    	<h3><a class="artlink" href="{{url('/index/information/information')}}">{{$v['infor_title']}}</a></h3>
+    @foreach($hot as $v)
+        <h3><a class="artlink" href="{{url('/index/information/information/'.$v->infor_id)}}">{{$v['infor_title']}}</a></h3>
         <p>{{$v['infor_content']}}</p>
         <p class="artilabel">
         <span class="ask_label">热门资讯</span>
@@ -26,4 +25,5 @@
         </p>
         <div class="clearh"></div>
 @endforeach
+</div>
 @endsection
