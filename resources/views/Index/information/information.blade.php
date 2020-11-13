@@ -11,19 +11,19 @@
     <div class="clearh"></div>
     <span class="bread">
     <a class="ask_link" href="informationlist">全部资讯</a>&nbsp;/&nbsp;<a class="ask_link" href="informationhot">热门资讯</a>&nbsp;/&nbsp;
-    @foreach($a as $v)
-    {{$v['infor_title']}}
+ 
+    {{$data->infor_title}}
     </span>    
 </div>
 <div class="clearh"></div>
 <div class="coursetext">
 	<span class="informationtitle">
-        <h2>{{$v['infor_title']}}</h2>
-        <p class="gray">2015-02-02</p>
+        <h2>{{$data->infor_title}}</h2>
+        <p class="gray">{{date('Y-m-d H:i:s',$data->infor_time)}}</p>
     </span>   
-    <p class="coutex">{{$v['infor_content']}}</p>    
+    <p class="coutex">{{$data->infor_content}}</p>    
 	<div class="clearh" style="height:30px;"></div>
-    @endforeach
+
 	<span class="pagejump">
     	<a class="pagebtn lpage" title="上一篇" href="#">上一篇</a>
         <a class="pagebtn npage" title="下一篇" href="#">下一篇</a>
@@ -36,7 +36,7 @@
     <div class="gonggao">
 	<ul class="hotask">
         	@foreach($hot as $v)
-            <li><a class="ask_link" href="#"><strong>●</strong>{{$v['infor_title']}} </a></li>
+            <li><a class="ask_link" href="{{url('/index/information/information/'.$v->infor_id)}}"><strong>●</strong>{{$v['infor_title']}} </a></li>
             @endforeach  
         </ul>
     </div>

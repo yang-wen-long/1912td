@@ -21,7 +21,7 @@
 <div class="coursetext">
 	<div class="informationlist">
         @foreach($list as $v)
-    	<h3><a class="artlink" href="{{url('/index/information/information')}}">{{$v['infor_title']}}</a></h3>
+    	<h3><a class="artlink" href="{{url('/index/information/information/'.$v->infor_id)}}">{{$v['infor_title']}}</a></h3>
         <p>{{$v['infor_content']}}</p>
         <p class="artilabel">
         <span class="ask_label">热门资讯</span>
@@ -47,7 +47,7 @@
     <div class="gonggao">
 	<ul class="informationhot">
             @foreach($hot as $v)
-            <li><a class="ask_link" href="informationhot"><strong>●</strong>{{$v['infor_title']}} </a></li>
+            <li><a class="ask_link" href="{{url('/index/information/information/'.$v->infor_id)}}"><strong>●</strong>{{$v['infor_title']}} </a></li>
             @endforeach            
         </ul>
     </div>
