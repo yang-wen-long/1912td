@@ -19,7 +19,7 @@ class CourseController extends Controller
         // dd($data);
         $cate_id= $data[0]->cate_id;
         // dd($cate_id);
-        $array=CateGory::get();
+        $array=Category::get();
         $data = $this->CreateTree($array,$cate_id);
         // dd($data);
         // 课程
@@ -49,7 +49,7 @@ class CourseController extends Controller
          // var_dump($teacher);die;
         // $c=$b['tea_name'];
          // var_dump($c);die;
-        $log_data=Log::where('cou_id',$cou_id)->paginate(5);
+        $log_data=Log::where('cou_id',$cou_id)->paginate(6);
     	return view("course.detail",["name"=>$name,'teacher'=>$teacher,"nav"=>$nav,'cou_data'=>$cou_data,'log_data'=>$log_data]);
     }
      
