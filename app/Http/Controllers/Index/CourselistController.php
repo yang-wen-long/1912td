@@ -13,7 +13,7 @@ class CourselistController extends Controller{
     //详情
     public function courselist(){
         // 无限极分类
-        $data = CateGory::where('parents_id',0)->orderBy('cate_id','asc')->get('cate_id');
+        $data = Category::where('parents_id',0)->orderBy('cate_id','asc')->get('cate_id');
         // dd($data);
         $cate_id= $data[0]->cate_id;
         // dd($cate_id);
