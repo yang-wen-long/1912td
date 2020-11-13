@@ -47,7 +47,7 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	Route::any('/information/informationlist',"Index\InformationController@informationlist")->name("informationlist");
 
 	//资讯详情
-	Route::any('/information/information',"Index\InformationController@information")->name("information");
+	Route::any('/information/information/{infor_id}',"Index\InformationController@information")->name("information");
 
 	//热门资讯
 	Route::any('/information/informationhot',"Index\InformationController@informationhot")->name("informationhot");
