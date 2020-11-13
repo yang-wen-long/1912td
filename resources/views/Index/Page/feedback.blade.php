@@ -30,7 +30,7 @@
                 <td>图片（选项，提供问题图片 请点击图片上传）</td>
                 <td>
                     <input type="file" name="u_img" value="" id="hideuimg">
-                    <img src="../../../../../static/index/images/0-0.JPG" id="heverimg" width="80">
+                    <img src="/static/index/images/0-0.JPG" id="heverimg" width="80">
                 </td>
             </tr>
             <tr>

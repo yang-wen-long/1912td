@@ -1,9 +1,9 @@
 @extends('layouts.show')
 @section('app.name', '课程')
 @section('content')
-<link rel="stylesheet" href="../../../../../static/index/css/register-login.css"/>
+<link rel="stylesheet" href="/static/index/css/register-login.css"/>
 <!-- InstanceBeginEditable name="EditRegion1" -->
-<div class="login" style="background:url(../../../../../static/index/images//12.jpg) right center no-repeat #fff">
+<div class="login" style="background:url(/static/index/images/12.jpg) right center no-repeat #fff">
 <h2>登录</h2>
 <div>
 <div>
@@ -34,8 +34,8 @@
 <div class="hezuologo">
     <span class="hezuo">使用合作网站账号登录</span>
     <div class="hezuoimg">
-    <img src="../../../../../static/index/images//hezuoqq.png" class="hzqq" title="QQ" width="40" height="40"/>
-    <img src="../../../../../static/index/images//hezuowb.png" class="hzwb" title="微博" width="40" height="40"/>
+    <img src="/static/index/images//hezuoqq.png" class="hzqq" title="QQ" width="40" height="40"/>
+    <img src="/static/index/images//hezuowb.png" class="hzwb" title="微博" width="40" height="40"/>
     </div>
     
   </div>

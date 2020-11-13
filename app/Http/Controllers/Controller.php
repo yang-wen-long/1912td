@@ -16,7 +16,7 @@ class Controller extends BaseController
     	return $name;
     }
     //无限极分类
-    public function CreateTree($data,$parents_id=0,$level=1){
+	public function CreateTree($data,$parents_id=0,$level=1){
         if(!$data){
             return ;
         }

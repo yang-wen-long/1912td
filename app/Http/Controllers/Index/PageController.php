@@ -4,10 +4,10 @@ namespace App\Http\Controllers\Index;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-//关于我们
-class PageController extends Controller
-{
-    //
+
+
+class PageController extends Controller{
+    //关于我们
     public function Page(){
         $nav = $this->nav();
     	return view("Index.Page.Page",["nav"=>$nav]);

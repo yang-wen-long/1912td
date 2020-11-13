@@ -65,6 +65,19 @@
     <div class="teapic">
         <a href="#"  target="_blank"><img src="/static/index/images/c1.jpg" height="60" title="财经法规与财经职业道德"></a>
         <h3 class="courh3"><a href="JavaScript:;" class="ask_link cou_detail" cou_id="{{$v->cou_id}}">{{$v->cou_name}}</a></h3>
+        <h3 class="courh3"><a href="#" class="ask_link" target="_blank">财经法规与财经职业道德</a></h3>
+    </div>
+    <div class="clearh"></div>
+    <div class="teapic">
+        <a href="#"  target="_blank"><img src="/static/index/images/c2.jpg" height="60" title="财经法规与财经职业道德"></a>
+        <h3 class="courh3"><a href="#" class="ask_link" target="_blank">财经法规与财经职业道德</a></h3>
+    </div>
+    <div class="clearh"></div>
+    <div class="teapic">
+        <a href="#"  target="_blank"><img src="/static/index/images/c3.jpg" height="60" title="财经法规与财经职业道德"></a>
+        <h3 class="courh3"><a href="#" class="ask_link" target="_blank">财经法规与财经职业道德</a></h3>
+    </div>
+    <div class="clearh"></div>
     </div>
     <div class="clearh"></div> @endforeach
     </div>  

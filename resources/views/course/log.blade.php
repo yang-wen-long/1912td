@@ -4,7 +4,7 @@
 <!-- InstanceBeginEditable name="EditRegion1" -->
 <div class="coursecont">
 <div class="coursepic">
-	<div class="course_img"><img src="../../../../../static/index/images/c1.jpg" width="500"></div>
+	<div class="course_img"><img src="/static/index/images/c1.jpg" width="500"></div>
     <div class="coursetitle">
    		<a class="state">更新中</a>
     	<h2 class="courseh2">会计基础</h2>    
@@ -12,7 +12,7 @@
 		<p class="courstime">课程时长：<span class="course_tt">3小时20分</span></p>
         <p class="courstime">学习人数：<span class="course_tt">25987人</span></p>
 		<p class="courstime">讲师：马老师</p>
-		<p class="courstime">课程评价：<img width="71" height="14" src="../../../../../static/index/images/evaluate5.png">&nbsp;&nbsp;<span class="hidden-sm hidden-xs">5.0分（10人评价）</span></p>
+		<p class="courstime">课程评价：<img width="71" height="14" src="/static/index/images/evaluate5.png">&nbsp;&nbsp;<span class="hidden-sm hidden-xs">5.0分（10人评价）</span></p>
         <!--<p><a class="state end">完结</a></p>-->      
         <span class="coursebtn"><a class="btnlink" href="{{url('/index/course/coursecont1')}}">加入学习</a><a class="codol fx" href="javascript:void(0);" onClick="$('#bds').toggle();">分享课程</a><a class="codol sc" href="#">收藏课程</a></span> 
 		<div style="clear:both;"></div>
@@ -81,7 +81,7 @@
     <h3 class="righttit">授课讲师</h3>
     <div class="teacher">
     <div class="teapic ppi">
-    <a href="teacher.html" target="_blank"><img src="../../../../../static/index/images/teacher.png" width="80" class="teapicy" title="张民智"></a>
+    <a href="teacher.html" target="_blank"><img src="/static/index/images/teacher.png" width="80" class="teapicy" title="张民智"></a>
     <h3 class="tname"><a href="teacher.html" class="peptitle" target="_blank">张民智</a><p style="font-size:14px;color:#666">会计讲师</p></h3>
     </div>
     <div class="clearh"></div>
@@ -110,17 +110,17 @@
     <h3 class="righttit">相关课程</h3>
     <div class="teacher">
     <div class="teapic">
-        <a href="#"  target="_blank"><img src="../../../../../static/index/images/c1.jpg" height="60" title="财经法规与财经职业道德"></a>
+        <a href="#"  target="_blank"><img src="/static/index/images/c1.jpg" height="60" title="财经法规与财经职业道德"></a>
         <h3 class="courh3"><a href="#" class="peptitle" target="_blank">财经法规与财经职业道德</a></h3>
     </div>
     <div class="clearh"></div>
     <div class="teapic">
-        <a href="#"  target="_blank"><img src="../../../../../static/index/images/c2.jpg" height="60" title="财经法规与财经职业道德"></a>
+        <a href="#"  target="_blank"><img src="/static/index/images/c2.jpg" height="60" title="财经法规与财经职业道德"></a>
         <h3 class="courh3"><a href="#" class="peptitle" target="_blank">财经法规与财经职业道德</a></h3>
     </div>
     <div class="clearh"></div>
     <div class="teapic">
-        <a href="#"  target="_blank"><img src="../../../../../static/index/images/c3.jpg" height="60" title="财经法规与财经职业道德"></a>
+        <a href="#"  target="_blank"><img src="/static/index/images/c3.jpg" height="60" title="财经法规与财经职业道德"></a>
         <h3 class="courh3"><a href="#" class="peptitle" target="_blank">财经法规与财经职业道德</a></h3>
     </div>
     <div class="clearh"></div>

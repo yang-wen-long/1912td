@@ -1,7 +1,7 @@
 @extends('layouts.show')
 @section('app.name', '我的详情')
 @section('content')
-<link rel="stylesheet" href="../../../../../static/index/css/member.css"/>
+<link rel="stylesheet" href="/static/index/css/member.css"/>
 <!-- InstanceBeginEditable name="EditRegion1" -->
 <script type="text/javascript">
 $(function(){
@@ -19,7 +19,7 @@ $(function(){
 <div class="membertab">
 <div class="memblist">
 	<div class="membhead">
-    <div style="text-align:center;"><img src="../../../../../static/index/images/0-0.JPG" width="80" ></div>
+    <div style="text-align:center;"><img src="/static/index/images/0-0.JPG" width="80" ></div>
     <div style="width:220px;text-align:center;">
     <p class="membUpdate mine">某某某</p> 
     <p class="membUpdate mine"><a href="{{url('/index/mycourse/details')}}">修改信息</a>&nbsp;|&nbsp;<a href="{{url('/index/user/myrepassword')}}">修改密码</a></p>
@@ -51,7 +51,7 @@ $(function(){
                     	
                         <li>
                             <div class="courseli">
-                            <a href="video.html" target="_blank"><img width="230" src="../../../../../static/index/images/c8.jpg"></a>
+                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg"></a>
                             <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
                             <div class="mpp">
                                 <div class="lv" style="width:20%;"></div>
@@ -61,7 +61,7 @@ $(function(){
                         </li>
 <li>
                             <div class="courseli">
-                            <a href="video.html" target="_blank"><img width="230" src="../../../../../static/index/images/c8.jpg"></a>
+                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg"></a>
                             <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
                             <div class="mpp">
                                 <div class="lv" style="width:20%;"></div>
@@ -71,7 +71,7 @@ $(function(){
                         </li>
 <li>
                             <div class="courseli">
-                            <a href="video.html" target="_blank"><img width="230" src="../../../../../static/index/images/c8.jpg"></a>
+                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg"></a>
                             <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
                             <div class="mpp">
                                 <div class="lv" style="width:20%;"></div>
@@ -94,7 +94,7 @@ $(function(){
                     	
                         <li>
                             <div class="courseli">
-                            <a href="video.html" target="_blank"><img width="230" src="../../../../../static/index/images/c8.jpg"></a>
+                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg"></a>
                             <p class="memb_courname"><a href="coursecont.html" class="blacklink">会计基础</a></p>
 							<div class="mpp">
                                 <div class="lv" style="width:100%;"></div>
@@ -104,7 +104,7 @@ $(function(){
                         </li>
                         <li>
                             <div class="courseli">
-                            <a href="video.html" target="_blank"><img width="230" src="../../../../../static/index/images/c8.jpg"></a>
+                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg"></a>
                             <p class="memb_courname"><a href="coursecont.html" class="blacklink">会计基础</a></p>
 							<div class="mpp">
                                 <div class="lv" style="width:100%;"></div>
@@ -123,7 +123,7 @@ $(function(){
 					<ul class="memb_course">                   	
                         <li>
                             <div class="courseli mysc">
-                            <a href="video.html" target="_blank"><img width="230" src="../../../../../static/index/images/c8.jpg" class="mm"></a>
+                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg" class="mm"></a>
                             <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
                             <div class="mpp">
                                 <div class="lv" style="width:20%;"></div>
@@ -134,7 +134,7 @@ $(function(){
                         </li>
                         <li>
                             <div class="courseli mysc">
-                            <a href="video.html" target="_blank"><img width="230" src="../../../../../static/index/images/c8.jpg" class="mm"></a>
+                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg" class="mm"></a>
                             <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
                             <div class="mpp">
                                 <div class="lv" style="width:20%;"></div>
