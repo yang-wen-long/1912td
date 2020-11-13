@@ -251,7 +251,7 @@ function nTabs(thisObj,Num){
         <ul id="myTab3">
             @foreach($course_category as $k=>$a)
             <!-- class="current"  -->
-            <li code_id="{{$a->cate_id}}" id="points" class="points">{{$a->cate_name}}</li>
+            <li code_id="{{$a->cate_id}}" id="points" @if($k==0) class="points current" @else class="points" @endif>{{$a->cate_name}}</li>
             @endforeach
         </ul>
         <div class="clearh"></div>
@@ -305,9 +305,11 @@ function nTabs(thisObj,Num){
                 }
             });
         });
+        $(".btnlink").click(function(){
+            var code_id = $(".current").attr("code_id");
+            alert(code_id);
+            return false;
+        });
     });
 </script>
-
-
-
 @endsection

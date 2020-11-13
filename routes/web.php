@@ -84,10 +84,3 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	//ajax处理前台分类
 	Route::post('/points',"Index\IndexController@points");
 });
-                        // var date = index.data;
-                        // var str = "<ul class='courseul' id='myTab3_Content0' style='display: block;'><li id='desc_li' class='descname'><div class='courselist'>";
-                        // for(var i in date){
-                        //     str+="<a href='{{url("+/index/course/coursecont/+date[i]['cou_id']+")}}'><img width='263' style='border-radius:3px 3px 0 0;'src='"+date[i]['cou_img']+"'></a><p class='courTit'>"+date[i]['cou_name']+"</p><div class='gray'><span>1小时前更新</span><span class='sp1'>"+date[i]['lll']+"人学习"
-                        // }
-                        // str+="</span><div style='clear:both'></div></div></div></li><div class='clearh'></div></ul>";
-                        // $("#showdesc").after(str);
