@@ -258,7 +258,7 @@ function nTabs(thisObj,Num){
         <div id="showdesc">
            <ul class='courseul' id='myTab3_Content0' style='display: block;'>
             @foreach($data as $k=>$a)
-            <li id="desc_li" class="descname ">
+            <li id="desc_li" class="descname">
                 <div class="courselist">
                 <a href="{{url('/index/course/coursecont/'.$a->cou_id)}}">
                     <img width="263" style="border-radius:3px 3px 0 0;" src="{{$a->cou_img}}" >
@@ -306,8 +306,28 @@ function nTabs(thisObj,Num){
             });
         });
         $(".btnlink").click(function(){
-            var code_id = $(".current").attr("code_id");
-            alert(code_id);
+            var cate_id = $(".current").attr("code_id");
+            var id = '1';
+            $.ajax({
+                url:"/index/points",
+                type:'post',
+                dataType:'json',
+                data:{cate_id:cate_id,id:id},
+                async:true,
+                success:function(index){
+                    if(index.error==0){
+                    var data = index.data;
+                    var html = "";
+                    $.each(data,function(k,v){
+                        html+="<li id='desc_li' class='descname'><div class='courselist'><a href='/index/course/coursecont/"+data[k].cou_id+"'><img width='263' style='border-radius:3px 3px 0 0;' src='"+data[k].cou_img+"' ></a><p class='courTit'>"+data[k].cou_name+"</p><div class='gray'><span>1小时前更新</span><span class='sp1'>"+data[k].lll+"人学习</span><div style='clear:both'></div></div></div></li>";
+                    });
+                    html+="<div class='clearh'></div>";
+                    $(".descname").append(html);
+                }else{
+                    alert(index.msg);
+                }
+                }
+            });
             return false;
         });
     });
