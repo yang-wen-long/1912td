@@ -251,14 +251,14 @@ function nTabs(thisObj,Num){
         <ul id="myTab3">
             @foreach($course_category as $k=>$a)
             <!-- class="current"  -->
-            <li code_id="{{$a->cate_id}}" class="points edscddd">{{$a->cate_name}}</li>
+            <li code_id="{{$a->cate_id}}" id="points" class="points">{{$a->cate_name}}</li>
             @endforeach
         </ul>
         <div class="clearh"></div>
         <div id="showdesc">
            <ul class='courseul' id='myTab3_Content0' style='display: block;'>
             @foreach($data as $k=>$a)
-            <li id="desc_li" class="descname">
+            <li id="desc_li" class="descname ">
                 <div class="courselist">
                 <a href="{{url('/index/course/coursecont/'.$a->cou_id)}}">
                     <img width="263" style="border-radius:3px 3px 0 0;" src="{{$a->cou_img}}" >
@@ -281,9 +281,11 @@ function nTabs(thisObj,Num){
 <span class="morecourse"><a href="{{url('/index/course/courselist')}}" class="btnlink">更多课程</a></span>
 <script>
     $(document).ready(function(){
-        $(".points").click(function(){
+        $(document).on('click','.points',function(){
             var _this=$(this);
-            $(".edscddd").css("points","points current");
+            _this.siblings().removeClass('current');
+            _this.siblings().addClass('points');
+            _this.addClass('current');
             var cate_id = _this.attr("code_id");
             $.ajax({
                 url:"/index/points",
