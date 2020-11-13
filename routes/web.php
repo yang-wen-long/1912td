@@ -60,7 +60,7 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	Route::any('/teacher/teacherlist',"Index\TeacherController@teacherlist");
 
 	//讲师详情
-	Route::any('/teacher/teacher',"Index\TeacherController@teacher");
+	Route::any('/teacher/teacher/{tea_id}',"Index\TeacherController@teacher");
 
 	//题库
 	Route::any('/question/bank',"Index\BankController@bank")->name("informationlist");
