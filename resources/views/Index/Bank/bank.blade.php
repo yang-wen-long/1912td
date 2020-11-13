@@ -37,15 +37,7 @@
 	<div class="clearh" style="height:20px;"></div>
 	<span class="pagejump">
     	<p class="userpager-list">
-       	   <a href="#" class="page-number">首页</a>
-           <a href="#" class="page-number">上一页</a>
-           <a href="#" class="page-number">1</a>
-           <a href="#" class="page-number pageractive">2</a>
-           <a href="#" class="page-number">3</a>
-            <a href="#" class="page-number">...</a>
-            <a href="#" class="page-number">10</a>
-           <a href="#" class="page-number">下一页</a>
-           <a href="#" class="page-number">末页</a>
+       	  {{$data->links()}}
         </p>
     </span>
     <div class="clearh" style="height:10px;"></div>

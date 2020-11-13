@@ -11,7 +11,7 @@
         <p class="courstime">总课时：<span class="course_tt">30课时</span></p>
 		<p class="courstime">课程时长：<span class="course_tt">3小时20分</span></p>
         <p class="courstime">学习人数：<span class="course_tt">{{$cou_data->lll}}人</span></p>
-		<p class="courstime">讲师：{{$cou_data->admin_name}}</p>
+		<p class="courstime">讲师：{{$teacher->tea_name}}</p>
 		<p class="courstime">课程评价：<img width="71" height="14" src="../../../../../static/index/images/evaluate5.png">&nbsp;&nbsp;<span class="hidden-sm hidden-xs">5.0分（10人评价）</span></p>
         <!--<p><a class="state end">完结</a></p>-->      
         <span class="coursebtn"><a class="btnlink" href="{{url('/index/course/coursecont1')}}">加入学习</a><a class="codol fx" href="javascript:void(0);" onClick="$('#bds').toggle();">分享课程</a><a class="codol sc" href="#">收藏课程</a></span> 
@@ -37,7 +37,7 @@
 <div class="clearh"></div>
 <div class="coursetext">
 	<h3 class="leftit">课程简介</h3>
-    <p class="coutex">本课程主要针对重新改版后的新大纲会计从业资格考试的学习，主要为零基础学生顺利通过会计从业考试而设立！内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列。 本教程为2014最新版教材课程详细讲解，学完后可以直接考证，也可以提高会计业务基础知识</p>
+    <p class="coutex">{{$cou_data->cou_desc}}</p>
 	<div class="clearh"></div>
 	<h3 class="leftit">课程目录</h3>
     <dl class="mulu">
@@ -59,10 +59,10 @@
     <div class="teacher">
     <div class="teapic ppi">
     <a href="teacher.html" target="_blank"><img src="../../../../../static/index/images/teacher.png" width="80" class="teapicy" title="张民智"></a>
-    <h3 class="tname"><a href="teacher.html" class="peptitle" target="_blank">张民智</a><p style="font-size:14px;color:#666">会计讲师</p></h3>
+    <h3 class="tname"><a href="teacher.html" class="peptitle" target="_blank">{{$teacher->tea_name}}</a><p style="font-size:14px;color:#666">{{$teacher->tea_style}}</p></h3>
     </div>
     <div class="clearh"></div>
-    <p>十年以上Linux从业经验， 培训经验超过八年。在各 个知名培训机构做过金牌 讲师、学科负责人，培训 学员过万人。曾获红帽认 证讲师，微软认证讲师等 资质认证。教学以逻辑性 强、教学细致、知识点准 确著称。</p>
+    <p>{{$teacher->tea_resume}}</p>
     </div>
     </div>
 </div>

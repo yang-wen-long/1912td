@@ -12,7 +12,7 @@ class BankController extends Controller
     //
     public function bank(){
     	$nav=$this->nav();
-        $data=Bank::get();
+        $data=Bank::paginate(5);
         //热门课程
         $course_data=Course::orderby('lll','desc')->get();
         //推荐课程
