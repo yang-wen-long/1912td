@@ -18,7 +18,7 @@ class CourseController extends Controller{
         // dd($data);
         $cate_id= $data[0]->cate_id;
         // dd($cate_id);
-        $array=CateGory::get();
+        $array=Category::get();
         $data = $this->CreateTree($array,$cate_id);
         // dd($data);
         // 课程

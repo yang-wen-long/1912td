@@ -67,7 +67,6 @@
         <h3 class="courh3"><a href="JavaScript:;" class="ask_link cou_detail" cou_id="{{$v->cou_id}}">{{$v->cou_name}}</a></h3>
         <h3 class="courh3"><a href="#" class="ask_link" target="_blank">财经法规与财经职业道德</a></h3>
     </div>
-
     <div class="clearh"></div> @endforeach
     </div>  
 
