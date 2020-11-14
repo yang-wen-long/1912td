@@ -9,9 +9,9 @@ use App\Models\Category;
 use App\Models\Course;
 
 //课程
-class CourselistController extends Controller{
+class CourseController extends Controller{
     //详情
-    public function courselist(){
+    public function list(){
         // 无限极分类
         $data = CateGory::where('parents_id',0)->orderBy('cate_id','asc')->get('cate_id');
         // dd($data);
@@ -34,7 +34,7 @@ class CourselistController extends Controller{
 
         // 导航栏
         $nav = $this->nav();
-    	return view("Index.Courselist.Courselist",["nav"=>$nav,'data'=>$data,'course'=>$course]);
+    	return view("Index.course.list",["nav"=>$nav,'data'=>$data,'course'=>$course]);
     }
 
     //课程目录

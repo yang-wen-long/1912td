@@ -33,7 +33,7 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	
 
 	//课程首页
-	Route::any('/course/courselist',"Index\CourselistController@courselist")->name("courselist");
+	Route::any('/course/list',"Index\CourselistController@list");
 
 	//课程目录
 	Route::any('/course/coursecont',"Index\CourselistController@coursecont");
