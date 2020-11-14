@@ -31,7 +31,7 @@
         @foreach($course as $k=>$v)
         <li>
         	<div class="courselist">
-            <a href="{{url('/index/course/coursecont')}}" target="_blank">
+            <a href="{{url('/index/course/detail/'.$v->cou_id)}}" target="_blank">
             <img style="border-radius:3px 3px 0 0;" width="240" src="../../{{$v->cou_img}}" title="会计基础"></a>
             <p class="courTit"><a href="{{url('/index/course/detail/'.$v->cou_id)}}" target="_blank">{{$v->cou_name}}</a></p>
             <div class="gray">

@@ -44,7 +44,7 @@ class CourseController extends Controller{
          // var_dump($teacher);die;
         // $c=$b['tea_name'];
          // var_dump($c);die;
-        $log_data=Log::where('cou_id',$cou_id)->paginate(6);
+        $log_data=Log::where('cou_id',$cou_id)->paginate(5);
     	return view("course.detail",["name"=>$name,'teacher'=>$teacher,"nav"=>$nav,'cou_data'=>$cou_data,'log_data'=>$log_data]);
     }
 }
