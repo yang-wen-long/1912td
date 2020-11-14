@@ -35,10 +35,7 @@ class IndexController extends Controller
         }
         $id = request()->post("id");
         if($id == 1){
-            $data = DB::table("course")->orderBY("cate_id","desc")->where("cate_id",$cate_id)->limit("4")->get();
-            if(count($data)!==4){
-                return json_encode(["error"=>1,"msg"=>"我的耐性有限，请不要忽略"]);
-            }
+            $data = DB::table("course")->orderBY("cate_id","desc")->where("cate_id",$cate_id)->get();
         }else{
             $data = DB::table("course")->where("cate_id",$cate_id)->limit("4")->get();
         }

@@ -287,6 +287,7 @@ function nTabs(thisObj,Num){
             _this.siblings().addClass('points');
             _this.addClass('current');
             var cate_id = _this.attr("code_id");
+            $("#desc_lidshg").remove("addr_id");
             $.ajax({
                 url:"/index/points",
                 type:'post',
@@ -307,7 +308,14 @@ function nTabs(thisObj,Num){
         });
         $(".btnlink").click(function(){
             var cate_id = $(".current").attr("code_id");
-            var id = '1';
+            var id = $("#desc_lidshg").attr("addr_id");
+            if(id == undefined){
+                var id = '1';
+            }
+            if(parseInt(id) == '2'){
+                alert("我的耐性有限，请不要忽略");
+                return false;
+            }
             $.ajax({
                 url:"/index/points",
                 type:'post',
@@ -319,10 +327,11 @@ function nTabs(thisObj,Num){
                     var data = index.data;
                     var html = "";
                     $.each(data,function(k,v){
-                        html+="<li id='desc_li' class='descname'><div class='courselist'><a href='/index/course/coursecont/"+data[k].cou_id+"'><img width='263' style='border-radius:3px 3px 0 0;' src='"+data[k].cou_img+"' ></a><p class='courTit'>"+data[k].cou_name+"</p><div class='gray'><span>1小时前更新</span><span class='sp1'>"+data[k].lll+"人学习</span><div style='clear:both'></div></div></div></li>";
+                        html+="<li id='desc_lidshg' class='descname'  addr_id='2'><div class='courselist'><a href='/index/course/coursecont/"+data[k].cou_id+"'><img width='263' style='border-radius:3px 3px 0 0;' src='"+data[k].cou_img+"' ></a><p class='courTit'>"+data[k].cou_name+"</p><div class='gray'><span>1小时前更新</span><span class='sp1'>"+data[k].lll+"人学习</span><div style='clear:both'></div></div></div></li>";
                     });
                     html+="<div class='clearh'></div>";
-                    $(".descname").append(html);
+                    $(".descname").hide();
+                    $(".courseul").append(html);
                 }else{
                     alert(index.msg);
                 }
