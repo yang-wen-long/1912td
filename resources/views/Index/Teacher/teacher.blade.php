@@ -26,9 +26,9 @@
 <ul class="tcourseul">
 @foreach($course as $v)
 	<li>
-	    <span class="courseimg tcourseimg"><a href="{{url('/index/course/coursecont')}}" target="_blank"><img width="230" src="../../../../{{$v->cou_img}}"></a></span>
+	    <span class="courseimg tcourseimg"><a href="{{url('/index/course/detail/'.$v->cou_id)}}" target="_blank"><img width="230" src="../../../../{{$v->cou_img}}"></a></span>
 	    <span class="tcoursetext">
-	       <h4><a href="{{url('/index/course/coursecont')}}" target="_blank" class="teatt">{{$v->cou_name}}</a><a class="state">更新中</a></h4>
+	       <h4><a href="{{url('/index/course/detail/'.$v->cou_id)}}" target="_blank" class="teatt">{{$v->cou_name}}</a><a class="state">{{$v->cou_status==1?'连载':'完结'}}</a></h4>
 	       <p class="teadec">
 			   {{$v->cou_desc}}
 			</p>
