@@ -14,7 +14,7 @@
     <h4>计算机</h4>
         <ul class="sortul">
             @foreach($data as $v)
-                <li><a href="/index/course/coursecont">{{$v->cate_name}}</a></li>
+                <li value="{{$v->cate_id}}" class='ss'>{{$v->cate_name}}</a></li>
             @endforeach
         </ul>
     <div class="clearh"></div>
