@@ -26,8 +26,22 @@ class MycouController extends Controller
      //我的问答详情
     public function questions($q_id){
         $nav = $this->nav();
-        
         $data=Question::where('q_id',$q_id)->first();
         return view("Index.mycourse.questions",["nav"=>$nav,"data"=>$data]);
     }
+    //我的笔记
+    public function biji(){
+        $nav = $this->nav();
+        return view("Index.mycourse.biji",["nav"=>$nav]);
+    } 
+     //我的作业
+    public function homework(){
+        $nav = $this->nav();
+        return view("Index.mycourse.homework",["nav"=>$nav]);
+    } 
+    //我的题库
+    public function bank(){
+        $nav = $this->nav();
+        return view("Index.mycourse.bank",["nav"=>$nav]);
+    } 
 }

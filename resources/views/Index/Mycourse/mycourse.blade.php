@@ -29,11 +29,11 @@ $(function(){
     <div class="memb">
    
     <ul>
-    	<li class="currnav"><a class="mb1" href="{{url('/index/mycourse/mycourse')}}">我的课程</a></li>
-		<li><a class="mb3" href="{{url('/index/mycourse/mycourse')}}">我的问答</a></li>
-		<li><a class="mb4" href="{{url('/index/mycourse/mycourse')}}">我的笔记</a></li>
-		<li><a class="mb12" href="{{url('/index/mycourse/mycourse')}}">我的作业</a></li>
-        <li><a class="mb2" href="{{url('/index/mycourse/mycourse')}}" target="_blank">我的题库</a></li>
+    	<li class=" mb1 currnav"><a class="mb1" href="{{url('/index/mycourse/mycourse')}}">我的课程</a></li>
+		<li><a class="mb3" href="{{url('/index/mycourse/question')}}">我的问答</a></li>
+		<li><a class="mb4" href="{{url('/index/mycourse/biji')}}">我的笔记</a></li>
+		<li><a class="mb12" href="{{url('/index/mycourse/homework')}}">我的作业</a></li>
+        <li><a class="mb2" href="{{url('/index/mycourse/bank')}}" target="_blank">我的题库</a></li>
    </ul>
     </div>
   </div>

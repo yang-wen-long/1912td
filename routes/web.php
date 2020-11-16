@@ -38,7 +38,15 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 
 	//我的问答详情
 	Route::any('/mycourse/questions/{q_id}',"Index\MycouController@questions"); 
+
+	//我的笔记
+	Route::any('/mycourse/biji',"Index\MycouController@biji"); 
 	
+	//我的作业
+	Route::any('/mycourse/homework',"Index\MycouController@homework"); 
+
+	//我的题库
+	Route::any('/mycourse/bank',"Index\MycouController@bank"); 
 
 	//课程首页
 	Route::any('/course/course',"Index\CourseController@course")->name("course");
