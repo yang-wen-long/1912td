@@ -42,6 +42,8 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	//课程详情
 	Route::any('/course/detail/{cou_id}',"Index\CourseController@detail");
 
+    //加入学习
+    Route::any('/course/study/{cou_id}',"Index\CourseController@study");
 	//资讯
 	Route::any('/information/informationlist',"Index\InformationController@informationlist")->name("informationlist");
 

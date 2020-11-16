@@ -60,7 +60,7 @@ $(function(){
 
 <body>
    <div class="linevideo" style="overflow-x:hidden">
-        <span class="returnindex"><a class="gray" href="{{url('/index/course/coursecont1')}}" style="font-size:14px;">返回课程</a></span>   
+        <span class="returnindex"><a class="gray" href="{{url('/index/course/detail/'.$log->cou_id)}}" style="font-size:14px;">返回课程</a></span>   
         <span class="taskspan"><span class="ts">第{{$log->catalog_chapters}}章</span>&nbsp;&nbsp;<b class="tasktit">{{$log->catalog_name}}</b></span> 
         <div style="width:100%;margin-top:20px;">
             <video width="auto" id="example_video_1" class="video-js vjs-default-skin  vjs-big-play-centered vvi " controls preload="none"  poster="" data-setup="{}"><!--poster是视频未播放前的展示图片-->
