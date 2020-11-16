@@ -32,7 +32,7 @@ class TeacherController extends Controller
         $teacher = TeacherModel::join('course_category',"teacher.cate_id","=","course_category.cate_id")->where('tea_id',$tea_id)->first();
         // dd($teacher);
         // 课程
-        $course = Course::select('cou_id','cou_name','cou_desc','cou_img','cou_time','lll')
+        $course = Course::select('cou_id','cou_name','cou_desc','cou_img','cou_time','lll','cou_status')
         ->take(2)
         ->get();
         // dd($course);
