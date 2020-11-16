@@ -13,7 +13,6 @@
         <p class="courstime">学习人数：<span class="course_tt">{{$cou_data->lll}}人</span></p>
 		<p class="courstime">讲师：{{$teacher->tea_name}}</p>
 		<p class="courstime">课程评价：<img width="71" height="14" src="../../../../../static/index/images/evaluate5.png">&nbsp;&nbsp;<span class="hidden-sm hidden-xs">5.0分（10人评价）</span></p>
-        
         <span class="coursebtn"><a class="btnlink" href="{{url('/index/course/log/'.$study->catalog_id)}}">加入学习</a><a class="codol fx" href="javascript:void(0);" onClick="$('#bds').toggle();">分享课程</a><a class="codol sc" href="#">收藏课程</a></span> 
 		<div style="clear:both;"></div>
 		<div id="bds">

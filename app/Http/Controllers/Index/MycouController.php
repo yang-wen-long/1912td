@@ -18,7 +18,16 @@ class MycouController extends Controller
         ];
         $course = Course::where($where)->take(1)->get();
         // dd($course);
-    	return view("Index.mycourse.mycourse",["nav"=>$nav,'course'=>$course]);
+        $where = [
+            "is_xx" =>1
+        ];
+        $data =  Course::where($where)->get();
+        // dd($data);
+        $where = [
+            "is_xx" =>2
+        ];
+        $datas =  Course::where($where)->get();
+    	return view("Index.mycourse.mycourse",["nav"=>$nav,'course'=>$course,'data'=>$data,'datas'=>$datas]);
     }
     //修改信息
     public function details(){
