@@ -33,7 +33,6 @@
     </div>
     <div class="clearh"></div>
 </div>
-
 <div class="clearh"></div>
 <div class="coursetext">
 	<h3 class="leftit">课程简介</h3>
@@ -44,14 +43,9 @@
         @foreach($log_data as $k=>$v)
     	<dt><a href="{{url('/index/course/coursecont1')}}" class="graylink">第{{$v->catalog_chapters}}章&nbsp;&nbsp;{{$v->catalog_name}}</a></dt>
         <dd>{{$v->catalog_desc}}</dd>
-   @endforeach
-    
-     
-    
-    	 
+   @endforeach  	 
     </dl>
 </div>
-
 <div class="courightext">
 <div class="ctext">
     <div class="cr1">
@@ -66,7 +60,6 @@
     </div>
     </div>
 </div>
-
 <div class="ctext">
     <div class="cr1">
     <h3 class="righttit">课程公告</h3>
@@ -81,7 +74,6 @@
     </div>
     </div>
 </div>
-
 <div class="ctext">
     <div class="cr1">
     <h3 class="righttit">相关课程</h3>
@@ -103,14 +95,6 @@
     <div class="clearh"></div>
     </div>
     </div>
+</div>  
 </div>
-   
-</div>
-
-
-
-
-
-
-
 @endsection

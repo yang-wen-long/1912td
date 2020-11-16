@@ -6,8 +6,7 @@
 	<span class="select">     	
       <input type="text" value="请输入关键字" class="pingjia_con"/>
       <a href="#" class="sellink"></a>        
-    </span>
-    
+    </span>   
     <ul class="courseul">
     <li class="curr" style="border-radius:3px 3px 0 0;background:#fb5e55;"><h3 style="color:#fff;"><a href="#" class="whitea">全部课程</a></h3>
     <li>
@@ -18,13 +17,10 @@
             @endforeach
         </ul>
     <div class="clearh"></div>
-    </li>
-    
-    
+    </li>    
     </ul>
     <div style="height:20px;border-radius:0 0 5px 5px; background:#fff;box-shadow:0 2px 4px rgba(0, 0, 0, 0.1)"></div>
     </div>
-    
     <div class="courseright">
         <div class="clearh"></div>
       <ul class="courseulr">
@@ -43,7 +39,6 @@
             </div>
        </li>
        @endforeach
-
     </ul>
     </div>
     <div class="clearh"></div>

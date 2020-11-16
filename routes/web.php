@@ -24,11 +24,20 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	Route::any('/user/reg',"Index\RegController@reg");
     Route::any('/user/reg_do',"Index\RegController@reg_do");
 
-	//我的首页
+
+
+//个人中心
+	//我的课程
 	Route::any('/mycourse/mycourse',"Index\MycouController@mycourse"); 
 
-	//我的详情
+	//修改信息
 	Route::any('/mycourse/details',"Index\MycouController@details"); 
+
+	//我的问答
+	Route::any('/mycourse/question',"Index\MycouController@question"); 
+
+	//我的问答详情
+	Route::any('/mycourse/questions/{q_id}',"Index\MycouController@questions"); 
 	
 
 	//课程首页

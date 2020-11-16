@@ -33,7 +33,6 @@
     </div>
     <div class="clearh"></div>
 </div>
-
 <div class="clearh"></div>
 <div class="coursetext">
 	<h3 class="leftit">课程简介</h3>
@@ -43,38 +42,26 @@
     <dl class="mulu">
     	<dt><a href="{{url('/index/course/coursecont1')}}" class="graylink">第一章&nbsp;&nbsp;总论</a></dt>
         <dd>内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列。内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列</dd>
-   
-    
     	<dt><a href="#" class="graylink">第二章&nbsp;&nbsp;会计要素与会计等式</a></dt>
-        <dd>内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列。内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列</dd>
-    
-    
+        <dd>内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列。内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列</dd>   
     	<dt><a href="#" class="graylink">第三章&nbsp;&nbsp;会计科目与账户</a></dt>
-        <dd>内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列。内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列</dd>
-    
+        <dd>内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列。内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列</dd>   
     	<dt><a href="#" class="graylink">第四章&nbsp;&nbsp;会计记账方法</a></dt>
         <dd>内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列。内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列</dd>
-
 		<dt><a href="#" class="graylink">第五章&nbsp;&nbsp;借贷记账法下主要经济业务的账务处理</a></dt>
         <dd>介绍ISO/OSI七层模型、TCP/IP四层模型、IP地址、DNS、端口、网关等网络知识，为Linux的网络配置打好基础。</dd>
-
 		<dt><a href="#" class="graylink">第六章&nbsp;&nbsp;会计凭证</a></dt>
         <dd>内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列。内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列</dd>
-
 		<dt><a href="#" class="graylink">第七章&nbsp;&nbsp; 会计账簿</a></dt>
         <dd>介绍ISO/OSI七层模型、TCP/IP四层模型、IP地址、DNS、端口、网关等网络知识，为Linux的网络配置打好基础。</dd>
-
 		<dt><a href="#" class="graylink">第八章&nbsp;&nbsp;账务处理程序</a></dt>
         <dd>介绍ISO/OSI七层模型、TCP/IP四层模型、IP地址、DNS、端口、网关等网络知识，为Linux的网络配置打好基础。</dd>
-
 		<dt><a href="#" class="graylink">第九章&nbsp;&nbsp; 财产清查</a></dt>
         <dd>介绍ISO/OSI七层模型、TCP/IP四层模型、IP地址、DNS、端口、网关等网络知识，为Linux的网络配置打好基础。</dd>
-
 		<dt><a href="#" class="graylink">第十章&nbsp;&nbsp;财务报表</a></dt>
         <dd>内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列。内容包括会计基础、财经法规和职业道德、电算化三科视频课程全系列</dd>
     </dl>
 </div>
-
 <div class="courightext">
 <div class="ctext">
     <div class="cr1">
@@ -89,7 +76,6 @@
     </div>
     </div>
 </div>
-
 <div class="ctext">
     <div class="cr1">
     <h3 class="righttit">课程公告</h3>
@@ -104,7 +90,6 @@
     </div>
     </div>
 </div>
-
 <div class="ctext">
     <div class="cr1">
     <h3 class="righttit">相关课程</h3>
@@ -126,14 +111,6 @@
     <div class="clearh"></div>
     </div>
     </div>
+</div> 
 </div>
-   
-</div>
-
-
-
-
-
-
-
 @endsection

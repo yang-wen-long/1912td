@@ -146,16 +146,11 @@ $(function(){
                         <div class="clearfix" style="height:10px;"></div>
                     </ul>
 				</div>
-				</div>
-				
+				</div>				
 			</div>
 		</div>
 </div>
-
-
 <div class="clearh"></div>
 </div>
-
 <!-- InstanceEndEditable -->
-
 @endsection
