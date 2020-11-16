@@ -10,6 +10,14 @@
         margin-left:-19px;
     }
 </style>
+    <style>
+        .page-item{
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+    </style>
 <link rel="stylesheet" href="../../../../../static/index/css/information.css">
 <script src="../../../../../static/index/js/jquery-1.8.0.min.js"></script>
 <script src="../../../../../static/index/js/mine.js"></script>
@@ -45,8 +53,8 @@
             </td>
             @endforeach
         </tr>
-        <tr class="box-title"><td class="box-title">{{$huo->links()}}</td></tr>
-    </table>  
+    </table> 
+    {{$huo->links()}} 
 </div>
 </div>
 </div>

@@ -33,6 +33,9 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	
 	//课程首页
 	Route::any('/course/list',"Index\CourseController@list")->name('courselist');
+	
+	//课程首页
+	Route::any('/course/Asubclass',"Index\CourseController@Asubclass");
 
 	//课程目录
 	Route::any('/course/coursecont',"Index\CourseController@coursecont");
