@@ -5,32 +5,24 @@ namespace App\Http\Controllers\Index;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use \DB;
+use App\Models\Category;
 use App\Models\Course;
 use App\Models\Log;
 use App\Models\Teacher;
-use App\Models\Category;
 //课程
 class CourseController extends Controller{
-    //列表
+    //详情
     public function list(){
         // 无限极分类
-        $data = Category::where('parents_id',0)->orderBy('cate_id','asc')->get('cate_id');
-        // dd($data);
-        $cate_id= $data[0]->cate_id;
-        // dd($cate_id);
-        $array=Category::get();
-        $data = $this->CreateTree($array,$cate_id);
-        // dd($data);
-        // 课程
-        
+        $topcss = CateGory::where('parents_id',0)->get();
+        $css=CateGory::get();
         $course = Course::select('cou_id','cou_name','cou_desc','cou_img','cou_time','lll')
-        ->take(9)
-        ->orderBy('cou_id','desc')
+        ->take('9')
+        ->orderBy('lll','desc')
         ->get();
-        // dd($course);
         // 导航栏
         $nav = $this->nav();
-        return view("course.list",["nav"=>$nav,'data'=>$data,'course'=>$course]);
+    	return view("course.list",["nav"=>$nav,'topcss'=>$topcss,"css"=>$css,'course'=>$course]);
     }
 
     //课程详情
@@ -53,19 +45,57 @@ class CourseController extends Controller{
         $log_data=Log::where('cou_id',$cou_id)->paginate(5);
     	return view("course.detail",['study'=>$study,"name"=>$name,'teacher'=>$teacher,"nav"=>$nav,'cou_data'=>$cou_data,'log_data'=>$log_data]);
     }
+    //我的目录
     public function log($log_id){
-        
         //展示当前目录内容
         $log=Log::where('catalog_id',$log_id)->first();
-        
+        $name = DB::table("course_notice")->where("notice_del","1")->limit("3")->get();
         $cou_id=$log['cou_id'];
         //获取大当前课程的目录列表
         $catalog=Log::where('cou_id',$cou_id)->get();
-        return view('course/log',['log'=>$log,'catalog'=>$catalog]);
+        return view('course/log',['log'=>$log,'catalog'=>$catalog,"name"=>$name]);
     }
-    public function study($cou_id){
-        $catalog_chapters=1;
+
+    //处理课程首页分类业务
+    public function Asubclass(){
+        if(request()->isMethod("get")){
+            $name = Request()->get("keyword");
+            $data = Course::select('cou_id','cou_name','cou_desc','cou_img','cou_time','lll')
+                          ->where("cou_name","like","%$name%")
+                          ->take('9')
+                          ->orderBy('lll','desc')
+                          ->get();
+            if($data=='[]'){
+                return json_encode(["error"=>1,"msg"=>"正在赶往这的路上！"]);
+            }
+            if($data){
+                return json_encode(["error"=>0,"msg"=>"查询","data"=>$data]);
+            }else{
+                 return json_encode(["error"=>1,"msg"=>"查询失败"]);
+            }
+        }
+        if(request()->isMethod("post")){
+            $cate_id = request()->post("cate_id");
+            $fgid="/^[0-9]*$/";
+            if(!preg_match($fgid,$cate_id)){
+                return json_encode(["error"=>1,"msg"=>"请不要测试我的耐性！"]);
+            }
+            $data = Course::select('cou_id','cou_name','cou_desc','cou_img','cou_time','lll')
+                          ->take('9')
+                          ->orderBy('lll','desc')
+                          ->where("cate_id",$cate_id)
+                          ->get();
+            if($data=='[]'){
+                return json_encode(["error"=>1,"msg"=>"正在赶往这的路上！"]);
+            }
+            if($data){
+                return json_encode(["error"=>0,"msg"=>"成功","data"=>$data]);
+            }else{
+                 return json_encode(["error"=>1,"msg"=>"分类失败"]);
+            }
+        }
+    }
 
 
-    }
+
 }

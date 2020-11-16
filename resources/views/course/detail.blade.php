@@ -13,10 +13,6 @@
         <p class="courstime">学习人数：<span class="course_tt">{{$cou_data->lll}}人</span></p>
 		<p class="courstime">讲师：{{$teacher->tea_name}}</p>
 		<p class="courstime">课程评价：<img width="71" height="14" src="../../../../../static/index/images/evaluate5.png">&nbsp;&nbsp;<span class="hidden-sm hidden-xs">5.0分（10人评价）</span></p>
-<<<<<<< HEAD
-        <!--<p><a class="state end">完结</a></p>-->      
-=======
->>>>>>> 442fcfe39fc87e32dcffbf015be613a23fe3434f
         <span class="coursebtn"><a class="btnlink" href="{{url('/index/course/log/'.$study->catalog_id)}}">加入学习</a><a class="codol fx" href="javascript:void(0);" onClick="$('#bds').toggle();">分享课程</a><a class="codol sc" href="#">收藏课程</a></span> 
 		<div style="clear:both;"></div>
 		<div id="bds">
@@ -36,7 +32,6 @@
     </div>
     <div class="clearh"></div>
 </div>
-
 <div class="clearh"></div>
 <div class="coursetext">
 	<h3 class="leftit">课程简介</h3>
@@ -47,14 +42,9 @@
         @foreach($log_data as $k=>$v)
     	<dt><a href="{{url('/index/course/log/'.$v->catalog_id)}}" class="graylink">第{{$v->catalog_chapters}}章&nbsp;&nbsp;{{$v->catalog_name}}</a></dt>
         <dd>{{$v->catalog_desc}}</dd>
-   @endforeach
-    
-     
-    
-    	 
+   @endforeach  	 
     </dl>
 </div>
-
 <div class="courightext">
 <div class="ctext">
     <div class="cr1">
@@ -69,7 +59,6 @@
     </div>
     </div>
 </div>
-
 <div class="ctext">
     <div class="cr1">
     <h3 class="righttit">课程公告</h3>
@@ -84,7 +73,6 @@
     </div>
     </div>
 </div>
-
 <div class="ctext">
     <div class="cr1">
     <h3 class="righttit">相关课程</h3>
@@ -106,14 +94,6 @@
     <div class="clearh"></div>
     </div>
     </div>
+</div>  
 </div>
-   
-</div>
-
-
-
-
-
-
-
 @endsection
