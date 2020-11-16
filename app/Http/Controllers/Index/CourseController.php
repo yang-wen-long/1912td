@@ -47,4 +47,13 @@ class CourseController extends Controller{
         $log_data=Log::where('cou_id',$cou_id)->paginate(6);
     	return view("course.detail",["name"=>$name,'teacher'=>$teacher,"nav"=>$nav,'cou_data'=>$cou_data,'log_data'=>$log_data]);
     }
+    public function log($log_id){
+        //展示当前目录内容
+        $log=Log::where('catalog_id',$log_id)->first();
+        
+        $cou_id=$log['cou_id'];
+        //获取大当前课程的目录列表
+        $catalog=Log::where('cou_id',$cou_id)->get();
+        return view('course/log',['log'=>$log,'catalog'=>$catalog]);
+    }
 }

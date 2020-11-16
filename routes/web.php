@@ -37,13 +37,10 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	Route::any('/course/list',"Index\CourseController@list");
 
 	//课程目录
-	Route::any('/course/coursecont',"Index\CourseController@coursecont");
+	Route::any('/course/log/{catalog_id}',"Index\CourseController@log");
 
 	//课程详情
 	Route::any('/course/detail/{cou_id}',"Index\CourseController@detail");
-
-	//课程视频
-	Route::any('/video/video',"Index\VideoController@video");
 
 	//资讯
 	Route::any('/information/informationlist',"Index\InformationController@informationlist")->name("informationlist");
