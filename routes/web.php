@@ -10,19 +10,17 @@
 | contains the "web" middleware group. Now create something great!
 |前台首页
 */
-Route::get('/',"Index\IndexController@index")->name("index");
-
-Route::prefix("/index")/*->middleware("auth")*/->group(function(){
-
-	//登录LoginController
-	Route::any('/user/login',"Index\LoginController@login");
-    Route::any('/user/login_do/{zh}',"Index\LoginController@login_do");
+    Route::get('/',"Index\IndexController@index")->name("index");
+    //登录LoginController
+	Route::any('/index/user/login',"Index\LoginController@login"); 
+	Route::any('/index/user/login_do/{zh}',"Index\LoginController@login_do");
 	//忘记密码
-	Route::any('/user/myrepassword',"Index\LoginController@myrepassword");
-
+	Route::any('/index/user/myrepassword',"Index\LoginController@myrepassword");
 	//注册
-	Route::any('/user/reg',"Index\RegController@reg");
-    Route::any('/user/reg_do',"Index\RegController@reg_do");
+	Route::any('/index/user/reg',"Index\RegController@reg");
+    Route::any('/index/user/reg_do',"Index\RegController@reg_do");
+
+Route::prefix("/index")->middleware("Checklogin")->group(function(){
 
 	//我的首页
 	Route::any('/mycourse/mycourse',"Index\MycouController@mycourse"); 
