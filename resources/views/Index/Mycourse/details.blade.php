@@ -24,7 +24,7 @@ $(function(){
     <div class="memb">
         <ul>
         	<li class="currnav"><a class="mb1" href="">我的课程</a></li>
-    		<li><a class="mb3" href="">我的问答</a></li>
+    		<li><a class="mb3" href="/index/mycourse/question">我的问答</a></li>
     		<li><a class="mb4" href="">我的笔记</a></li>
     		<li><a class="mb12" href="">我的作业</a></li>
             <li><a class="mb2" href="" target="_blank">我的题库</a></li>

@@ -16,9 +16,9 @@ class Checklogin
     public function handle($request, Closure $next)
     {
         
-    $u_id = Request()->session()->get('userinfo')['u_id'];
+    $user = Request()->session()->get('userinfo');
 //        $admin_id=5;
-        if (empty($u_id)){
+        if (empty($user)){
             echo  "<script>alert('请登录');location.href='/index/user/login';</script>";exit;
         }
         return $next($request);

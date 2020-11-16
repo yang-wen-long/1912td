@@ -14,7 +14,7 @@ class BankController extends Controller
     	$nav=$this->nav();
         $data=Bank::paginate(5);
         //热门课程
-        $course_data=Course::orderby('lll','desc')->get();
+        $course_data=Course::orderby('lll','desc')->limit(5)->get();
         //推荐课程
         $course_tj=Course::where('is_tj','2')->orderby('cou_time','desc')->limit(4)->get();
         // dd($data);

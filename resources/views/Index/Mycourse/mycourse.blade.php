@@ -29,11 +29,11 @@ $(function(){
     <div class="memb">
    
     <ul>
-    	<li class="currnav"><a class="mb1" href="{{url('/index/mycourse/mycourse')}}">我的课程</a></li>
-		<li><a class="mb3" href="{{url('/index/mycourse/mycourse')}}">我的问答</a></li>
-		<li><a class="mb4" href="{{url('/index/mycourse/mycourse')}}">我的笔记</a></li>
-		<li><a class="mb12" href="{{url('/index/mycourse/mycourse')}}">我的作业</a></li>
-        <li><a class="mb2" href="{{url('/index/mycourse/mycourse')}}" target="_blank">我的题库</a></li>
+    	<li class=" mb1 currnav"><a class="mb1" href="{{url('/index/mycourse/mycourse')}}">我的课程</a></li>
+		<li><a class="mb3" href="{{url('/index/mycourse/question')}}">我的问答</a></li>
+		<li><a class="mb4" href="{{url('/index/mycourse/biji')}}">我的笔记</a></li>
+		<li><a class="mb12" href="{{url('/index/mycourse/homework')}}">我的作业</a></li>
+        <li><a class="mb2" href="{{url('/index/mycourse/bank')}}" target="_blank">我的题库</a></li>
    </ul>
     </div>
   </div>
@@ -87,19 +87,44 @@ $(function(){
                         <div class="clearfix" style="height:10px;"></div>
                     </ul>
 				</div>
+				</div>
+				<div class="hide">
+					<div>
+					<ul class="memb_course">                   	
+                        <li>
+                            <div class="courseli mysc">
+                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg" class="mm"></a>
+                            <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
+                            <div class="mpp">
+                                <div class="lv" style="width:20%;"></div>
+                            </div>
+                            <p class="goon"><a href="#"><span>继续学习</span></a></p>
+							<div class="mask"><span class="qxsc"  title="移除收藏">▬</span></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="courseli mysc">
+                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg" class="mm"></a>
+                            <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
+                            <div class="mpp">
+                                <div class="lv" style="width:20%;"></div>
+                            </div>
+                            <p class="goon"><a href="#"><span>继续学习</span></a></p>
+							<div class="mask"><span class="qxsc"  title="移除收藏">▬</span></div>
+                            </div>
+                        </li>                                     
+                        <div class="clearfix" style="height:10px;"></div>
+                    </ul>
+				</div>
+				</div>				
                 </div>
                 
 				
 				</div>
-				
 			</div>
 		</div>
 </div>
-
-
 <div class="clearh"></div>
 </div>
-
 <!-- InstanceEndEditable -->
-
 @endsection
