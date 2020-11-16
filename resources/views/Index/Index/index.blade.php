@@ -65,7 +65,7 @@ function nTabs(thisObj,Num){
                         data-speed="300"
                         data-start="1200"
                         data-easing="easeOutExpo">
-                        <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary" style="background:#58b7ed">了解情况</a>
+                        <a href="{{url('/index/course/list')}}" class="btn btn-large btn-primary" style="background:#58b7ed">了解情况</a>
                     </div>
 
                     <div class="tp-caption small-white lfb"
@@ -74,7 +74,7 @@ function nTabs(thisObj,Num){
                         data-speed="1000"
                         data-start="1400"
                         data-easing="easeOutExpo">
-                        <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">立即咨询</a>
+                        <a href="{{url('/index/course/list')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">立即咨询</a>
                     </div>
                 </li>
 
@@ -119,7 +119,7 @@ function nTabs(thisObj,Num){
                         data-speed="300"
                         data-start="1200"
                         data-easing="easeOutExpo">
-                        <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">了解情况</a>
+                        <a href="{{url('/index/course/list')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">了解情况</a>
                     </div>
 
                     <div class="tp-caption small-white lfb"
@@ -128,7 +128,7 @@ function nTabs(thisObj,Num){
                         data-speed="1000"
                         data-start="1400"
                         data-easing="easeOutExpo">
-                        <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">立即咨询</a>
+                        <a href="{{url('/index/course/list')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">立即咨询</a>
                     </div>
                 </li>
 
@@ -179,7 +179,7 @@ function nTabs(thisObj,Num){
                         data-speed="300"
                         data-start="1200"
                         data-easing="easeOutExpo">
-                        <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">快来充钱 </a>
+                        <a href="{{url('/index/course/list')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">快来充钱 </a>
                     </div>
 
                     <div class="tp-caption small-white lfb"
@@ -188,7 +188,7 @@ function nTabs(thisObj,Num){
                         data-speed="1000"
                         data-start="1400"
                         data-easing="easeOutExpo">
-                        <a href="{{url('/index/course/courselist')}}" class="btn btn-large btn-primary"  style="background:#58b7ed"> 充八万 </a>
+                        <a href="{{url('/index/course/list')}}" class="btn btn-large btn-primary"  style="background:#58b7ed"> 充八万 </a>
                     </div>
                 </li>
 
@@ -202,7 +202,7 @@ function nTabs(thisObj,Num){
         <span class="tdtext">
             <h3>完全免费课程</h3>
             <p>精心录制视频课程与讲解，全部课程完全免费。</p><br/>
-            <p><a href="{{url('/index/course/courselist')}}" class="btninto">开始学习</a></p>
+            <p><a href="{{url('/index/user/login')}}" class="btninto">开始学习</a></p>
         </span>
         <div style="clear:both"></div>
     </div>
@@ -213,7 +213,7 @@ function nTabs(thisObj,Num){
         <span class="tdtext1">
             <h3 class="co1">智能评估题库</h3>
             <p>智能能力评估，学员可以通过具体题目，匹配相关知识点,文字解析与视频解析相结合。</p><br/>
-            <p><a href="training.html" class="btninto">点击测评</a></p>
+            <p><a href="{{url('/index/user/login')}}" class="btninto">点击测评</a></p>
         </span>
         <div style="clear:both"></div>
     </div>
@@ -224,7 +224,7 @@ function nTabs(thisObj,Num){
         <span class="tdtext" style="margin-top:120px">
             <h3 class="co2">智能匹配练习</h3>
             <p class="tex1">跟随视频课程同步练习，紧扣重点难点，点点精通。</p><br/>
-            <p><a href="training.html" class="btninto">开始练习</a></p>
+            <p><a href="{{url('/index/user/login')}}" class="btninto">开始练习</a></p>
         </span>
         <div style="clear:both"></div>
     </div>
@@ -235,7 +235,7 @@ function nTabs(thisObj,Num){
         <span class="tdtext1" style="margin-top:100px;">
             <h3 class="co3">全天答疑解惑</h3>
             <p class="tex1">谋刻答疑社区，老师学员共同交流，我们的讲师更是倾囊相授，有问必答。</p><br/>
-            <p><a href="{{url('/')}}" class="btninto">提问问题</a></p>
+            <p><a href="{{url('/index/user/login')}}" class="btninto">提问问题</a></p>
         </span>
         <div style="clear:both"></div>
     </div>
@@ -260,7 +260,7 @@ function nTabs(thisObj,Num){
             @foreach($data as $k=>$a)
             <li id="desc_li" class="descname">
                 <div class="courselist">
-                <a href="{{url('/index/course/coursecont/'.$a->cou_id)}}">
+                <a href="{{url('/index/course/detail/'.$a->cou_id)}}">
                     <img width="263" style="border-radius:3px 3px 0 0;" src="{{$a->cou_img}}" >
                 </a>
                 <p class="courTit">{{$a->cou_name}}</p>
@@ -278,7 +278,8 @@ function nTabs(thisObj,Num){
     </div>
     <div class="line no"></div>
 </div>
-<span class="morecourse"><a href="{{url('/index/course/courselist')}}" class="btnlink">更多课程</a></span>
+<span class="morecourse"><a href="javascript:;" class="btnlink">更多课程</a></span>
+<script src="../../layui/layui.js"></script>
 <script>
     $(document).ready(function(){
         $(document).on('click','.points',function(){
@@ -298,7 +299,7 @@ function nTabs(thisObj,Num){
                     var data = index.data;
                     var html = "";
                     $.each(data,function(k,v){
-                        html+="<li id='desc_li' class='descname'><div class='courselist'><a href='/index/course/coursecont/"+data[k].cou_id+"'><img width='263' style='border-radius:3px 3px 0 0;' src='"+data[k].cou_img+"' ></a><p class='courTit'>"+data[k].cou_name+"</p><div class='gray'><span>1小时前更新</span><span class='sp1'>"+data[k].lll+"人学习</span><div style='clear:both'></div></div></div></li>";
+                        html+="<li id='desc_li' class='descname'><div class='courselist'><a href='/index/course/detail/"+data[k].cou_id+"'><img width='263' style='border-radius:3px 3px 0 0;' src='"+data[k].cou_img+"' ></a><p class='courTit'>"+data[k].cou_name+"</p><div class='gray'><span>1小时前更新</span><span class='sp1'>"+data[k].lll+"人学习</span><div style='clear:both'></div></div></div></li>";
                     });
                     html+="<div class='clearh'></div>";
                     $(".descname").hide();
@@ -313,7 +314,11 @@ function nTabs(thisObj,Num){
                 var id = '1';
             }
             if(parseInt(id) == '2'){
-                alert("我的耐性有限，请不要忽略");
+                  layui.use('layer', function(){
+                        var layer = layui.layer;
+                        //提示层
+                        layer.msg("我的耐性有限，请不要忽略");
+                    });
                 return false;
             }
             $.ajax({
@@ -327,13 +332,17 @@ function nTabs(thisObj,Num){
                     var data = index.data;
                     var html = "";
                     $.each(data,function(k,v){
-                        html+="<li id='desc_lidshg' class='descname'  addr_id='2'><div class='courselist'><a href='/index/course/coursecont/"+data[k].cou_id+"'><img width='263' style='border-radius:3px 3px 0 0;' src='"+data[k].cou_img+"' ></a><p class='courTit'>"+data[k].cou_name+"</p><div class='gray'><span>1小时前更新</span><span class='sp1'>"+data[k].lll+"人学习</span><div style='clear:both'></div></div></div></li>";
+                        html+="<li id='desc_lidshg' class='descname'  addr_id='2'><div class='courselist'><a href='/index/course/detail/"+data[k].cou_id+"'><img width='263' style='border-radius:3px 3px 0 0;' src='"+data[k].cou_img+"' ></a><p class='courTit'>"+data[k].cou_name+"</p><div class='gray'><span>1小时前更新</span><span class='sp1'>"+data[k].lll+"人学习</span><div style='clear:both'></div></div></div></li>";
                     });
                     html+="<div class='clearh'></div>";
                     $(".descname").hide();
                     $(".courseul").append(html);
                 }else{
-                    alert(index.msg);
+                    layui.use('layer', function(){
+                        var layer = layui.layer;
+                        //提示层
+                        layer.msg(index.msg);
+                    });
                 }
                 }
             });

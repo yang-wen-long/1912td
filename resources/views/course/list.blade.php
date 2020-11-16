@@ -8,26 +8,26 @@
       <a href="javascript:;" class="sellink"></a>        
     </span>
     
+ 
     <ul class="courseul">
     <li class="curr" style="border-radius:3px 3px 0 0;background:#fb5e55;"><h3 style="color:#fff;"><a href="javascript:;" class="whitea">全部课程</a></h3>
     @foreach($topcss as $k=>$a)
     <li>
         <h4>{{$a->cate_name}}</h4>
         @foreach($css as $n=>$v)
-        @if($a->cate_id==$v->parents_id)
-        <ul class="sortul">
-                <li><a href="javascript:;" class="cate" cate_id="{{$v->cate_id}}">{{$v->cate_name}}</a></li>
-        </ul>
-        @endif
+            @if($a->cate_id==$v->parents_id)
+            <ul class="sortul">
+                    <li><a href="javascript:;" class="cate" cate_id="{{$v->cate_id}}">{{$v->cate_name}}</a></li>
+            </ul>
+            @endif
         @endforeach
     <div class="clearh"></div>
     </li>
     @endforeach
-    
+    </li>    
     </ul>
     <div style="height:20px;border-radius:0 0 5px 5px; background:#fff;box-shadow:0 2px 4px rgba(0, 0, 0, 0.1)"></div>
     </div>
-    
     <div class="courseright">
         <div class="clearh"></div>
       <ul class="courseulr">
@@ -46,7 +46,6 @@
             </div>
        </li>
        @endforeach
-
     </ul>
     </div>
     <div class="clearh"></div>

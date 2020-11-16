@@ -26,6 +26,8 @@
         <p>{{$v->bank_text}}</p>
         <p class="artilabel">
         <span class="ask_label">{{$v->bank_type==1?'单选题':'多选题'}}</span>
+        <b>答案：</b>
+        <span>{{$v->bank_key}}</span>
         <b class="labtime">{{date('Y-m-d H:i:s',$v->bank_time)}}</b>
         </p>
         <div class="clearh"></div>
