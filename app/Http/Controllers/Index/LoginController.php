@@ -83,6 +83,6 @@ class LoginController extends Controller
     }
     public function quit(){
         Request()->session()->forget('userinfo');
-        return view('Index.Index.index')
+        return view('Index.Index.index');
     }
 }

@@ -40,10 +40,12 @@ $(function(){
 	<div class="membcont">
 <h3 class="mem-h3">我的课程</h3>
 <div class="box demo2" style="width:820px;">
+        @foreach($course as $v)
 			<ul class="tab_menu" style="margin-left:30px;">
-				<li class="current">学习中</li>
-				<li>已学完</li>
-			</ul>
+				<li class="current">{{$v->is_xx==1?'学习中':'已学完'}}</li>
+				<li>{{$v->is_xx==1?'已学完':'学习中'}}</li>
+            </ul>
+        @endforeach
 			<div class="tab_box">
 				<div>
 					<ul class="memb_course">
