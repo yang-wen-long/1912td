@@ -198,7 +198,7 @@ function nTabs(thisObj,Num){
 
 <div class="td1">
     <div class="tdcont">
-        <span class="tdimg"><img src="/static/index/images/ico4.jpg" width="450"></span>
+        <span class="tdimg"><img src="/uploads/123.png" width="550px" style="padding-top:50px;"></span>
         <span class="tdtext">
             <h3>完全免费课程</h3>
             <p>精心录制视频课程与讲解，全部课程完全免费。</p><br/>
