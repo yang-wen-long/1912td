@@ -30,6 +30,7 @@ class LoginController extends Controller
              // dd($res);
             //验证邮箱成功登陆
             if($res){
+                  Request()->session()->put('userinfo',$res);
 			    $arr=[
 			    'code'=>'00000',
                 'msg'=>'邮箱登陆成功',
@@ -55,6 +56,7 @@ class LoginController extends Controller
                 ];
                 $res=User::where($where)->first();
                 if($res){
+                      Request()->session()->put('userinfo',$res);
                 	$arr=[
 			        'code'=>'00000',
                     'msg'=>'账号登陆成功',
@@ -78,5 +80,9 @@ class LoginController extends Controller
     public function myrepassword(){
     	$nav = $this->nav();
     	return view("user.myrepassword",["nav"=>$nav]);
+    }
+    public function quit(){
+        Request()->session()->forget('userinfo');
+        return view('Index.Index.index')
     }
 }
