@@ -16,60 +16,28 @@
         <a class="fombtn" href="{{url('/index/article/articlelist')}}">填空题</a>
         <a class="fombtn" href="{{url('/index/article/articlelist')}}">选择题</a>
     </span>
-    
+   
 </div>
 <div class="clearh"></div>
 <div class="coursetext">
+    @foreach($data as $k=>$v)
 	<div class="articlelist">
-    	<h3><a class="artlink" href="{{url('/index/article/article')}}">PHP算法</a></h3>
-        <p>给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的中位数。进阶：你能设计一个时间复杂度为 O(log (m+n)) 的算法解决此问题吗？</p>
+    	<h3><a class="artlink" href="">{{$v->bank_name}}</a></h3>
+        <p>{{$v->bank_text}}</p>
         <p class="artilabel">
-        <span class="ask_label">热门资讯</span>
-        <b class="labtime">2015-02-02</b>
+        <span class="ask_label">{{$v->bank_type==1?'单选题':'多选题'}}</span>
+        <b class="labtime">{{date('Y-m-d H:i:s',$v->bank_time)}}</b>
         </p>
         <div class="clearh"></div>
     </div>
-    <div class="articlelist">
-    	<h3><a class="artlink" href="#">PHP算法</a></h3>
-        <p>给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的中位数。进阶：你能设计一个时间复杂度为 O(log (m+n)) 的算法解决此问题吗？</p>
-        <p class="artilabel">
-        <span class="ask_label">热门资讯</span>
-        <b class="labtime">2015-02-02</b>
-        </p>
-        <div class="clearh"></div>
-    </div>
-    <div class="articlelist">
-    	<h3><a class="artlink" href="#">PHP算法</a></h3>
-        <p>给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的中位数。进阶：你能设计一个时间复杂度为 O(log (m+n)) 的算法解决此问题吗？</p>
-        <p class="artilabel">
-        <span class="ask_label">热门资讯</span>
-        <b class="labtime">2015-02-02</b>
-        </p>
-        <div class="clearh"></div>
-    </div>
-    <div class="articlelist">
-    	<h3><a class="artlink" href="#">PHP算法</a></h3>
-        <p>给定两个大小为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的中位数。进阶：你能设计一个时间复杂度为 O(log (m+n)) 的算法解决此问题吗？</p>
-        <p class="artilabel">
-        <span class="ask_label">热门资讯</span>
-        <b class="labtime">2015-02-02</b>
-        </p>
-        <div class="clearh"></div>
-    </div>
+    @endforeach
+    
     
     
 	<div class="clearh" style="height:20px;"></div>
 	<span class="pagejump">
     	<p class="userpager-list">
-       	   <a href="#" class="page-number">首页</a>
-           <a href="#" class="page-number">上一页</a>
-           <a href="#" class="page-number">1</a>
-           <a href="#" class="page-number pageractive">2</a>
-           <a href="#" class="page-number">3</a>
-            <a href="#" class="page-number">...</a>
-            <a href="#" class="page-number">10</a>
-           <a href="#" class="page-number">下一页</a>
-           <a href="#" class="page-number">末页</a>
+       	  {{$data->links()}}
         </p>
     </span>
     <div class="clearh" style="height:10px;"></div>
@@ -81,12 +49,9 @@
     <h3 class="righttit">热门课程</h3>
     <div class="gonggao">
 	<ul class="hotask">
-        	<li><a class="ask_link" href="#"><strong>●</strong>PHP算法</a></li>
-            <li><a class="ask_link" href="#"><strong>●</strong>数据库</a></li>
-            <li><a class="ask_link" href="#"><strong>●</strong>Shell</a></li>
-            <li><a class="ask_link" href="#"><strong>●</strong>多线程</a></li>
-            <li><a class="ask_link" href="#"><strong>●</strong>PHP算法</a></li>
-            <li><a class="ask_link" href="#"><strong>●</strong>多线程</a></li>
+        @foreach($course_data as $k=>$v)
+        	<li><a class="ask_link cou_detail" href="JavaScript:;" cou_id="{{$v->cou_id}}"><strong>●</strong>{{$v->cou_name}}</a></li>
+             @endforeach
         </ul>
     </div>
     </div>
@@ -96,22 +61,15 @@
     <div class="cr1">
     <h3 class="righttit">推荐课程</h3>
     <div class="teacher">
+        @foreach($course_tj as $k=>$v)
     <div class="teapic">
         <a href="#"  target="_blank"><img src="/static/index/images/c1.jpg" height="60" title="财经法规与财经职业道德"></a>
+        <h3 class="courh3"><a href="JavaScript:;" class="ask_link cou_detail" cou_id="{{$v->cou_id}}">{{$v->cou_name}}</a></h3>
         <h3 class="courh3"><a href="#" class="ask_link" target="_blank">财经法规与财经职业道德</a></h3>
     </div>
-    <div class="clearh"></div>
-    <div class="teapic">
-        <a href="#"  target="_blank"><img src="/static/index/images/c2.jpg" height="60" title="财经法规与财经职业道德"></a>
-        <h3 class="courh3"><a href="#" class="ask_link" target="_blank">财经法规与财经职业道德</a></h3>
-    </div>
-    <div class="clearh"></div>
-    <div class="teapic">
-        <a href="#"  target="_blank"><img src="/static/index/images/c3.jpg" height="60" title="财经法规与财经职业道德"></a>
-        <h3 class="courh3"><a href="#" class="ask_link" target="_blank">财经法规与财经职业道德</a></h3>
-    </div>
-    <div class="clearh"></div>
-    </div>
+    <div class="clearh"></div> @endforeach
+    </div>  
+
     </div>
 </div>
    
@@ -122,5 +80,23 @@
 <div class="clearh"></div>
 </div>
 <!-- InstanceEndEditable -->
-
+<script src="/layui/layui.js"></script>
+<script>
+  $(".cou_detail").click(function(){
+     var _this = $(this);
+    var cou_id = _this.attr("cou_id");
+    layui.use('layer', function(){
+    var layer = layui.layer;
+        layer.confirm('is not?', {icon: 4, title:'提示'}, function(index){
+        layer.close(index);
+        });
+        //eg2
+        layer.confirm('是否进入详情?', function(index){
+          var url = "/index/course/detail/"+cou_id;
+          location.href=url;
+          layer.close(index);
+        });
+    });
+}); 
+</script>
 @endsection

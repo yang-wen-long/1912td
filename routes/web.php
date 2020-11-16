@@ -31,15 +31,14 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	//我的详情
 	Route::any('/mycourse/details',"Index\MycouController@details"); 
 	
-
 	//课程首页
-	Route::any('/course/list',"Index\CourselistController@list");
+	Route::any('/course/list',"Index\CourseController@list")->name('courselist');
 
 	//课程目录
-	Route::any('/course/coursecont',"Index\CourselistController@coursecont");
+	Route::any('/course/coursecont',"Index\CourseController@coursecont");
 
 	//课程详情
-	Route::any('/course/coursecont1',"Index\CourselistController@coursecont1");
+	Route::any('/course/detail/{cou_id}',"Index\CourseController@detail");
 
 	//课程视频
 	Route::any('/video/video',"Index\VideoController@video");
@@ -59,7 +58,7 @@ Route::prefix("/index")/*->middleware("auth")*/->group(function(){
 	Route::any('/teacher/teacherlist',"Index\TeacherController@teacherlist");
 
 	//讲师详情
-	Route::any('/teacher/teacher',"Index\TeacherController@teacher");
+	Route::any('/teacher/teacher/{tea_id}',"Index\TeacherController@teacher");
 
 	//题库
 	Route::any('/question/bank',"Index\BankController@bank")->name("informationlist");

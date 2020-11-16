@@ -4,17 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Course extends Model
+class Log extends Model
 {
     # 表名
-    protected $table = 'course';
+    protected $table = 'course_catalog';
 
     # 主键
-    protected $primaryKey = 'cou_id';
+    protected $primaryKey = 'catalog_id';
 
     # 黑名单
     protected $guarded = [];
 
-    // 关闭laravel自带的时间戳
+    # 关闭laravel自带的时间戳
     public $timestamps = false;
 }

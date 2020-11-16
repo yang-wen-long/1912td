@@ -34,7 +34,7 @@ class CourseController extends Controller{
 
         // 导航栏
         $nav = $this->nav();
-    	return view("Index.course.list",["nav"=>$nav,'data'=>$data,'course'=>$course]);
+    	return view("course.list",["nav"=>$nav,'data'=>$data,'course'=>$course]);
     }
 
     //课程目录
@@ -42,13 +42,13 @@ class CourseController extends Controller{
         // 导航栏
         $nav = $this->nav();
         $name = DB::table("course_notice")->where("notice_del","1")->limit("3")->get();
-    	return view("Index.Courselist.Coursecont",["name"=>$name,"nav"=>$nav]);
+    	return view("course.log",["name"=>$name,"nav"=>$nav]);
     }
 
     //课程详情页
     public function coursecont1(){
         // 导航栏
         $nav = $this->nav();
-    	return view("Index.Courselist.coursecont1",["nav"=>$nav]);
+    	return view("course.detail",["nav"=>$nav]);
     }
 }
