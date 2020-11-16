@@ -52,12 +52,12 @@ $(function(){
                     	@foreach($data as $v)
                         <li>
                             <div class="courseli">
-                            <a href="video.html" target="_blank"><img width="230" src="../../{{$v->cou_img}}"></a>
-                            <p class="memb_courname"><a href="{{url('/index/course/log/'.$v->catalog_id)}}" class="blacklink">{{$v->cou_name}}</a></p>
+                            <a href="{{url('/index/course/detail/'.$v->cou_id)}}" target="_blank"><img width="230" src="../../{{$v->cou_img}}"></a>
+                            <p class="memb_courname"><a href="{{url('/index/course/detail/'.$v->cou_id)}}" class="blacklink">{{$v->cou_name}}</a></p>
                             <div class="mpp">
                                 <div class="lv" style="width:60%;"></div>
                             </div>
-                            <p class="goon"><a href="{{url('/index/course/log/'.$v->catalog_id)}}"><span>继续学习</span></a></p>
+                            <p class="goon"><a href="{{url('/index/course/detail/'.$v->cou_id)}}"><span>继续学习</span></a></p>
                             </div>
                         </li>
                         @endforeach
@@ -72,12 +72,12 @@ $(function(){
                     @foreach($datas as $v)
                         <li>
                             <div class="courseli">
-                            <a href="video.html" target="_blank"><img width="230" src="../../{{$v->cou_img}}"></a>
-                            <p class="memb_courname"><a href="{{url('/index/course/log/'.$v->catalog_id)}}" class="blacklink">{{$v->cou_name}}</a></p>
+                            <a href="{{url('/index/course/detail/'.$v->cou_id)}}" target="_blank"><img width="230" src="../../{{$v->cou_img}}"></a>
+                            <p class="memb_courname"><a href="{{url('/index/course/detail/'.$v->cou_id)}}" class="blacklink">{{$v->cou_name}}</a></p>
                             <div class="mpp">
                                 <div class="lv" style="width:100%;"></div>
                             </div>
-                            <p class="goon"><a href="{{url('/index/course/log/'.$v->catalog_id)}}"><span>查看课程</span></a></p>
+                            <p class="goon"><a href="{{url('/index/course/detail/'.$v->cou_id)}}"><span>查看课程</span></a></p>
                             </div>
                         </li>
                         @endforeach
@@ -86,40 +86,9 @@ $(function(){
                        
                         <div class="clearfix" style="height:10px;"></div>
                     </ul>
-				</div>
-				</div>
-				<div class="hide">
-					<div>
-					<ul class="memb_course">                   	
-                        <li>
-                            <div class="courseli mysc">
-                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg" class="mm"></a>
-                            <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
-                            <div class="mpp">
-                                <div class="lv" style="width:20%;"></div>
-                            </div>
-                            <p class="goon"><a href="#"><span>继续学习</span></a></p>
-							<div class="mask"><span class="qxsc"  title="移除收藏">▬</span></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="courseli mysc">
-                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg" class="mm"></a>
-                            <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
-                            <div class="mpp">
-                                <div class="lv" style="width:20%;"></div>
-                            </div>
-                            <p class="goon"><a href="#"><span>继续学习</span></a></p>
-							<div class="mask"><span class="qxsc"  title="移除收藏">▬</span></div>
-                            </div>
-                        </li>                                     
-                        <div class="clearfix" style="height:10px;"></div>
-                    </ul>
-				</div>
-				</div>				
+				    </div>
                 </div>
                 
-				
 				</div>
 			</div>
 		</div>
