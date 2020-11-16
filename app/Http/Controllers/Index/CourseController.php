@@ -35,6 +35,12 @@ class CourseController extends Controller{
 
     //课程详情
     public function detail($cou_id){
+        $where=[
+           ['cou_id','=',$cou_id],
+           ['catalog_chapters','=','1']
+        ];
+        $study=Log::where($where)->first();
+        // dd($study);
         $nav = $this->nav();
         $name = DB::table("course_notice")->where("notice_del","1")->limit("2")->get();
         $cou_data=Course::leftJoin('shop_admin','course.admin_id','=','shop_admin.admin_id')->where('cou_id',$cou_id)->first();
@@ -45,6 +51,21 @@ class CourseController extends Controller{
         // $c=$b['tea_name'];
          // var_dump($c);die;
         $log_data=Log::where('cou_id',$cou_id)->paginate(5);
-    	return view("course.detail",["name"=>$name,'teacher'=>$teacher,"nav"=>$nav,'cou_data'=>$cou_data,'log_data'=>$log_data]);
+    	return view("course.detail",['study'=>$study,"name"=>$name,'teacher'=>$teacher,"nav"=>$nav,'cou_data'=>$cou_data,'log_data'=>$log_data]);
+    }
+    public function log($log_id){
+        
+        //展示当前目录内容
+        $log=Log::where('catalog_id',$log_id)->first();
+        
+        $cou_id=$log['cou_id'];
+        //获取大当前课程的目录列表
+        $catalog=Log::where('cou_id',$cou_id)->get();
+        return view('course/log',['log'=>$log,'catalog'=>$catalog]);
+    }
+    public function study($cou_id){
+        $catalog_chapters=1;
+
+
     }
 }

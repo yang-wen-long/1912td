@@ -14,7 +14,11 @@
 		<p class="courstime">讲师：{{$teacher->tea_name}}</p>
 		<p class="courstime">课程评价：<img width="71" height="14" src="../../../../../static/index/images/evaluate5.png">&nbsp;&nbsp;<span class="hidden-sm hidden-xs">5.0分（10人评价）</span></p>
         <!--<p><a class="state end">完结</a></p>-->      
+<<<<<<< HEAD
         <span class="coursebtn"><a class="btnlink" href="{{url('/index/mycourse/mycourse/')}}">加入学习</a><a class="codol fx" href="javascript:void(0);" onClick="$('#bds').toggle();">分享课程</a><a class="codol sc" href="#">收藏课程</a></span> 
+=======
+        <span class="coursebtn"><a class="btnlink" href="{{url('/index/course/log/'.$study->catalog_id)}}">加入学习</a><a class="codol fx" href="javascript:void(0);" onClick="$('#bds').toggle();">分享课程</a><a class="codol sc" href="#">收藏课程</a></span> 
+>>>>>>> 54be0ce7f59372b2321b3d2491f823524ea6d719
 		<div style="clear:both;"></div>
 		<div id="bds">
             <div class="bdsharebuttonbox">
@@ -42,7 +46,7 @@
 	<h3 class="leftit">课程目录</h3>
     <dl class="mulu">
         @foreach($log_data as $k=>$v)
-    	<dt><a href="{{url('/index/course/coursecont1')}}" class="graylink">第{{$v->catalog_chapters}}章&nbsp;&nbsp;{{$v->catalog_name}}</a></dt>
+    	<dt><a href="{{url('/index/course/log/'.$v->catalog_id)}}" class="graylink">第{{$v->catalog_chapters}}章&nbsp;&nbsp;{{$v->catalog_name}}</a></dt>
         <dd>{{$v->catalog_desc}}</dd>
    @endforeach
     
@@ -59,7 +63,7 @@
     <div class="teacher">
     <div class="teapic ppi">
     <a href="teacher.html" target="_blank"><img src="../../../../../static/index/images/teacher.png" width="80" class="teapicy" title="张民智"></a>
-    <h3 class="tname"><a href="teacher.html" class="peptitle" target="_blank">{{$teacher->tea_name}}</a><p style="font-size:14px;color:#666">{{$teacher->tea_style}}</p></h3>
+    <h3 class="tname"><a href="{{url('/index/teacher/teacher/'.$teacher->tea_id)}}" class="peptitle" target="_blank">{{$teacher->tea_name}}</a><p style="font-size:14px;color:#666">{{$teacher->tea_style}}</p></h3>
     </div>
     <div class="clearh"></div>
     <p>{{$teacher->tea_resume}}</p>
