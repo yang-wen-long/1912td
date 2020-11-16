@@ -52,31 +52,17 @@
                 <p>讲师</p>
             </span>
         </span>-->
-          @php $name = Route::currentRouteName();@endphp
-            @if($name == "courselist")
+          @php $name = Route::currentRouteName(); $user= Request()->session()->get('userinfo');@endphp
+          @if(empty($user))
+ 
             <a href="{{url('/index/user/login')}}" class="link2 he">登录</a>
             <a href="{{url('/index/user/reg')}}" class="link2 he">注册</a>
-            <a href="{{url('/index/mycourse/mycourse')}}" style="width:70px" class="link2 he ico">个人中心</a>
-          @elseif($name == "index")
-            <a href="{{url('/index/mycourse/mycourse')}}"  onMouseOver="logmine()" style="width:70px" class="link2 he ico">sherley</a>
-            <span id="lne" style="display:none" onMouseOut="logclose()" onMouseOver="logmine()">
-                <span style="background:#fff;">
-                    <a href="{{url('/index/mycourse/mycourse')}}" style="width:70px; display:block;" class="link2 he ico">sherley</a>
-                </span>
-                <div class="clearh"></div>
-                <ul class="logmine" >
-                    <!-- <li><a class="link1" href="#">我的课程</a></li>
-                    <li><a class="link1" href="#">我的题库</a></li>
-                    <li><a class="link1" href="#">我的问答</a></li>
-                    <li><a class="link1" href="#">退出</a></li> -->
-                    <li><a href="{{url('/index/user/login')}}" class="link1">登录</a></li>
-                </ul>
-            </span>
+            
+ 
           @else
-              <span class="exambtn_lore">
-                   <a class="tkbtn tklog" href="{{url('/index/user/login')}}">登录</a>
-                   <a class="tkbtn tkreg" href="{{url('/index/user/reg')}}">注册</a>
-              </span>
+              <a>欢迎@php echo $user['u_name']; @endphp登陆</a> 
+              <a href="{{url('/index/mycourse/mycourse')}}" style="width:70px" >个人中心</a>
+              <a href="{{url('/index/user/quit')}}">退出</a>
           @endif
         </span>
     </div>

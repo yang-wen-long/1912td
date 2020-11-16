@@ -10,7 +10,7 @@ use \DB;
 class IndexController extends Controller
 {
     //前台首页
-    public function index(){ 
+    public function index(){
         // 导航栏
         $nav = $this->nav();
         //轮播图

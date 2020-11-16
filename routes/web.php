@@ -14,6 +14,7 @@
     //登录LoginController
 	Route::any('/index/user/login',"Index\LoginController@login"); 
 	Route::any('/index/user/login_do/{zh}',"Index\LoginController@login_do");
+	Route::any('/index/user/quit',"Index\LoginController@quit");
 	//忘记密码
 	Route::any('/index/user/myrepassword',"Index\LoginController@myrepassword");
 	//注册

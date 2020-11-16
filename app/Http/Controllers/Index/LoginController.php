@@ -82,7 +82,9 @@ class LoginController extends Controller
     	return view("user.myrepassword",["nav"=>$nav]);
     }
     public function quit(){
-        Request()->session()->forget('userinfo');
-        return view('Index.Index.index');
+        $user=Request()->session()->forget('userinfo');
+     
+            echo  "<script>alert('退出成功');location.href='/';</script>";
+        
     }
 }
