@@ -14,7 +14,11 @@
 		<p class="courstime">讲师：{{$teacher->tea_name}}</p>
 		<p class="courstime">课程评价：<img width="71" height="14" src="../../../../../static/index/images/evaluate5.png">&nbsp;&nbsp;<span class="hidden-sm hidden-xs">5.0分（10人评价）</span></p>
         <!--<p><a class="state end">完结</a></p>-->      
+<<<<<<< HEAD
+        <span class="coursebtn"><a class="btnlink" href="{{url('/index/mycourse/mycourse/')}}">加入学习</a><a class="codol fx" href="javascript:void(0);" onClick="$('#bds').toggle();">分享课程</a><a class="codol sc" href="#">收藏课程</a></span> 
+=======
         <span class="coursebtn"><a class="btnlink" href="{{url('/index/course/log/'.$study->catalog_id)}}">加入学习</a><a class="codol fx" href="javascript:void(0);" onClick="$('#bds').toggle();">分享课程</a><a class="codol sc" href="#">收藏课程</a></span> 
+>>>>>>> 54be0ce7f59372b2321b3d2491f823524ea6d719
 		<div style="clear:both;"></div>
 		<div id="bds">
             <div class="bdsharebuttonbox">
