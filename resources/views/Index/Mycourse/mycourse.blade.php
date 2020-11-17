@@ -56,16 +56,6 @@ $(function(){
                             <p class="goon"><a href="{{url('/index/course/detail/'.$v->cou_id)}}"><span>继续学习</span></a></p>
                             </div>
                         </li>
-                        <li>
-                            <div class="courseli">
-                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg"></a>
-                            <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
-                            <div class="mpp">
-                                <div class="lv" style="width:20%;"></div>
-                            </div>
-                            <p class="goon"><a href="video.html"><span>继续学习</span></a></p>
-                            </div>
-                        </li>
                         @endforeach
                         <div style="height:10px;" class="clearfix"></div>
                     </ul> 
@@ -82,15 +72,11 @@ $(function(){
                             </div>
                             <p class="goon"><a href="{{url('/index/course/detail/'.$v->cou_id)}}"><span>查看课程</span></a></p>
                             </div>
-                        </li>
-                                    
+                        </li>                                   
                         <div class="clearfix" style="height:10px;"></div>
                     </ul>
 				</div>
-				</div>
-			
-					
-                </div>				
+				</div>								
                         @endforeach 
                         <div class="clearfix" style="height:10px;"></div>
                     </ul>
@@ -99,8 +85,6 @@ $(function(){
 				</div>
 			</div>
 		</div>
-</div>
 <div class="clearh"></div>
-</div>
 <!-- InstanceEndEditable -->
 @endsection
