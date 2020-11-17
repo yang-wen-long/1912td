@@ -94,11 +94,11 @@ $(function(){
                     <div style="padding-left:25px;">
                     <div class="c_eform" style="width:280px;margin-left:10px;">
                       <div class="clearh" ></div>
-                        <textarea rows="7" class="pingjia_con" style="width:100%;height:500px;" 
+                        <textarea rows="7" class="pingjia_con" name="note_desc" id="note_desc" style="width:100%;height:300px;" 
                          onblur="if (this.value =='') this.value='记下课程笔记';this.className='pingjia_con'" 
-                         onclick="if (this.value=='记下课程笔记') this.value='';this.className='pingjia_con_on'">
+                         onclick="if (this.value=='记下课程笔记') this.value='';this.className='pingjia_con_on'" placeholder="记下课程笔记">
                         </textarea>
-                       <a href="#" class="fombtn">提交</a>
+                       <a href="javascript:;" class="fombtn">提交</a>
                        <div class="clearh"></div>
                     </div>                  
                 </div>
@@ -122,6 +122,7 @@ $(function(){
                             </p>                           
                         </li>                       
                     </ul>
+                    
                 </div>
                 </div>
                 <div class="hide">
@@ -138,3 +139,11 @@ $(function(){
     </div>
 </body>
 </html>
+<script>
+  $(document).ready(function(){
+    $(".fombtn").click(function(){
+        var note_desc = $("#note_desc").val();
+        console.log(note_desc);
+    });
+  });
+</script>
