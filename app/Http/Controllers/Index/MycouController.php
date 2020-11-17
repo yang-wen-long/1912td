@@ -6,31 +6,28 @@ use App\Models\Answer;
 use App\Models\Question;
 use App\Models\Course;
 use App\Models\Mb;
+use  App\Models\Coustatus;
+
 class MycouController extends Controller
 {
     //我的课程
     public function mycourse(){
         // 导航栏
         $nav = $this->nav();
-        // 个人中心我的课程
+       
+        
+        $users = Request()->session()->get("userinfo")->u_id;
+        // dd($users);
         $where = [
-            "is_xx" =>1
+            "coustatus.u_id"=>$users
         ];
-        $course = Course::where($where)->take(1)->get();
-        // dd($course);
-        $where = [
-            "is_xx" =>1
-        ];
-        $data =  Course::where($where)->get();
-        // dd($data);
-        $where = [
-            "is_xx" =>2
-        ];
-        $datas =  Course::where($where)->get();
+        $arr = Coustatus::where($where)->join('course','coustatus.cou_id',"=",'course.cou_id')->get();
+        // dd($arr);
         $userinfo=Request()->session()->get('userinfo');
         // dd($userinfo);
         
-    	return view("Index.mycourse.mycourse",["nav"=>$nav,'course'=>$course,'data'=>$data,'datas'=>$datas,'userinfo'=>$userinfo]);
+    	return view("Index.mycourse.mycourse",["nav"=>$nav,'userinfo'=>$userinfo,'arr'=>$arr]);
+        
     }
     //修改信息
     public function details(){

@@ -35,18 +35,19 @@ $(function(){
 	<div class="membcont">
 <h3 class="mem-h3">我的课程</h3>
 <div class="box demo2" style="width:820px;">
-        @foreach($course as $v)
+     
 			<ul class="tab_menu" style="margin-left:30px;">
-				<li class="current">{{$v->is_xx==1?'学习中':'已学完'}}</li>
-				<li>{{$v->is_xx==1?'已学完':'学习中'}}</li>
+				<li class="current">学习中</li>
+				<li>已学完</li>
             </ul>
-        @endforeach
+
 			<div class="tab_box">
 				<div>
 					<ul class="memb_course">                   	
                        
 					<ul class="memb_course">
-                    	@foreach($data as $v)
+                        @foreach($arr as $v)
+                        @if($v->is_xx==1)
                         <li>
                             <div class="courseli">
                             <a href="{{url('/index/course/detail/'.$v->cou_id)}}" target="_blank"><img width="230" src="../../{{$v->cou_img}}"></a>
@@ -57,13 +58,18 @@ $(function(){
                             <p class="goon"><a href="{{url('/index/course/detail/'.$v->cou_id)}}"><span>继续学习</span></a></p>
                             </div>
                         </li>
+                        @endif
                         @endforeach
                         <div style="height:10px;" class="clearfix"></div>
                     </ul> 
-                </div>               
+                </div>
+              
 				<div class="hide">
 					<div>
-                    @foreach($datas as $v)
+					<ul class="memb_course">
+                    	
+                    @foreach($arr as $v)
+                    @if($v->is_xx==2)
                         <li>
                             <div class="courseli">
                             <a href="{{url('/index/course/detail/'.$v->cou_id)}}" target="_blank"><img width="230" src="../../{{$v->cou_img}}"></a>
@@ -73,15 +79,16 @@ $(function(){
                             </div>
                             <p class="goon"><a href="{{url('/index/course/detail/'.$v->cou_id)}}"><span>查看课程</span></a></p>
                             </div>
-                        </li>                                   
+                        </li>
+                        @endif
+                        @endforeach
+
+                        
+                       
                         <div class="clearfix" style="height:10px;"></div>
                     </ul>
-				</div>
-				</div>								
-                        @endforeach 
-                        <div class="clearfix" style="height:10px;"></div>
-                    </ul>
-				    </div>
+                    </div>
+                    
                 </div>
 				</div>
 			</div>

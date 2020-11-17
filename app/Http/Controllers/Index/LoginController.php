@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Index;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Mb;
 
 //登录
 class LoginController extends Controller
@@ -86,5 +87,39 @@ class LoginController extends Controller
      
             echo  "<script>alert('退出成功');location.href='/';</script>";
         
+    }
+    public function xg(){
+        $new_pwd=request()->post('new_pwd');
+        $u_name=request()->post('u_name');
+        $wt_1=request()->post('wt_1');
+        $wt_2=request()->post('wt_2');
+        $wt_3=request()->post('wt_3');
+
+  
+        $a=User::where('u_name',$u_name)->first();
+        $u_id=$a['u_id'];
+        $where=[
+           ['wt_1','=',$wt_1],
+           ['wt_2','=',$wt_2],
+           ['wt_3','=',$wt_3],
+           ['u_id','=',$u_id]
+        ];
+        $data=Mb::where($where)->first();
+        if($data){
+            $ss=User::where('u_id',$u_id)->update(['u_pwd'=>$new_pwd]);
+            Request()->session()->forget('userinfo');
+            $arr=[
+                'code'=>'00000',
+                'msg'=>'验证成功 密码已更新',
+                'url'=>"/"
+            ];
+        }else{
+            $arr = [
+                'code'=>'00002',
+                'msg'=>'验证失败',
+                'url'=>"/"
+            ];
+        }
+        return json_encode($arr,true);
     }
 }
