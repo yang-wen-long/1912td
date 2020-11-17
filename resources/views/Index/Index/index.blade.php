@@ -131,67 +131,6 @@ function nTabs(thisObj,Num){
                         <a href="{{url('/index/course/list')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">立即咨询</a>
                     </div>
                 </li>
-
-                <li data-transition="fade" data-slotamount="10" data-masterspeed="300" data-thumb="/static/index/images-slider/thumbs/thumb1.jpg">
-                    <!--  BACKGROUND IMAGE -->
-                    <img src="{{$c->silde_log}}" alt="" />
-
-                    <!-- THE CAPTIONS IN THIS SLIDE -->
-                    <div class="tp-caption sfl"
-                        data-x="-130"
-                        data-y="190"
-                        data-speed="300"
-                        data-start="300"
-                        data-easing="easeOutBack">
-                        <!-- <img src="/static/index/images-slider/rb.png" alt=""> -->
-                    </div>
-
-                    <div class="caption sfb"
-                        data-x="10"
-                        data-y="300"
-                        data-speed="300"
-                        data-start="800"
-                        data-easing="easeOutExpo">
-                        <h2>
-                            <span  style="font-size:20px;">
-                                我总是习惯黑夜里想你
-                                夜深了还没有睡意
-                                虽然我爱你是我的决定
-                                还要试着把你忘记
-                                我总想能够再次抱紧你
-                                告诉你我真没关系
-                            </span>
-                        </h2>
-                    </div>
-                    
-                    <div class="tp-caption med-white sfl"
-                        data-x="120"
-                        data-y="400"
-                        data-speed="300"
-                        data-start="1000"
-                        data-easing="easeOutExpo" style="font-size:80px;">
-                        <h3><span>以梦为马&nbsp;&nbsp;&nbsp;不负韶华</span></h3>
-                    </div>
-
-                    <div class="tp-caption small-white sfr"
-                        data-x="300"
-                        data-y="500"
-                        data-speed="300"
-                        data-start="1200"
-                        data-easing="easeOutExpo">
-                        <a href="{{url('/index/course/list')}}" class="btn btn-large btn-primary"  style="background:#58b7ed">快来充钱 </a>
-                    </div>
-
-                    <div class="tp-caption small-white lfb"
-                        data-x="600"
-                        data-y="500"
-                        data-speed="1000"
-                        data-start="1400"
-                        data-easing="easeOutExpo">
-                        <a href="{{url('/index/course/list')}}" class="btn btn-large btn-primary"  style="background:#58b7ed"> 充八万 </a>
-                    </div>
-                </li>
-
             </ul>
         </div>
 </div>
