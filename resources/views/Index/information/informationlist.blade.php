@@ -5,6 +5,14 @@
 <script src="/static/index/js/jquery-1.8.0.min.js"></script>
 <script src="/static/index/js/mine.js"></script>
 <script type="text/javascript" src="../../../static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <style>
+        .page-item{
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+    </style>
 <!-- InstanceBeginEditable name="EditRegion1" -->
 <div class="coursecont">
 <div class="coursepic">
@@ -32,11 +40,9 @@
     </div>
 	<div class="clearh" style="height:20px;"></div>
 	<span class="pagejump">
-    	<p class="userpager-list" >
-            <div id="a">      	  
-                <a href="#" class="page-number pageractive">{{$list->links()}}</a>         
-           </div>
-        </p>
+        <div>
+            {{$list->links()}}
+        </div>
     </span>
     <div class="clearh" style="height:10px;"></div>
 </div>

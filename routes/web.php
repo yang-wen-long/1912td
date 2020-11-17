@@ -14,6 +14,7 @@
     //登录LoginController
 	Route::any('/index/user/login',"Index\LoginController@login"); 
 	Route::any('/index/user/login_do/{zh}',"Index\LoginController@login_do");
+	Route::any('/index/user/quit',"Index\LoginController@quit");
 	//忘记密码
 	Route::any('/index/user/myrepassword',"Index\LoginController@myrepassword");
 	//注册
@@ -22,9 +23,9 @@
 
 Route::prefix("/index")->middleware("Checklogin")->group(function(){
 
+    
 
-
-//个人中心
+	//个人中心
 	//我的课程
 	Route::any('/mycourse/mycourse',"Index\MycouController@mycourse"); 
 
@@ -40,6 +41,7 @@ Route::prefix("/index")->middleware("Checklogin")->group(function(){
 	//我的笔记
 	Route::any('/mycourse/biji',"Index\MycouController@biji"); 
 	
+
 	//我的作业
 	Route::any('/mycourse/homework',"Index\MycouController@homework"); 
 
@@ -47,9 +49,10 @@ Route::prefix("/index")->middleware("Checklogin")->group(function(){
 	Route::any('/mycourse/bank',"Index\MycouController@bank"); 
 
 	//课程首页
-	Route::any('/course/course',"Index\CourseController@course")->name("course");
-	//课程首页
-	Route::any('/course/list',"Index\CourseController@list");
+	Route::any('/course/list',"Index\CourseController@list")->name('courselist');
+	
+	//课程首页处理
+	Route::any('/course/Asubclass',"Index\CourseController@Asubclass");
 
 	//课程目录
 	Route::any('/course/log/{catalog_id}',"Index\CourseController@log");
@@ -57,8 +60,6 @@ Route::prefix("/index")->middleware("Checklogin")->group(function(){
 	//课程详情
 	Route::any('/course/detail/{cou_id}',"Index\CourseController@detail");
 
-    //加入学习
-    Route::any('/course/study/{cou_id}',"Index\CourseController@study");
 	//资讯
 	Route::any('/information/informationlist',"Index\InformationController@informationlist")->name("informationlist");
 
@@ -100,10 +101,3 @@ Route::prefix("/index")->middleware("Checklogin")->group(function(){
 	//ajax处理前台分类
 	Route::post('/points',"Index\IndexController@points");
 });
-                        // var date = index.data;
-                        // var str = "<ul class='courseul' id='myTab3_Content0' style='display: block;'><li id='desc_li' class='descname'><div class='courselist'>";
-                        // for(var i in date){
-                        //     str+="<a href='{{url("+/index/course/coursecont/+date[i]['cou_id']+")}}'><img width='263' style='border-radius:3px 3px 0 0;'src='"+date[i]['cou_img']+"'></a><p class='courTit'>"+date[i]['cou_name']+"</p><div class='gray'><span>1小时前更新</span><span class='sp1'>"+date[i]['lll']+"人学习"
-                        // }
-                        // str+="</span><div style='clear:both'></div></div></div></li><div class='clearh'></div></ul>";
-                        // $("#showdesc").after(str);
