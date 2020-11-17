@@ -94,7 +94,7 @@ $(function(){
                     <div style="padding-left:25px;">
                     <div class="c_eform" style="width:280px;margin-left:10px;">
                       <div class="clearh" ></div>
-                        <textarea rows="7" class="pingjia_con" name="note_desc" id="note_desc" style="width:100%;height:300px;" 
+                        <textarea rows="7" class="pingjia_con" name="note_desc" id="note_desc"  cou_id="{{$log->cou_id}}" style="width:100%;height:300px;" 
                          onblur="if (this.value =='') this.value='记下课程笔记';this.className='pingjia_con'" 
                          onclick="if (this.value=='记下课程笔记') this.value='';this.className='pingjia_con_on'" placeholder="记下课程笔记"></textarea>
                        <a href="javascript:;" class="fombtn">提交</a>
@@ -138,11 +138,45 @@ $(function(){
     </div>
 </body>
 </html>
+<script src="../../../layui/layui.js"></script>
 <script>
   $(document).ready(function(){
+    //添加我的笔记
     $(".fombtn").click(function(){
         var note_desc = $("#note_desc").val();
-        console.log(note_desc);
+        var cou_id = $("#note_desc").attr("cou_id");
+        //判断是否为空
+        if(note_desc == ""||cou_id == 'undefined'){
+          layui.use('layer', function(){
+              var layer = layui.layer;
+              //提示层
+              layer.msg("请不要填写为空，这样我会不好办的！");
+          });
+          return false;
+        }
+        var url="/index/course/log/"+cou_id;
+        $.ajax({
+          url:url,
+          type:'post',
+          dataType:'json',
+          data:{note_desc:note_desc},
+          async:true,
+          success:function(index){
+            if(index.error==0){
+              layui.use('layer', function(){
+                  var layer = layui.layer;
+                  //提示层
+                  layer.msg(index.msg);
+              });
+            }else{
+              layui.use('layer', function(){
+                  var layer = layui.layer;
+                  //提示层
+                  layer.msg(index.msg);
+              });
+            }
+          }
+        });
     });
   });
 </script>

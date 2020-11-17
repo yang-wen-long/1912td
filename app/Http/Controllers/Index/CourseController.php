@@ -65,16 +65,35 @@ class CourseController extends Controller{
     }
     //我的目录
     public function log($log_id){
-        //展示当前目录内容
-        $log=Log::select("cou_id","catalog_chapters","catalog_name","video_img")->where('catalog_id',$log_id)->first();
-        $cou_id=$log['cou_id'];
-        //用户课程状态
-        $this->username($cou_id);
-        //获取大当前课程的目录列表
-        $catalog=Log::select("catalog_chapters","catalog_id","catalog_name")->where('cou_id',$cou_id)->get();
-        //查询视频展示照片
-        $cou_img = DB::table('course')->where("cou_id",$log->cou_id)->first("cou_img");
-        return view('course/log',['log'=>$log,'catalog'=>$catalog,"cou_img"=>$cou_img]);
+        if(Request()->isMethod("get")){
+            //展示当前目录内容
+            $log=Log::select("cou_id","catalog_chapters","catalog_name","video_img")->where('catalog_id',$log_id)->first();
+            $cou_id=$log['cou_id'];
+            //用户课程状态
+            $this->username($cou_id);
+            //获取大当前课程的目录列表
+            $catalog=Log::select("catalog_chapters","catalog_id","catalog_name")->where('cou_id',$cou_id)->get();
+            //查询视频展示照片
+            $cou_img = DB::table('course')->where("cou_id",$log->cou_id)->first("cou_img");
+            return view('course/log',['log'=>$log,'catalog'=>$catalog,"cou_img"=>$cou_img]);
+        }
+        if(Request()->isMethod("post")){
+            $note_desc = Request()->post("note_desc");
+            $user_id = request()->session()->get("userinfo")->u_id;
+            $data = [
+                "cou_id"=>$log_id,
+                "note_desc"=>$note_desc,
+                "u_id"=>$user_id,
+                "create_time"=>time()
+            ];
+            $name = DB::table("users_note")->insert($data);
+            if($name){
+                return json_encode(["error"=>0,"msg"=>'添加成功']);
+            }else{
+                return json_encode(["error"=>1,"msg"=>'添加失败']);
+            }
+
+        }
     }
 
     //处理课程首页分类业务
