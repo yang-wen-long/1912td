@@ -96,8 +96,7 @@ $(function(){
                       <div class="clearh" ></div>
                         <textarea rows="7" class="pingjia_con" name="note_desc" id="note_desc" style="width:100%;height:300px;" 
                          onblur="if (this.value =='') this.value='记下课程笔记';this.className='pingjia_con'" 
-                         onclick="if (this.value=='记下课程笔记') this.value='';this.className='pingjia_con_on'" placeholder="记下课程笔记">
-                        </textarea>
+                         onclick="if (this.value=='记下课程笔记') this.value='';this.className='pingjia_con_on'" placeholder="记下课程笔记"></textarea>
                        <a href="javascript:;" class="fombtn">提交</a>
                        <div class="clearh"></div>
                     </div>                  
