@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use App\Models\Answer;
 use App\Models\Question;
 use App\Models\Course;
+use App\Models\Mb;
 use  App\Models\Coustatus;
 
 class MycouController extends Controller
@@ -13,12 +14,7 @@ class MycouController extends Controller
     public function mycourse(){
         // 导航栏
         $nav = $this->nav();
-        // 个人中心我的课程
-        // $where = [
-        //     "is_xx" =>1
-        // ];
-        // $course = Course::where($where)->take(1)->get();
-        // // dd($course);
+       
         
         $users = Request()->session()->get("userinfo")->u_id;
         // dd($users);
@@ -27,13 +23,17 @@ class MycouController extends Controller
         ];
         $arr = Coustatus::where($where)->join('course','coustatus.cou_id',"=",'course.cou_id')->get();
         // dd($arr);
-
-    	return view("Index.mycourse.mycourse",["nav"=>$nav,'arr'=>$arr]);
+        $userinfo=Request()->session()->get('userinfo');
+        // dd($userinfo);
+        
+    	return view("Index.mycourse.mycourse",["nav"=>$nav,'userinfo'=>$userinfo,'arr'=>$arr]);
+        
     }
     //修改信息
     public function details(){
+          $userinfo=Request()->session()->get('userinfo');
     	$nav = $this->nav();
-    	return view("Index.mycourse.details",["nav"=>$nav]);
+    	return view("Index.mycourse.details",["nav"=>$nav,'userinfo'=>$userinfo]);
     }
     //我的问答
     public function question(){
@@ -62,4 +62,34 @@ class MycouController extends Controller
         $nav = $this->nav();
         return view("Index.mycourse.bank",["nav"=>$nav]);
     } 
+    public function mb(){
+         $nav = $this->nav();
+         $userinfo=Request()->session()->get('userinfo');
+         $u_id=$userinfo['u_id'];
+         $data=Mb::where('u_id',$u_id)->first();
+         if($data){
+            return "<script>alert('已经设置过密保');location.href='/index/mycourse/mycourse';</script>";
+         }
+        return view('Index.mycourse.mb',['userinfo'=>$userinfo,'nav'=>$nav]);
+    }
+    public function mbdo(){
+        $data=request()->all();
+        $u_id=Request()->session()->get('userinfo')['u_id'];
+       
+        $data['u_id']=$u_id;
+
+        $data=Mb::insert($data);
+        if($data){
+            $arr=[
+                'code'=>'00000',
+                'msg'=>'密保添加成功',
+            ];
+        }else{
+            $arr = [
+                'code'=>'00002',
+                'msg'=>'密保添加失败'
+            ];
+        }
+        return json_encode($arr,true);
+    }
 }

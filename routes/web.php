@@ -17,14 +17,17 @@
 	Route::any('/index/user/quit',"Index\LoginController@quit");
 	//忘记密码
 	Route::any('/index/user/myrepassword',"Index\LoginController@myrepassword");
+    //修改
+	Route::any('/index/user/xg',"Index\LoginController@xg");
 	//注册
 	Route::any('/index/user/reg',"Index\RegController@reg");
     Route::any('/index/user/reg_do',"Index\RegController@reg_do");
 
 Route::prefix("/index")->middleware("Checklogin")->group(function(){
 
-    
-
+    //设置密保
+    Route::any('/mycourse/mb',"Index\MycouController@mb");
+    Route::any('/mycourse/mbdo',"Index\MycouController@mbdo");
 	//个人中心
 	//我的课程
 	Route::any('/mycourse/mycourse',"Index\MycouController@mycourse"); 

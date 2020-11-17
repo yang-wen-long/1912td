@@ -32,6 +32,7 @@ $(function(){
             <li><a class="mb4 currnav" href="{{url('/index/mycourse/biji')}}">我的笔记</a></li>
             <li><a class="mb12" href="{{url('/index/mycourse/homework')}}">我的作业</a></li>
             <li><a class="mb2" href="{{url('/index/mycourse/bank')}}">我的题库</a></li>
+            <li><a class="mb2" href="{{url('/index/mycourse/mb')}}" target="_blank">设置密保</a></li>
        </ul>
     </div>
   </div>

@@ -4,35 +4,80 @@
 <link rel="stylesheet" href="/static/index/css/register-login.css"/>
 <!-- InstanceBeginEditable name="EditRegion1" -->
 <div class="register" style="background:url(/static/index/images/13.jpg) right center no-repeat #fff">
-<h2>忘记密码</h2>
+<h2>修改密码</h2>
 <form>
-    <div>
-    <p class="formrow"><label class="control-label" for="register_email">邮箱地址</label>
-    <input type="text"></p>
-    <span class="text-danger">请输入邮箱地址</span>
-    </div>
-    <div>
-    <p class="formrow"><label class="control-label" for="register_email"><button style="width:100px;height:55px;">发送验证码</button></label>
-    <input type="text"></p>
-    <span class="text-danger"></span>
-    </div>
-    <div>
-    <p class="formrow"><label class="control-label" for="register_email">密码</label>
-    <input type="password"></p>
-    <span class="text-danger">5-20位英文、数字、符号，区分大小写</span>
-    </div>
-    <div>
-    <p class="formrow"><label class="control-label" for="register_email">确认密码</label>
-    <input type="password"></p>
-    <span class="text-danger">再输入一次密码</span>
-    </div>
-    <div class="loginbtn reg">
-    <button type="submit" class="uploadbtn ub1">确认</button>
-    </div>
+    <table>
+            <tr>
+                <td>要修改账号：</td>
+                <td>
+                    <input type="text" name="u_name" value="" class="user_desc">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>密保一：</td>
+                <td>
+                    <input type="text" name="wt_1" value="" class="user_desc">
+                    <p id='p'>*你的父亲叫什么名字</p>
+                </td>
+            </tr>
+            <tr>
+                <td>密保二：</td>
+                <td>
+                    <input type="text" name="wt_2" value="" class="user_desc">
+                    <p id='p'>*你的母亲叫什么名字</p>
+                </td>
+            </tr>
+            <tr>
+                <td>密保三：</td>
+                <td>
+                    <input type="text" name="wt_3" value="" class="user_desc">
+                    <p id='p'>*你的母校叫什么</p>
+                </td>
+            </tr>
+            <tr>
+                <td>新密码：</td>
+                <td>
+                    <input type="text" name="new_pwd" value="" class="user_desc">
+                </td>
+            </tr>
+         
 
+    <tr>
+                <td></td>
+                <td><button style="color: orange; width: 50px; height: 30px;">提交</button></td>
+           </tr>
+</table>
 </form>
 </div>
 <!-- InstanceEndEditable -->
+<script>
+ $(document).on('click','button',function () {    
+     var u_name = $('[name="u_name"]').val();
+        var wt_1 = $('[name="wt_1"]').val();
+        var wt_2 = $('[name="wt_2"]').val();
+        var wt_3 = $("[name='wt_3']").val(); 
+        var new_pwd = $("[name='new_pwd']").val(); 
+     
 
+       $.ajax({
+        url:"{{url('index/user/xg')}}",
+    
+            data:{u_name:u_name,wt_1:wt_1,wt_2:wt_2,wt_3:wt_3,new_pwd:new_pwd},
+            dataType:'json',
+                type:'post',
+                  success:function(res){
+                // console.log(res);
+                 if(res.code=='00000'){
+                    alert(res.msg);
+                    window.location.href=res.url;
+                }else{
+                    alert(res.msg);
+                }
+            }
+        }); return false;
+   });   
+ 
+</script>
 
 @endsection
