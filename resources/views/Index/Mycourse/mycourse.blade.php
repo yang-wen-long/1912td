@@ -43,16 +43,7 @@ $(function(){
 			<div class="tab_box">
 				<div>
 					<ul class="memb_course">                   	
-                        <li>
-                            <div class="courseli">
-                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg"></a>
-                            <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
-                            <div class="mpp">
-                                <div class="lv" style="width:20%;"></div>
-                            </div>
-                            <p class="goon"><a href="video.html"><span>继续学习</span></a></p>
-                            </div>
-                        </li>
+                       
 					<ul class="memb_course">
                     	@foreach($data as $v)
                         <li>
@@ -92,49 +83,13 @@ $(function(){
                             <p class="goon"><a href="{{url('/index/course/detail/'.$v->cou_id)}}"><span>查看课程</span></a></p>
                             </div>
                         </li>
-                        <li>
-                            <div class="courseli">
-                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg"></a>
-                            <p class="memb_courname"><a href="coursecont.html" class="blacklink">会计基础</a></p>
-							<div class="mpp">
-                                <div class="lv" style="width:100%;"></div>
-                            </div>
-                            <p class="goon"><a href="coursecont.html"><span>查看课程</span></a></p>
-                            </div>
-                        </li>                      
+                                    
                         <div class="clearfix" style="height:10px;"></div>
                     </ul>
 				</div>
 				</div>
-				<div class="hide">
-					<div>
-					<ul class="memb_course">                   	
-                        <li>
-                            <div class="courseli mysc">
-                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg" class="mm"></a>
-                            <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
-                            <div class="mpp">
-                                <div class="lv" style="width:20%;"></div>
-                            </div>
-                            <p class="goon"><a href="#"><span>继续学习</span></a></p>
-							<div class="mask"><span class="qxsc"  title="移除收藏">▬</span></div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="courseli mysc">
-                            <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg" class="mm"></a>
-                            <p class="memb_courname"><a href="video.html" class="blacklink">会计基础</a></p>
-                            <div class="mpp">
-                                <div class="lv" style="width:20%;"></div>
-                            </div>
-                            <p class="goon"><a href="#"><span>继续学习</span></a></p>
-							<div class="mask"><span class="qxsc"  title="移除收藏">▬</span></div>
-                            </div>
-                        </li>                                     
-                        <div class="clearfix" style="height:10px;"></div>
-                    </ul>
-				</div>
-				</div>				
+			
+					
                 </div>				
                         @endforeach 
                         <div class="clearfix" style="height:10px;"></div>
