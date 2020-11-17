@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Answer;
 use App\Models\Question;
 use App\Models\Course;
+use  App\Models\Coustatus;
+
 class MycouController extends Controller
 {
     //我的课程
@@ -27,6 +29,8 @@ class MycouController extends Controller
             "is_xx" =>2
         ];
         $datas =  Course::where($where)->get();
+
+
     	return view("Index.mycourse.mycourse",["nav"=>$nav,'course'=>$course,'data'=>$data,'datas'=>$datas]);
     }
     //修改信息
