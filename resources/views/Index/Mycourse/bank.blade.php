@@ -40,13 +40,14 @@ $(function(){
     <h3 class="mem-h3">我的题库</h3>
     <div class="box demo2" style="width:820px;">
        <div class="coursetext">
-        
-        <h3><a class="artlink" href=""></a></h3>
-        <p></p>  
+        @foreach($bank as $k=>$v)
+        <h3><a class="artlink" href="">{{$v->bank_name}}</a></h3>
+       <p>{{$v->bank_text}}</p>  
         <p class="artilabel">   
         <span class="ask_label">这里是我的题库</span></p>
-        <b class="labtime"></b>      
+        <b class="labtime">{{date('Y-m-d H:i:s',$v->add_time)}}</b>    
         <div class="clearh"></div>      
+        @endforeach
     <!-- 结束 -->
     </div>
     </div>
