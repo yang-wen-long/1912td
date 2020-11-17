@@ -39,9 +39,6 @@ class CourseController extends Controller{
         // dd($cou_data);
         $a=$cou_data['admin_id'];
         $teacher=Teacher::where('admin_id',$a)->first();
-         // var_dump($teacher);die;
-        // $c=$b['tea_name'];
-         // var_dump($c);die;
         $log_data=Log::where('cou_id',$cou_id)->paginate(5);
     	return view("course.detail",['study'=>$study,"name"=>$name,'teacher'=>$teacher,"nav"=>$nav,'cou_data'=>$cou_data,'log_data'=>$log_data]);
     }
@@ -51,6 +48,8 @@ class CourseController extends Controller{
         $log=Log::where('catalog_id',$log_id)->first();
         $name = DB::table("course_notice")->where("notice_del","1")->limit("3")->get();
         $cou_id=$log['cou_id'];
+        //用户课程状态
+        $this->username($cou_id);
         //获取大当前课程的目录列表
         $catalog=Log::where('cou_id',$cou_id)->get();
         return view('course/log',['log'=>$log,'catalog'=>$catalog,"name"=>$name]);
@@ -96,6 +95,20 @@ class CourseController extends Controller{
         }
     }
 
-
-
+    //处理用户浏览课程数据
+    public function username($cou_id){
+        $user = request()->session()->get("userinfo")->u_id;
+        $user_name = DB::table("coustatus")->where(["cou_id"=>$cou_id,"u_id"=>$user])->first();
+        if(!empty($user_name)){
+            $name = DB::table("coustatus")->where(["cou_id"=>$cou_id,"u_id"=>$user])->update(["add_time"=>time(),"upd_time"=>time()]);
+        }else{
+            $data = [
+                    "cou_id"=>$cou_id,
+                    "u_id"=>$user,
+                    "add_time"=>time(),
+            ];
+            $name = DB::table("coustatus")->insert($data);
+        }
+        return $name;
+    }
 }
