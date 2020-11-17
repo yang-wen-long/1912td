@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Answer;
 use App\Models\Question;
 use App\Models\Course;
+use App\Models\Mb;
 class MycouController extends Controller
 {
     //我的课程
@@ -27,12 +28,16 @@ class MycouController extends Controller
             "is_xx" =>2
         ];
         $datas =  Course::where($where)->get();
-    	return view("Index.mycourse.mycourse",["nav"=>$nav,'course'=>$course,'data'=>$data,'datas'=>$datas]);
+        $userinfo=Request()->session()->get('userinfo');
+        // dd($userinfo);
+        
+    	return view("Index.mycourse.mycourse",["nav"=>$nav,'course'=>$course,'data'=>$data,'datas'=>$datas,'userinfo'=>$userinfo]);
     }
     //修改信息
     public function details(){
+          $userinfo=Request()->session()->get('userinfo');
     	$nav = $this->nav();
-    	return view("Index.mycourse.details",["nav"=>$nav]);
+    	return view("Index.mycourse.details",["nav"=>$nav,'userinfo'=>$userinfo]);
     }
     //我的问答
     public function question(){
@@ -61,4 +66,29 @@ class MycouController extends Controller
         $nav = $this->nav();
         return view("Index.mycourse.bank",["nav"=>$nav]);
     } 
+    public function mb(){
+         $nav = $this->nav();
+         $userinfo=Request()->session()->get('userinfo');
+        return view('Index.mycourse.mb',['userinfo'=>$userinfo,'nav'=>$nav]);
+    }
+    public function mbdo(){
+        $data=request()->all();
+        $u_id=Request()->session()->get('userinfo')['u_id'];
+       
+        $data['u_id']=$u_id;
+
+        $data=Mb::insert($data);
+        if($data){
+            $arr=[
+                'code'=>'00000',
+                'msg'=>'密保添加成功',
+            ];
+        }else{
+            $arr = [
+                'code'=>'00002',
+                'msg'=>'密保添加失败'
+            ];
+        }
+        return json_encode($arr,true);
+    }
 }

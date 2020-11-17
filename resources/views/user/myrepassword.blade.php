@@ -11,11 +11,8 @@
     <input type="text"></p>
     <span class="text-danger">请输入邮箱地址</span>
     </div>
-    <div>
-    <p class="formrow"><label class="control-label" for="register_email"><button style="width:100px;height:55px;">发送验证码</button></label>
-    <input type="text"></p>
-    <span class="text-danger"></span>
-    </div>
+ 
+
     <div>
     <p class="formrow"><label class="control-label" for="register_email">密码</label>
     <input type="password"></p>

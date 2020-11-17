@@ -21,7 +21,7 @@ $(function(){
 	<div class="membhead">
     <div style="text-align:center;"><img src="/static/index/images/0-0.JPG" width="80" ></div>
     <div style="width:220px;text-align:center;">
-    <p class="membUpdate mine">某某某</p> 
+    <p class="membUpdate mine">{{$userinfo->u_name}}</p> 
     <p class="membUpdate mine"><a href="{{url('/index/mycourse/details')}}">修改信息</a>&nbsp;|&nbsp;<a href="{{url('/index/user/myrepassword')}}">修改密码</a></p>
     <div class="clearh"></div>
     </div>
@@ -34,6 +34,7 @@ $(function(){
 		<li><a class="mb4" href="{{url('/index/mycourse/biji')}}">我的笔记</a></li>
 		<li><a class="mb12" href="{{url('/index/mycourse/homework')}}">我的作业</a></li>
         <li><a class="mb2" href="{{url('/index/mycourse/bank')}}" target="_blank">我的题库</a></li>
+        <li><a class="mb2" href="{{url('/index/mycourse/mb')}}" target="_blank">设置密保</a></li>
    </ul>
     </div>
   </div>

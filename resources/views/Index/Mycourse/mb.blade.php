@@ -35,71 +35,68 @@ $(function(){
     <h3 class="mem-h3">我的详细信息</h3>
     <div class="box demo2" style="width:820px;">
         <table id="tables_name">
+           
             <tr>
-                <td>头像:</td>
-                <td>
-                    <input type="file" name="u_img" value="" id="hideuimg">
-                    <img src="/static/index/images/0-0.JPG" id="heverimg" width="80">
+                <td>*当前登陆:</td>
+                <td>{{$userinfo->u_name}}
                 </td>
             </tr>
             <tr>
-                <td>*用户名:</td>
+                <td>密保一：</td>
                 <td>
-                    <input type="text" name="u_name" class="user_name">
-                    <p id='p'>*昵称填写须知：与教育或课程冲突的昵称，我们将有可能收回</p>
+                    <input type="text" name="wt_1" value="" class="user_desc">
+                    <p id='p'>*你的父亲叫什么名字</p>
                 </td>
             </tr>
             <tr>
-                <td>*性别:</td>
+                <td>密保二：</td>
                 <td>
-                    <input type="radio" name="u_sex" value="1">男
-                    <input type="radio" name="u_sex" value="2">女
+                    <input type="text" name="wt_2" value="" class="user_desc">
+                    <p id='p'>*你的母亲叫什么名字</p>
                 </td>
             </tr>
             <tr>
-                <td>年龄:</td>
+                <td>密保三：</td>
                 <td>
-                    <input type="text" name="u_age" value="" class="user_desc">
-                    <p id='p'>*年龄填写须知：请请填写正确的年龄。</p>
+                    <input type="text" name="wt_3" value="" class="user_desc">
+                    <p id='p'>*你的母校叫什么</p>
                 </td>
             </tr>
             <tr>
-                <td>手机号:</td>
-                <td>
-                    <input type="text" name="u_tel" value="" class="user_desc">
-                    <p id='p'>*手机号填写须知：请请填写正确的手机号。</p>
-                </td>
-            </tr>
-            <tr>
-                <td>介绍</td>
-                <td>
-                    <textarea name="u_text" id="u_text" cols="30" rows="10"></textarea>
-                    <p id='p'>*介绍填写须知：请请填写正确的介绍。</p>
-                </td>
-            </tr>
+                <td></td>
+                <td><button style="color: orange; width: 50px; height: 30px;">保存</button></td>
+           </tr>
         </table>
-	   <div>
-            <div id="heage_desc"></div>
-            <button id="heage_asc">保存</button>   
-       </div>
+
     <!-- 结束 -->
     </div>
 </div>
 <div class="clearh"></div>
 </div>
 <!-- InstanceEndEditable -->
+ 
+   
 <script>
-    $(document).ready(function(){
-        $("#heverimg").click(function(){
-            $("#hideuimg").show();
-            $("#heverimg").hide();
-        });
-        $("#heage_asc").click(function(){
-            alert("添加");
-        });
-    });
+ $(document).on('click','button',function () {     
+        var wt_1 = $('[name="wt_1"]').val();
+        var wt_2 = $('[name="wt_2"]').val();
+        var wt_3 = $("[name='wt_3']").val(); 
+       $.ajax({
+            url:'/index/mycourse/mbdo',
+            type:'post',
+            data:{wt_1:wt_1,wt_2:wt_2,wt_3:wt_3},
+            dataType:'json',
+                type:'post',
+                success:function (res) {
+                    if (res.code=="00000"){
+                        alert(res.msg);
+                        location.href="/index/mycourse/mycourse"
+                    }else{
+                        alert(res.msg);
+                    }
+                }
+            })
+        })
+ 
 </script>
-
-
-
 @endsection

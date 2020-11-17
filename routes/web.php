@@ -23,8 +23,9 @@
 
 Route::prefix("/index")->middleware("Checklogin")->group(function(){
 
-    
-
+    //设置密保
+    Route::any('/mycourse/mb',"Index\MycouController@mb");
+    Route::any('/mycourse/mbdo',"Index\MycouController@mbdo");
 	//个人中心
 	//我的课程
 	Route::any('/mycourse/mycourse',"Index\MycouController@mycourse"); 
