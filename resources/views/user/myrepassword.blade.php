@@ -6,27 +6,33 @@
 <div class="register" style="background:url(/static/index/images/13.jpg) right center no-repeat #fff">
 <h2>忘记密码</h2>
 <form>
-    <div>
-    <p class="formrow"><label class="control-label" for="register_email">邮箱地址</label>
-    <input type="text"></p>
-    <span class="text-danger">请输入邮箱地址</span>
-    </div>
- 
-
-    <div>
-    <p class="formrow"><label class="control-label" for="register_email">密码</label>
-    <input type="password"></p>
-    <span class="text-danger">5-20位英文、数字、符号，区分大小写</span>
-    </div>
-    <div>
-    <p class="formrow"><label class="control-label" for="register_email">确认密码</label>
-    <input type="password"></p>
-    <span class="text-danger">再输入一次密码</span>
-    </div>
-    <div class="loginbtn reg">
-    <button type="submit" class="uploadbtn ub1">确认</button>
-    </div>
-
+    <table>
+    <tr>
+                <td>密保一：</td>
+                <td>
+                    <input type="text" name="wt_1" value="" class="user_desc">
+                    <p id='p'>*你的父亲叫什么名字</p>
+                </td>
+            </tr>
+            <tr>
+                <td>密保二：</td>
+                <td>
+                    <input type="text" name="wt_2" value="" class="user_desc">
+                    <p id='p'>*你的母亲叫什么名字</p>
+                </td>
+            </tr>
+            <tr>
+                <td>密保三：</td>
+                <td>
+                    <input type="text" name="wt_3" value="" class="user_desc">
+                    <p id='p'>*你的母校叫什么</p>
+                </td>
+            </tr>
+    <tr>
+                <td></td>
+                <td><button style="color: orange; width: 50px; height: 30px;">保存</button></td>
+           </tr>
+</table>
 </form>
 </div>
 <!-- InstanceEndEditable -->

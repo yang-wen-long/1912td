@@ -28,6 +28,7 @@ $(function(){
     		<li><a class="mb4" href="">我的笔记</a></li>
     		<li><a class="mb12" href="">我的作业</a></li>
             <li><a class="mb2" href="" target="_blank">我的题库</a></li>
+            <li><a class="mb2" href="{{url('/index/mycourse/mb')}}" target="_blank">设置密保</a></li>
        </ul>
     </div>
   </div>
@@ -90,7 +91,7 @@ $(function(){
                 success:function (res) {
                     if (res.code=="00000"){
                         alert(res.msg);
-                        location.href="/index/mycourse/mycourse"
+                        location.href="/index/mycourse/mycourse" 
                     }else{
                         alert(res.msg);
                     }

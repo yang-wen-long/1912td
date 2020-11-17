@@ -105,6 +105,7 @@ class CourseController extends Controller{
             $data = [
                     "cou_id"=>$cou_id,
                     "u_id"=>$user,
+                    "is_xx"=>1,
                     "add_time"=>time(),
             ];
             $name = DB::table("coustatus")->insert($data);

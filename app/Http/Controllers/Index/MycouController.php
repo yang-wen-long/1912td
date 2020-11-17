@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\Index;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -69,6 +68,11 @@ class MycouController extends Controller
     public function mb(){
          $nav = $this->nav();
          $userinfo=Request()->session()->get('userinfo');
+         $u_id=$userinfo['u_id'];
+         $data=Mb::where('u_id',$u_id)->first();
+         if($data){
+            return "<script>alert('已经设置过密保');location.href='/index/mycourse/mycourse';</script>";
+         }
         return view('Index.mycourse.mb',['userinfo'=>$userinfo,'nav'=>$nav]);
     }
     public function mbdo(){
