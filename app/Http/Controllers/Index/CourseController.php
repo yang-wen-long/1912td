@@ -27,32 +27,54 @@ class CourseController extends Controller{
 
     //课程详情
     public function detail($cou_id){
-        $where=[
-           ['cou_id','=',$cou_id],
-           ['catalog_chapters','=','1']
-        ];
-        $study=Log::where($where)->first();
-        // dd($study);
-        $nav = $this->nav();
-        $name = DB::table("course_notice")->where("notice_del","1")->limit("2")->get();
-        $cou_data=Course::leftJoin('shop_admin','course.admin_id','=','shop_admin.admin_id')->where('cou_id',$cou_id)->first();
-        // dd($cou_data);
-        $a=$cou_data['admin_id'];
-        $teacher=Teacher::where('admin_id',$a)->first();
-        $log_data=Log::where('cou_id',$cou_id)->paginate(5);
-    	return view("course.detail",['study'=>$study,"name"=>$name,'teacher'=>$teacher,"nav"=>$nav,'cou_data'=>$cou_data,'log_data'=>$log_data]);
+        if(Request()->isMethod("get")){
+            $where=[
+               ['cou_id','=',$cou_id],
+               ['catalog_chapters','=','1']
+            ];
+            $study=Log::where($where)->first();
+            // dd($study);
+            $nav = $this->nav();
+            $name = DB::table("course_notice")->where("notice_del","1")->limit("2")->get();
+            $cou_data=Course::leftJoin('shop_admin','course.admin_id','=','shop_admin.admin_id')->where('cou_id',$cou_id)->first();
+            // dd($cou_data);
+            $a=$cou_data['admin_id'];
+            $teacher=Teacher::where('admin_id',$a)->first();
+            $log_data=Log::where('cou_id',$cou_id)->paginate(5);
+            return view("course.detail",['study'=>$study,"name"=>$name,'teacher'=>$teacher,"nav"=>$nav,'cou_data'=>$cou_data,'log_data'=>$log_data]);
+        }
+        if(Request()->isMethod("post")){
+            $user_id = Request()->session()->get("userinfo")->u_id;
+            $name = DB::table("user_bank")->where("bank_id",$cou_id)->first();
+            if($name == ''){
+                $datas = [
+                    "u_id"=>$user_id,
+                    "bank_id"=>$cou_id,
+                    "add_time"=>time()
+                ];
+                $data = DB::table("user_bank")->insert($datas);
+                if($data){
+                    return json_encode(["error"=>0,"msg"=>"添加成功"]);
+                }else{
+                    return json_encode(["error"=>1,"msg"=>"添加失败"]);
+                }
+            }else{
+                return json_encode(["error"=>1,"msg"=>"请不要重复添加"]);
+            }
+        }
     }
     //我的目录
     public function log($log_id){
         //展示当前目录内容
-        $log=Log::where('catalog_id',$log_id)->first();
-        $name = DB::table("course_notice")->where("notice_del","1")->limit("3")->get();
+        $log=Log::select("cou_id","catalog_chapters","catalog_name","video_img")->where('catalog_id',$log_id)->first();
         $cou_id=$log['cou_id'];
         //用户课程状态
         $this->username($cou_id);
         //获取大当前课程的目录列表
-        $catalog=Log::where('cou_id',$cou_id)->get();
-        return view('course/log',['log'=>$log,'catalog'=>$catalog,"name"=>$name]);
+        $catalog=Log::select("catalog_chapters","catalog_id","catalog_name")->where('cou_id',$cou_id)->get();
+        //查询视频展示照片
+        $cou_img = DB::table('course')->where("cou_id",$log->cou_id)->first("cou_img");
+        return view('course/log',['log'=>$log,'catalog'=>$catalog,"cou_img"=>$cou_img]);
     }
 
     //处理课程首页分类业务

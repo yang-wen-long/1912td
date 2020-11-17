@@ -11,13 +11,10 @@
 <link rel="stylesheet" href="/static/index/css/course.css"/>
 <link rel="stylesheet" href="/static/index/css/tab.css" media="screen">
 <script src="/static/index/video.js"></script>
-    
-      <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
-      <script>
-        videojs.options.flash.swf = "video-js.swf";
-        
-      </script>
-      <script type="text/javascript">
+<script>
+  videojs.options.flash.swf = "video-js.swf";
+</script>
+<script type="text/javascript">
 $(function(){
 
     $('.demo2').Tabs({
@@ -63,9 +60,10 @@ $(function(){
         <span class="returnindex"><a class="gray" href="{{url('/index/course/detail/'.$log->cou_id)}}" style="font-size:14px;">返回课程</a></span>   
         <span class="taskspan"><span class="ts">第{{$log->catalog_chapters}}章</span>&nbsp;&nbsp;<b class="tasktit">{{$log->catalog_name}}</b></span> 
         <div style="width:100%;margin-top:20px;">
-            <video width="auto" id="example_video_1" class="video-js vjs-default-skin  vjs-big-play-centered vvi " controls preload="none"  poster="" data-setup="{}"><!--poster是视频未播放前的展示图片-->
-            <source src="../../../../../{{$log->video_img}}" type='video/mp4' />
-           
+            <video width="auto" id="example_video_1" class="video-js vjs-default-skin  vjs-big-play-centered vvi " 
+            controls preload="none"  poster="../../../{{$cou_img->cou_img}}" data-setup="{}"><!--poster是视频未播放前的展示图片-->
+
+            <source src="../../../../../{{$log->video_img}}" type='video/mp4' /> 
             </video>
             <p class="signp"><span class="sign">学过了</span><span class="nextcourse" title="下一课时">∨</span></p>
         </div>       
@@ -95,8 +93,11 @@ $(function(){
                 <div class="hide">
                     <div style="padding-left:25px;">
                     <div class="c_eform" style="width:280px;margin-left:10px;">
-                        <div class="clearh" ></div>
-                        <textarea rows="7" class="pingjia_con" style="width:100%;height:500px;" onblur="if (this.value =='') this.value='记下课程笔记';this.className='pingjia_con'" onclick="if (this.value=='记下课程笔记') this.value='';this.className='pingjia_con_on'">记下课程笔记</textarea>
+                      <div class="clearh" ></div>
+                        <textarea rows="7" class="pingjia_con" style="width:100%;height:500px;" 
+                         onblur="if (this.value =='') this.value='记下课程笔记';this.className='pingjia_con'" 
+                         onclick="if (this.value=='记下课程笔记') this.value='';this.className='pingjia_con_on'">
+                        </textarea>
                        <a href="#" class="fombtn">提交</a>
                        <div class="clearh"></div>
                     </div>                  
@@ -121,7 +122,6 @@ $(function(){
                             </p>                           
                         </li>                       
                     </ul>
-                    
                 </div>
                 </div>
                 <div class="hide">

@@ -34,6 +34,9 @@
         <span class="ask_label">{{$v->bank_type==1?'单选题':'多选题'}}</span>
         <b>答案：</b>
         <span>{{$v->bank_key}}</span>
+        <span>
+            <button class="user_bank" bank_id="{{$v->bank_id}}">加入我的</button>
+        </span>
         <b class="labtime">{{date('Y-m-d H:i:s',$v->bank_time)}}</b>
         </p>
         <div class="clearh"></div>
@@ -77,32 +80,48 @@
     </div>  
 
     </div>
-</div>
-   
-</div>
-
-
-
+</div></div>
 <div class="clearh"></div>
 </div>
 <!-- InstanceEndEditable -->
 <script src="/layui/layui.js"></script>
 <script>
-  $(".cou_detail").click(function(){
-     var _this = $(this);
-    var cou_id = _this.attr("cou_id");
-    layui.use('layer', function(){
-    var layer = layui.layer;
-        layer.confirm('is not?', {icon: 4, title:'提示'}, function(index){
-        layer.close(index);
+$(document).ready(function(){
+    $(".user_bank").click(function(){
+        var _this = $(this);
+        var bank_id = _this.attr("bank_id");
+        var url="/index/course/detail/"+bank_id;
+        $.ajax({
+            url:url,
+            dataType:'json',
+            type:'post',
+            async:true,
+            success:function(index){
+                layui.use('layer', function(){
+                    var layer = layui.layer;
+                    //提示层
+                    layer.msg(index.msg);
+                });
+            }
         });
-        //eg2
-        layer.confirm('是否进入详情?', function(index){
-          var url = "/index/course/detail/"+cou_id;
-          location.href=url;
-          layer.close(index);
-        });
+
     });
-}); 
+    $(".cou_detail").click(function(){
+        var _this = $(this);
+        var cou_id = _this.attr("cou_id");
+        layui.use('layer', function(){
+        var layer = layui.layer;
+            layer.confirm('is not?', {icon: 4, title:'提示'}, function(index){
+            layer.close(index);
+            });
+            //eg2
+            layer.confirm('是否进入详情?', function(index){
+              var url = "/index/course/detail/"+cou_id;
+              location.href=url;
+              layer.close(index);
+            });
+        });
+    }); 
+});
 </script>
 @endsection
