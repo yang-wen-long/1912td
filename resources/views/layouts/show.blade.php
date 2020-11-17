@@ -59,9 +59,8 @@
             <a href="{{url('/index/user/reg')}}" class="link2 he">注册</a>
             
           @else
-          
-              <a>欢迎@php echo $user['u_name']; @endphp登陆</a> 
               <a href="{{url('/index/mycourse/mycourse')}}" style="width:70px" >个人中心</a>
+              <a>欢迎@php echo $user['u_name']; @endphp登陆</a> 
               <a href="{{url('/index/user/quit')}}">退出</a>
           @endif
         </span>

@@ -58,6 +58,9 @@
         //无限极分类
         $(".cate").click(function(){
             var _this = $(this);
+            //添加样式
+            $(".course_curr").removeClass('course_curr');
+            _this.parent().addClass('sortul course_curr');
             var cate_id = _this.attr("cate_id");
             var url = "/index/course/Asubclass";
             $.ajax({

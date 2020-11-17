@@ -6,6 +6,14 @@
 <script src="/static/index/js/mine.js"></script>
 <script type="text/javascript" src="/static/index/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <!-- InstanceBeginEditable name="EditRegion1" -->
+    <style>
+        .page-item{
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+        }
+    </style>
 <div class="coursecont">
 <div class="coursepic">
 	<h3 class="righttit">全部数据</h3>
@@ -38,9 +46,7 @@
     
 	<div class="clearh" style="height:20px;"></div>
 	<span class="pagejump">
-    	<p class="userpager-list">
-       	  {{$data->links()}}
-        </p>
+        {{$data->links()}}
     </span>
     <div class="clearh" style="height:10px;"></div>
 </div>
