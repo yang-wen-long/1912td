@@ -19,10 +19,8 @@
 	<h3 class="righttit">全部数据</h3>
     <div class="clearh"></div>
     <span class="bread nob">
-        <a class="fombtn cur" href="{{url('/index/article/articlelist')}}">全部数据</a>
-        <a class="fombtn" href="{{url('/index/article/articlelist')}}">热门题选</a>
-        <a class="fombtn" href="{{url('/index/article/articlelist')}}">填空题</a>
-        <a class="fombtn" href="{{url('/index/article/articlelist')}}">选择题</a>
+        
+        <a class="fombtn cur" href="{{url('/index/article/articlelist')}}">选择题</a>
     </span>
    
 </div>
