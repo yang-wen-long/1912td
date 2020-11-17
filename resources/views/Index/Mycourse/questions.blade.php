@@ -25,8 +25,7 @@ $(function(){
         <p class="artilabel">   
         <span class="ask_label">热门提问</span></p>
         <b class="labtime">{{date('Y-m-d H:i:s',$data->q_time)}}</b>      
-        <div class="clearh"></div>
-       
+        <div class="clearh"></div>     
     <!-- 结束 -->
     </div>
 </div>

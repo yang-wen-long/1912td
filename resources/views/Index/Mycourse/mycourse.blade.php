@@ -26,14 +26,13 @@ $(function(){
     <div class="clearh"></div>
     </div>
     </div>
-    <div class="memb">
-   
+    <div class="memb">  
     <ul>
     	<li class=" mb1 currnav"><a class="mb1" href="{{url('/index/mycourse/mycourse')}}">我的课程</a></li>
 		<li><a class="mb3" href="{{url('/index/mycourse/question')}}">我的问答</a></li>
 		<li><a class="mb4" href="{{url('/index/mycourse/biji')}}">我的笔记</a></li>
 		<li><a class="mb12" href="{{url('/index/mycourse/homework')}}">我的作业</a></li>
-        <li><a class="mb2" href="{{url('/index/mycourse/bank')}}" target="_blank">我的题库</a></li>
+        <li><a class="mb2" href="{{url('/index/mycourse/bank')}}">我的题库</a></li>
    </ul>
     </div>
   </div>
@@ -48,8 +47,7 @@ $(function(){
         @endforeach
 			<div class="tab_box">
 				<div>
-					<ul class="memb_course">
-                    	
+					<ul class="memb_course">                   	
                         <li>
                             <div class="courseli">
                             <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg"></a>
@@ -70,7 +68,6 @@ $(function(){
                             <p class="goon"><a href="video.html"><span>继续学习</span></a></p>
                             </div>
                         </li>
-
                         <li>
                             <div class="courseli">
                             <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg"></a>
@@ -81,15 +78,12 @@ $(function(){
                             <p class="goon"><a href="video.html"><span>继续学习</span></a></p>
                             </div>
                         </li>
-
                         <div style="height:10px;" class="clearfix"></div>
                     </ul> 
-                </div>
-                
+                </div>               
 				<div class="hide">
 					<div>
-					<ul class="memb_course">
-                    	
+					<ul class="memb_course">                   	
                         <li>
                             <div class="courseli">
                             <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg"></a>
@@ -100,7 +94,6 @@ $(function(){
                             <p class="goon"><a href="coursecont.html"><span>查看课程</span></a></p>
                             </div>
                         </li>
-
                         <li>
                             <div class="courseli">
                             <a href="video.html" target="_blank"><img width="230" src="/static/index/images/c8.jpg"></a>
@@ -110,8 +103,7 @@ $(function(){
                             </div>
                             <p class="goon"><a href="coursecont.html"><span>查看课程</span></a></p>
                             </div>
-                        </li>
-                       
+                        </li>                      
                         <div class="clearfix" style="height:10px;"></div>
                     </ul>
 				</div>
@@ -145,9 +137,7 @@ $(function(){
                     </ul>
 				</div>
 				</div>				
-                </div>
-                
-				
+                </div>				
 				</div>
 			</div>
 		</div>
