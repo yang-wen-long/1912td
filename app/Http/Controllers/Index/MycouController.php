@@ -15,23 +15,21 @@ class MycouController extends Controller
         // 导航栏
         $nav = $this->nav();
         // 个人中心我的课程
+        // $where = [
+        //     "is_xx" =>1
+        // ];
+        // $course = Course::where($where)->take(1)->get();
+        // // dd($course);
+        
+        $users = Request()->session()->get("userinfo")->u_id;
+        // dd($users);
         $where = [
-            "is_xx" =>1
+            "coustatus.u_id"=>$users
         ];
-        $course = Course::where($where)->take(1)->get();
-        // dd($course);
-        $where = [
-            "is_xx" =>1
-        ];
-        $data =  Course::where($where)->get();
-        // dd($data);
-        $where = [
-            "is_xx" =>2
-        ];
-        $datas =  Course::where($where)->get();
+        $arr = Coustatus::where($where)->join('course','coustatus.cou_id',"=",'course.cou_id')->get();
+        // dd($arr);
 
-
-    	return view("Index.mycourse.mycourse",["nav"=>$nav,'course'=>$course,'data'=>$data,'datas'=>$datas]);
+    	return view("Index.mycourse.mycourse",["nav"=>$nav,'arr'=>$arr]);
     }
     //修改信息
     public function details(){
