@@ -11,15 +11,12 @@
 <link rel="stylesheet" href="/static/index/css/course.css"/>
 <link rel="stylesheet" href="/static/index/css/tab.css" media="screen">
 <script src="/static/index/video.js"></script>
-    
       <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
       <script>
         videojs.options.flash.swf = "video-js.swf";
-        
       </script>
       <script type="text/javascript">
 $(function(){
-
     $('.demo2').Tabs({
         event:'click'
     });
@@ -34,11 +31,8 @@ $(function(){
              scrollbar-highlight-color: #fff; /*滚动条的高亮颜色（左阴影？）*/
              scrollbar-shadow-color: #fff; /*立体滚动条阴影的颜色*/
              scrollbar-darkshadow-color:#fff; /*立体滚动条外阴影的颜色*/
-             scrollbar-track-color: #fff; /*立体滚动条背景颜色*/
-             
-             
-            
-      }
+             scrollbar-track-color: #fff; /*立体滚动条背景颜色*/                  
+           }
        /* 设置滚动条的样式 */
             ::-webkit-scrollbar {
                 width: 10px;
@@ -49,15 +43,13 @@ $(function(){
             }
             /* 滚动条滑块 */
             ::-webkit-scrollbar-thumb {
-                background: #333;
-                
+                background: #333;  
             }
             ::-webkit-scrollbar-thumb:window-inactive {
                 background: rgba(255,0,0,0.4);
             }
       </style>
 </head>
-
 <body>
    <div class="linevideo" style="overflow-x:hidden">
         <span class="returnindex"><a class="gray" href="{{url('/index/course/detail/'.$log->cou_id)}}" style="font-size:14px;">返回课程</a></span>   
@@ -65,7 +57,6 @@ $(function(){
         <div style="width:100%;margin-top:20px;">
             <video width="auto" id="example_video_1" class="video-js vjs-default-skin  vjs-big-play-centered vvi " controls preload="none"  poster="" data-setup="{}"><!--poster是视频未播放前的展示图片-->
             <source src="../../../../../{{$log->video_img}}" type='video/mp4' />
-           
             </video>
             <p class="signp"><span class="sign">学过了</span><span class="nextcourse" title="下一课时">∨</span></p>
         </div>       
@@ -73,8 +64,6 @@ $(function(){
   <div class="interact">
         <span class="ii" title="展开或收起">></span>
         <div class="clearh"></div>
-       
-  
           <div class="box1 demo2">
             <ul class="tab_menu vmulu">
                 <li class="current">目录</li>
@@ -90,8 +79,7 @@ $(function(){
                         @endforeach
                    </dl>    
                    <div class="clearh"></div>
-                </div>
-                
+                </div>                
                 <div class="hide">
                     <div style="padding-left:25px;">
                     <div class="c_eform" style="width:280px;margin-left:10px;">
@@ -120,8 +108,7 @@ $(function(){
                             <p class="vptext"><a target="_blank" class="peptitle" href="#">2013年国家公务员考试真题2013年国家公务员考试真题2013年国家公务员考试真题2013年?</a></p>         <p class="peptime pswer"><span style="float:left;"><b class="coclass">候候&nbsp;&nbsp;</b>发表于 2015-05-8 </span><span class="pepask" style="float:right;">回答(<strong style="color:#3eb0e0;"><a href="#" class="bluelink" target="_blank">10</a></strong>)&nbsp;&nbsp;&nbsp;&nbsp;浏览(<strong style="color:#3eb0e0;"><a href="#" class="bluelink" target="_blank">10</a></strong>)</span>                    
                             </p>                           
                         </li>                       
-                    </ul>
-                    
+                    </ul> 
                 </div>
                 </div>
                 <div class="hide">
@@ -131,7 +118,7 @@ $(function(){
                        <p>共4道作业题<a href="homework.html" target="_blank"><span class="star_zy">继续做题</span></a></p>
                        <p>共4道作业题<a href="homework_jiexi.html" target="_blank"><span class="star_zy">查看解析</span></a></p>
                        <p>共4道作业题<a href="homework.html" target="_blank"><span class="star_zy">开始作业</span></a></p>                                 
-                </div>
+                    </div>
                 </div>              
             </div>
         </div> 

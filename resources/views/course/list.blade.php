@@ -7,8 +7,6 @@
       <input type="text" value="" name="keyword" placeholder="请输入关键字" class="pingjia_con"/>
       <a href="javascript:;" class="sellink"></a>        
     </span>
-    
- 
     <ul class="courseul">
     <li class="curr" style="border-radius:3px 3px 0 0;background:#fb5e55;"><h3 style="color:#fff;"><a href="javascript:;" class="whitea">全部课程</a></h3>
     @foreach($topcss as $k=>$a)
